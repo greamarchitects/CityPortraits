@@ -1,0 +1,62 @@
+site_name: CityPortraits
+site_description: A project showcasing the architectural heritage of cities through portraits
+site_url: https://github.com/greamarchitects/CityPortraits
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: blue
+
+nav:
+  - Home: index.md
+
+  - Methodology:
+      - Overview: methodology.md
+
+      - Spatial Analysis:
+          - Overview: spatial_analysis.md
+          - Cadastral Maps: cadastral_maps.md
+          - Urban Fabric:
+              - Overview: urban_fabric.md
+              - Morphology: morphology.md
+              - Emergent Patterns: emergent_patterns.md
+          - Architecture:
+              - Overview: architecture.md
+              - Building Typology: building_typology.md
+              - Building Construction: building_construction.md
+              - Building Taxonomy: building_taxonomy.md
+
+      - Written Documentation:
+          - Overview: written_documentation.md
+          - Historical Archive: historical_archive.md
+          - Newspaper Archives: newspaper_archives.md
+          - Documentary Research: documentary_research.md
+          - Narrative Studies: narrative_studies.md
+
+      - Data Analysis:
+          - Overview: data_analysis.md
+          - Datasets:
+              - Overview: datasets.md
+              - GDE: gde.md
+              - GHSL: ghsl.md
+              - ASIG: asig.md
+              - OSM: osm.md
+              - Census: census.md
+          - Calibration: calibration.md
+          - Validation: validation.md
+
+  - Model:
+      - Overview: model.md
+      - Graphs: graphs.md
+      - Patterns: patterns.md
+
+  - Case Studies:
+      - Berat: case_studies/berat.md
+      - Durres: case_studies/durres.md
+      - Gjirokaster: case_studies/gjirokaster.md
+      - Korce: case_studies/korce.md
+      - Shkoder: case_studies/shkoder.md
+      - Tirana: case_studies/tirana.md
+
+  - About: about.md
