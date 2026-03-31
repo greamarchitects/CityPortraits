@@ -6,9 +6,9 @@ authors:
   - name: Gresa
     role: Architect
   - name: Doren
-    role: Developers  
+    role: Developer
   - name: Aida
-    role: Archive Specialist
+    role: Archival Specialist
 
 settings:
   debug: true
