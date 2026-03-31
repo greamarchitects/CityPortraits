@@ -1,0 +1,2 @@
+docs/assets/data/databases/GHSL_ALB/GHSL_ALB.gpkg filter=lfs diff=lfs merge=lfs -text
+assets/data/databases/GHSL_ALB/GHSL_ALB.gpkg filter=lfs diff=lfs merge=lfs -text
