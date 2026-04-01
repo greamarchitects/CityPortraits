@@ -1,4 +1,4 @@
-# Prominent
+# Actor
 
 ## Architect
 
@@ -20,7 +20,7 @@
   </div>
 
   <div class="archive-image">
-    <img src="/images/gani_strazimiri.jpg" alt="Gani Strazimiri portrait or archival material">
+    <img src="/assets/images/placeholder.jpg" alt="Gani Strazimiri portrait or archival material">
   </div>
 
   <div class="archive-caption">
@@ -60,7 +60,7 @@
   </div>
 
   <div class="archive-image">
-    <img src="/images/placeholder_plan.jpg" alt="Archival urban plan of Tirana">
+    <img src="/assets/images/placeholder.jpg" alt="Archival urban plan of Tirana">
   </div>
 
   <div class="archive-caption">
@@ -100,7 +100,7 @@
   </div>
 
   <div class="archive-image">
-    <img src="/images/placeholder_landscape.jpg" alt="Historic park or greenery system in Tirana">
+    <img src="/assets/images/placeholder.jpg" alt="Historic park or greenery system in Tirana">
   </div>
 
   <div class="archive-caption">
@@ -140,7 +140,7 @@
   </div>
 
   <div class="archive-image">
-    <img src="/images/placeholder_infra.jpg" alt="Infrastructure works in Albania (roads, bridges)">
+    <img src="/assets/images/placeholder.jpg" alt="Infrastructure works in Albania (roads, bridges)">
   </div>
 
   <div class="archive-caption">

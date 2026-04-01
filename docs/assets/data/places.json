@@ -1,0 +1,23 @@
+[
+  {
+    "id": "PL001",
+    "name": "Skanderbeg Square",
+    "city": "Tirana",
+    "coordinates": [41.3270, 19.8188],
+    "type": "square"
+  },
+  {
+    "id": "PL002",
+    "name": "Unit 5 Housing District",
+    "city": "Tirana",
+    "coordinates": [41.3310, 19.8200],
+    "type": "residential_district"
+  },
+  {
+    "id": "PL003",
+    "name": "Kamza Expansion Zone",
+    "city": "Tirana",
+    "coordinates": [41.3810, 19.7600],
+    "type": "peri_urban_area"
+  }
+]
