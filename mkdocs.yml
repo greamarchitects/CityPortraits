@@ -52,6 +52,7 @@ nav:
       - Patterns: patterns.md
 
   - Case Studies:
+      - Overview: case_studies.md
       - Berat: case_studies/berat.md
       - Durres: case_studies/durres.md
       - Gjirokaster: case_studies/gjirokaster.md
