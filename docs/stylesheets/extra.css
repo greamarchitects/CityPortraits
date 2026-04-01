@@ -135,4 +135,14 @@
   color: #888;
   padding: 10px 12px 14px;
   border-top: 1px solid #eee;
+
+/* ---------- Cytoscape ---------- */
+#cy-network {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  background: var(--md-default-bg-color);
+}
 }

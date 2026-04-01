@@ -42,6 +42,8 @@ extra_javascript:
   - javascripts/timeline-map.js
   - javascripts/graph.js
   - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
+  - https://unpkg.com/cytoscape/dist/cytoscape.min.js
+
 
 markdown_extensions:
   - pymdownx.superfences:

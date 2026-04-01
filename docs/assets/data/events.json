@@ -161,5 +161,21 @@
     "description": "Rapid informal expansion in peri-urban areas following the collapse of the socialist system.",
     "source_refs": ["SRC003"],
     "media": ["images/informal_expansion.jpg"]
+  },
+  {
+    "id": "EV004", 
+    "title": "Collaborative Urban Planning Project - Skanderbeg Square Development",
+    "start": "1970-01-01",
+    "end": "1980-12-31", 
+    "city": "Tirana",
+    "place_id": "PL001",
+    "category": ["planning", "urban_design", "socialist_modernism"],
+    "actor_ids": ["A002", "A004"], 
+    "tags": ["collaboration", "socialist_planning", "public_space"], 
+    "geometry_type": "point",
+    "coordinates": [41.3270, 19.8188], 
+    "description": "Joint project between Gani Strazimiri and Klement Kolaneci for the development and modernization of Skanderbeg Square under socialist urban planning guidelines.", 
+    "source_refs": ["SRC004"], 
+    "media": ["images/skanderbeg_collaboration.jpg"] 
   }
 ]
