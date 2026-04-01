@@ -44,17 +44,18 @@ Develop a reproducible method to describe and compare cities through their build
       <a href="methodology/">Methodology</a>
       <ul>
         <li>
+          <a href="methodology/written_documentation/">Contextual Analysis</a> 
+          <ul>
+            <li><a href="methodology/contextual_analysis/historical_archive/">Historical Archive</a></li>
+            <li><a href="methodology/contextual_analysis/narrative_studies/">Narrative Studies</a></li>
+            <li><a href="methodology/contextual_analysis/prominent/">Prominent</a></li>
+          </ul>
+        </li>
+        <li>
           <a href="methodology/spatial_analysis/">Spatial Analysis</a>
           <ul>
             <li><a href="methodology/spatial_analysis/urban_fabric/">Urban Fabric</a></li>
             <li><a href="methodology/spatial_analysis/architecture/">Architecture</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="methodology/written_documentation/">Written Documentation</a> 
-          <ul>
-            <li><a href="methodology/written_documentation/historical_archive/">Historical Archive</a></li>
-            <li><a href="methodology/written_documentation/narrative_studies/">Narrative Studies</a></li>
           </ul>
         </li>
         <li>

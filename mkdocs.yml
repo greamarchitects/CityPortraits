@@ -17,10 +17,10 @@ nav:
 
   - Methodology:
       - methodology/index.md
+      - Contextual Analysis:
+          - methodology/contextual_analysis/index.md
       - Spatial Analysis:
           - methodology/spatial_analysis/index.md
-      - Written Documentation:
-          - methodology/written_documentation/index.md
       - Data Analysis:
           - methodology/data_analysis/index.md
 
