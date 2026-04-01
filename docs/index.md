@@ -48,7 +48,7 @@ Develop a reproducible method to describe and compare cities through their build
           <ul>
             <li><a href="methodology/contextual_analysis/historical_archive/">Historical Archive</a></li>
             <li><a href="methodology/contextual_analysis/narrative_studies/">Narrative Studies</a></li>
-            <li><a href="methodology/contextual_analysis/prominent/">Prominent</a></li>
+            <li><a href="methodology/contextual_analysis/actor/">Actor</a></li>
           </ul>
         </li>
         <li>

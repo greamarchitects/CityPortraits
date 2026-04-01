@@ -1,0 +1,23 @@
+[
+  {
+    "id": "A001",
+    "name": "Armando Brasini",
+    "type": "architect",
+    "active_period": "1920–1935",
+    "nationality": "Italian"
+  },
+  {
+    "id": "A002",
+    "name": "Gani Strazimiri",
+    "type": "architect_planner",
+    "active_period": "1950–1985",
+    "nationality": "Albanian"
+  },
+  {
+    "id": "A003",
+    "name": "Informal Builders",
+    "type": "collective_actor",
+    "active_period": "1990–2010",
+    "nationality": "Various"
+  }
+]

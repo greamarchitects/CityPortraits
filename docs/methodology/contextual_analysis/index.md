@@ -15,8 +15,8 @@ Reports, studies, and institutional publications.
 → [Documentary Research](documentary_research.md)
 
 
-### Prominent 
-→ [Prominent Figures](prominent/index.md) 
+### Actor 
+→ [Actor](actor/index.md) 
 - Architects
 - Urban Planners
 - Landscape Architects

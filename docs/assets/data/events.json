@@ -113,6 +113,53 @@
       "Albania’s fragile democracy pursued development and modernization.",
       "In the last decade, research interest in socialist-period architecture has increased."
     ]
+  },
+  {
+    "id": "EV001",
+    "title": "Brasini Masterplan for Tirana",
+    "start": "1925-01-01",
+    "end": "1926-12-31",
+    "city": "Tirana",
+    "place_id": "PL001",
+    "category": ["planning", "urban_design"],
+    "actor_ids": ["A001"],
+    "tags": ["boulevard", "italian_influence"],
+    "geometry_type": "point",
+    "coordinates": [41.3275, 19.8187],
+    "description": "Armando Brasini proposes a monumental boulevard and axial urban structure for Tirana.",
+    "source_refs": ["SRC001"],
+    "media": ["images/brasini_plan.jpg"]
+  },
+  {
+    "id": "EV002",
+    "title": "Construction of Socialist Housing Blocks",
+    "start": "1965-01-01",
+    "end": "1975-12-31",
+    "city": "Tirana",
+    "place_id": "PL002",
+    "category": ["housing", "socialist_modernism"],
+    "actor_ids": ["A002"],
+    "tags": ["standardization", "prefabrication"],
+    "geometry_type": "point",
+    "coordinates": [41.3310, 19.8200],
+    "description": "Expansion of standardized housing blocks during socialist urbanization.",
+    "source_refs": ["SRC002"],
+    "media": ["images/socialist_blocks.jpg"]
+  },
+  {
+    "id": "EV003",
+    "title": "Post-Socialist Informal Expansion",
+    "start": "1992-01-01",
+    "end": "2005-12-31",
+    "city": "Tirana",
+    "place_id": "PL003",
+    "category": ["urban_growth", "informality"],
+    "actor_ids": ["A003"],
+    "tags": ["peri-urban", "self-construction"],
+    "geometry_type": "point",
+    "coordinates": [41.3400, 19.8300],
+    "description": "Rapid informal expansion in peri-urban areas following the collapse of the socialist system.",
+    "source_refs": ["SRC003"],
+    "media": ["images/informal_expansion.jpg"]
   }
-  
 ]
