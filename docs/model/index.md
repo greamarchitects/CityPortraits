@@ -623,7 +623,7 @@ _(V03: 20260401)_
 })();
 </script> -->
 
-## Map Timeline
+## Spatial Timeline
 <!-- _(V04_20260401_Default Map)_ -->
 <div class="timeline-layout">
 
