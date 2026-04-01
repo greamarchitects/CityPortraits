@@ -1,4 +1,4 @@
-# Written Documentation
+# Contextual Analysis
 
 Written documentation supports spatial analysis by interpreting historical, cultural, and narrative sources.
 
@@ -13,6 +13,14 @@ Descriptive accounts and qualitative interpretations of urban life.
 → [Narrative Studies](narrative_studies.md)
 Reports, studies, and institutional publications.  
 → [Documentary Research](documentary_research.md)
+
+
+### Prominent 
+→ [Prominent Figures](prominent/index.md) 
+- Architects
+- Urban Planners
+- Landscape Architects
+- Civil Engineers
 
 ## Approach
 
