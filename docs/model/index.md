@@ -124,7 +124,7 @@ The model synthesizes spatial and data analysis into structured representations 
 Relational representation of spatial elements and their connections.  
 → [Graphs](graphs.md)
 
-#### Sample Graph Visualization
+#### Sample Graph Visualization Mermaid
 
 ```mermaid
 graph TD
@@ -136,39 +136,16 @@ graph TD
     F --> E
 ```
 
+### Sample Graph - Cytoscape
+
 This is a sample network graph showing relationships between actors, events, and places. The actual graph will be rendered using the data from `events.json`, `actors.json`, and `places.json`.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="cy-network" style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"></div>
 
 
 ### Patterns
 Identification and abstraction of recurring spatial and architectural configurations.  
 → [Patterns](patterns.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

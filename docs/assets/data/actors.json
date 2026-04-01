@@ -19,5 +19,12 @@
     "type": "collective_actor",
     "active_period": "1990–2010",
     "nationality": "Various"
+  },
+  {
+    "id": "A004",
+    "name": "Klement Kolaneci",
+    "type": "architect_engineer",
+    "active_period": "1960–1990", 
+    "nationality": "Albanian"
   }
 ]
