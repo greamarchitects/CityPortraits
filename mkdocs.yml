@@ -61,3 +61,10 @@ nav:
       - Tirana: case_studies/tirana.md
 
   - About: about.md
+
+extra_css:
+  - https://unpkg.com/maplib/dist/maplibre-gl.css
+  - stylesheets/extra.css
+extra_javascript:
+  - https://unpkg.com/maplib/dist/maplibre-gl.js
+  - javascripts/timeline-map.js
