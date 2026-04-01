@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # CityPortraits
 
 CityPortraits is a framework for reconstructing and analyzing urban systems through spatial data, historical sources, and computational models.
@@ -10,81 +16,78 @@ Develop a reproducible method to describe and compare cities through their build
 
 <div class="cp-grid">
 
-  <a class="cp-card" href="methodology/index.md">
-    <div class="cp-icon">▣</div>
+  <a class="cp-card" href="methodology/">
+    <div class="cp-icon">◻◻◻ </div>
     <div class="cp-title">Methodology</div>
     <div class="cp-text">Integrated analytical framework combining spatial, documentary, and data-driven processes.</div>
   </a>
 
-  <a class="cp-card" href="model/index.md">
-    <div class="cp-icon">◫</div>
+  <a class="cp-card" href="model/">
+    <div class="cp-icon">○○○</div>
     <div class="cp-title">Model</div>
     <div class="cp-text">Structured synthesis layer translating inputs into graphs, patterns, and urban representations.</div>
   </a>
 
-  <a class="cp-card" href="case_studies/index.md">
-    <div class="cp-icon">△</div>
+  <a class="cp-card" href="case_studies/">
+    <div class="cp-icon">△△△</div>
     <div class="cp-title">Case Studies</div>
     <div class="cp-text">Application of the framework to selected cities for comparison and validation.</div>
   </a>
+
 </div>
 
 ## Structure
 
-<h3>Methodology</h3>
-
 <div class="cp-tree">
-  <p>
-    <a href="methodology/spatial_analysis/index.md">Spatial Analysis</a><br>
-    Spatial primitives, urban form, and pattern detection.<br>
-    <a href="methodology/spatial_analysis/cadastral_maps.md">Cadastral Maps</a> ·
-    <a href="methodology/spatial_analysis/urban_fabric/index.md">Urban Fabric</a> ·
-    <a href="methodology/spatial_analysis/architecture/index.md">Architecture</a>
-  </p>
-
-  <p>
-    <a href="methodology/written_documentation/index.md">Written Documentation</a><br>
-    Historical, archival, and narrative sources translated into structured inputs.<br>
-    <a href="methodology/written_documentation/historical_archive.md">Historical Archive</a> ·
-    <a href="methodology/written_documentation/newspaper_archives.md">Newspaper Archives</a> ·
-    <a href="methodology/written_documentation/documentary_research.md">Documentary Research</a> ·
-    <a href="methodology/written_documentation/narrative_studies.md">Narrative Studies</a>
-  </p>
-
-  <p>
-    <a href="methodology/data_analysis/index.md">Data Analysis</a><br>
-    Harmonization, calibration, and validation of heterogeneous urban datasets.<br>
-    <a href="methodology/data_analysis/datasets/index.md">Datasets</a> ·
-    <a href="methodology/data_analysis/calibration.md">Calibration</a> ·
-    <a href="methodology/data_analysis/validation.md">Validation</a>
-  </p>
-</div>
-
-<h3>Model</h3>
-
-<div class="cp-tree">
-  <p>
-    <a href="model/graphs.md">Graphs</a><br>
-    Relational structures encoding dependencies between spatial elements.
-  </p>
-
-  <p>
-    <a href="model/patterns.md">Patterns</a><br>
-    Recurrent spatial and architectural configurations abstracted for analysis.
-  </p>
-</div>
-
-<h3>Case Studies</h3>
-
-<div class="cp-tree">
-  <p>
-    <a href="case_studies/berat.md">Berat</a> ·
-    <a href="case_studies/durres.md">Durres</a> ·
-    <a href="case_studies/gjirokaster.md">Gjirokaster</a> ·
-    <a href="case_studies/korce.md">Korce</a> ·
-    <a href="case_studies/shkoder.md">Shkoder</a> ·
-    <a href="case_studies/tirana.md">Tirana</a>
-  </p>
+  <ul>
+    <li>
+      <a href="methodology/">Methodology</a>
+      <ul>
+        <li>
+          <a href="methodology/spatial_analysis/">Spatial Analysis</a>
+          <ul>
+            <li><a href="methodology/spatial_analysis/urban_fabric/">Urban Fabric</a></li>
+            <li><a href="methodology/spatial_analysis/architecture/">Architecture</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="methodology/written_documentation/">Written Documentation</a> 
+          <ul>
+            <li><a href="methodology/written_documentation/historical_archive/">Historical Archive</a></li>
+            <li><a href="methodology/written_documentation/narrative_studies/">Narrative Studies</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="methodology/data_analysis/">Data Analysis</a>
+          <ul>
+            <li><a href="methodology/data_analysis/datasets/">Datasets</a></li>
+            <li><a href="methodology/data_analysis/calibration/">Calibration</a></li>
+            <li><a href="methodology/data_analysis/validation/">Validation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="model/">Model</a>
+      <ul>
+        <li><a href="model/spatial_timeline/">Spatial Timeline</a></li>
+        <li><a href="model/graphs/">Graphs</a></li>
+        <li><a href="model/patterns/">Patterns</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="case_studies/">Case Studies</a>
+      <ul>
+        <!-- <li><a href="case_studies/berat/">Berat</a></li> -->
+        <li><a href="case_studies/durres/">Durres</a></li>
+        <!-- <li><a href="case_studies/gjirokaster/">Gjirokaster</a></li>
+        <li><a href="case_studies/korce/">Korce</a></li>
+        <li><a href="case_studies/shkoder/">Shkoder</a></li> -->
+        <li><a href="case_studies/tirana/">Tirana</a></li>
+        <li><a href="case_studies/vlora/">Vlora</a></li>
+      </ul>
+    </li>
+  </ul>
 </div>
 
 
@@ -92,7 +95,9 @@ Develop a reproducible method to describe and compare cities through their build
 
 Further development of the framework will focus on extending city coverage, refining classification systems, strengthening cross-source reconciliation, and improving reproducible generation of urban scenarios.
 
+
 <style>
+    
 .cp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -103,7 +108,7 @@ Further development of the framework will focus on extending city coverage, refi
 .cp-card {
   display: block;
   padding: 1rem 1.1rem;
-  border: 1px solid var(--md-default-fg-color--lightest, #d9d9d9);
+  border: 1px solid var(--md-default-fg-color--lightest, #ffffff);
   border-radius: 12px;
   background: var(--md-default-bg-color);
   text-decoration: none;
@@ -113,7 +118,7 @@ Further development of the framework will focus on extending city coverage, refi
 
 .cp-card:hover {
   transform: translateY(-2px);
-  border-color: var(--md-typeset-a-color, #5556bb);
+  border-color: var(--md-typeset-a-color, #ffffff);
 }
 
 .cp-icon {
@@ -131,7 +136,7 @@ Further development of the framework will focus on extending city coverage, refi
 .cp-text {
   font-size: 0.92rem;
   line-height: 1.45;
-  color: var(--md-default-fg-color--light, #354f97);
+  color: var(--md-default-fg-color--light, #ffffff);
 }
 
 .cp-section {
@@ -139,22 +144,54 @@ Further development of the framework will focus on extending city coverage, refi
 }
 
 .cp-tree {
-  padding: 0.9rem 1rem;
-  border-left: 2px solid var(--md-default-fg-color--lightest, #6771aa);
-  background: color-mix(in srgb, var(--md-default-bg-color) 96%, var(--md-default-fg-color) 4%);
-  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--md-default-fg-color--lightest, #ffffff);
+  border-radius: 12px;
+  background: var(--md-default-bg-color);
+  margin: 0.75rem 0 1.5rem 0;
 }
 
 .cp-tree ul {
-  margin-top: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.cp-tree > ul {
+  padding-left: 0.2rem;
 }
 
 .cp-tree li {
-  margin-bottom: 0.9rem;
+  position: relative;
+  margin: 0.45rem 0;
+  padding-left: 1rem;
+  line-height: 1.5;
+}
+
+.cp-tree li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 0.65rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest, #ffffff);
+}
+
+.cp-tree li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.55rem;
+  bottom: 0.7rem;
+  border-left: 1px solid var(--md-default-fg-color--lightest, #ffffff);
+}
+
+.cp-tree li:last-child::after {
+  bottom: 0.8em;
 }
 
 .cp-tree a {
-  font-weight: 500;
   text-decoration: none;
+  font-weight: 500;
 }
-</style>
+    </style>

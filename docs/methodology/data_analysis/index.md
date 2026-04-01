@@ -4,15 +4,15 @@ Data analysis structures and quantifies urban information to support spatial int
 
 ### Datasets  
 Sources used to describe and model the urban system.  
-→ [Overview](datasets.md) · [GDE](gde.md) · [GHSL](ghsl.md) · [ASIG](asig.md) · [OSM](osm.md) · [Census](census.md)
+→ [Datasets](datasets/index.md) · [GDE](datasets/gde.md) · [GHSL](datasets/ghsl.md) · [ASIG](datasets/asig.md) · [OSM](datasets/osm.md) · [Census](datasets/census.md)
 
 ### Calibration  
 Adjustment of data and models to align with known conditions.  
-→ [Calibration](calibration.md)
+→ [Calibration](calibration/index.md)
 
 ### Validation  
 Evaluation of results against reference data and observations.  
-→ [Validation](validation.md)
+→ [Validation](validation/index.md)
 
 ## Approach
 

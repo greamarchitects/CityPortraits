@@ -4,19 +4,15 @@ Written documentation supports spatial analysis by interpreting historical, cult
 
 ### Historical Archive  
 Official records, maps, and archival documents.  
-→ [Historical Archive](historical_archive.md)
-
-### Newspaper Archives  
+→ [Historical Archive](historical_archive.md)  
 Media sources reflecting events, discourse, and urban change.  
 → [Newspaper Archives](newspaper_archives.md)
-
-### Documentary Research  
-Reports, studies, and institutional publications.  
-→ [Documentary Research](documentary_research.md)
 
 ### Narrative Studies  
 Descriptive accounts and qualitative interpretations of urban life.  
 → [Narrative Studies](narrative_studies.md)
+Reports, studies, and institutional publications.  
+→ [Documentary Research](documentary_research.md)
 
 ## Approach
 

@@ -4,14 +4,15 @@ Case studies apply the methodology to specific cities, revealing local patterns 
 
 ## Cities
 
-- [Berat](case_studies/berat.md)  
-- [Durres](case_studies/durres.md)  
-- [Gjirokaster](case_studies/gjirokaster.md)  
-- [Korce](case_studies/korce.md)  
-- [Shkoder](case_studies/shkoder.md)  
-- [Tirana](case_studies/tirana.md)
+<!-- [Berat](berat.md) -->
+[Durres](durres.md)
+<!-- [Gjirokaster](gjirokaster.md) -->
+<!-- [Korce](korce.md) -->
+<!-- [Shkoder](shkoder.md) -->
+[Tirana](tirana.md)
+[Vlora](vlora.md)
 
-## Approachho
+## Approach
 
 - Multi-scale analysis  
 - Cross-domain integration  
