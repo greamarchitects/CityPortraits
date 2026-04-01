@@ -26,11 +26,11 @@ async function loadEvents() {
     // docs/assets/data/events.json
     //
     // Then load it with this path:
-    const response = await fetch("assets/data/events.json");
+    const response = await fetch("/greamarchitects/CityPortraits/assets/data/events.json");
 
     // Check if the file was found successfully
     if (!response.ok) {
-      throw new Error(`HTTP error ${response.status} while loading assets/data/events.json`);
+      throw new Error(`HTTP error ${response.status} while loading events.json`);
     }
 
     // Convert response to JS object

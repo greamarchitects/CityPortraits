@@ -34,9 +34,9 @@ nav:
       - about/index.md
 
 extra_css:
-  - https://unpkg.com/maplibre-gl/dist/maplibre-gl.css
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
   - stylesheets/extra.css
 
 extra_javascript:
-  - https://unpkg.com/maplibre-gl/dist/maplibre-gl.js
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/timeline-map.js
