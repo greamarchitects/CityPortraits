@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 # Model
 
 The model synthesizes spatial and data analysis into structured representations of urban systems.
