@@ -1,0 +1,181 @@
+[
+  {
+    "id": "P001",
+    "period": "1920s-1930s",
+    "title": "Modernization under King Zog I",
+    "text": "Albania, and especially Tirana, entered a period of modernization and westernization through political reform, urban transformation, and the work of local and foreign architects.",
+    "tags": ["modernization", "tirana", "zog", "architecture"],
+    "mapTitle": "Tirana during the interwar period",
+    "mapCaption": "Modernization and western-oriented transformation",
+    "lat": 41.3275,
+    "lng": 19.8187,
+    "zoom": 13,
+    "items": [
+      "Tirana entered a phase of political and cultural transformation after becoming capital.",
+      "King Zog I promoted modernization and westernization.",
+      "Austrian and Italian architects were invited to work in Albania.",
+      "Albanian architects educated abroad contributed to modern architecture.",
+      "Florestano di Fausto promoted Novecento-style architecture.",
+      "Main cities saw civic construction influenced by European late historicist architecture.",
+      "Legislative reforms modernized finance, health, expropriation, and administration.",
+      "Social reforms included measures on dress codes and women’s emancipation."
+    ]
+  },
+  {
+    "id": "P002",
+    "period": "1939-1943",
+    "title": "Italian occupation and architectural consolidation",
+    "text": "Under Italian Fascist rule, Albania underwent political regime change while the architectural and planning imprint of Italy deepened, especially in Tirana.",
+    "tags": ["occupation", "italy", "tirana", "architecture"],
+    "mapTitle": "Tirana under Italian rule",
+    "mapCaption": "Political occupation and stronger Italian planning influence",
+    "lat": 41.3275,
+    "lng": 19.8187,
+    "zoom": 13,
+    "items": [
+      "Albania was annexed by Italy and placed under Fascist rule.",
+      "The Italian architectural imprint on Tirana deepened.",
+      "Central ministries and institutional buildings continued to reflect state-building ambitions."
+    ]
+  },
+  {
+    "id": "P003",
+    "period": "late 1940s-1950s",
+    "title": "Soviet-oriented socialist transformation",
+    "text": "After 1945, Albania was transformed into a socialist state aligned with the Soviet Union. Planning, architecture, and education increasingly followed Soviet models.",
+    "tags": ["socialism", "soviet", "planning", "architecture"],
+    "mapTitle": "Tirana in the early socialist period",
+    "mapCaption": "Soviet influence on architecture and urban planning",
+    "lat": 41.3275,
+    "lng": 19.8187,
+    "zoom": 13,
+    "items": [
+      "Communists came to power and confiscated private property.",
+      "Albania became politically and ideologically aligned with the Soviet Union.",
+      "Moscow-trained Albanian architects introduced Soviet planning models.",
+      "Gani Strazimiri became a key figure in Stalinist architecture.",
+      "The 1956 plan for central Tirana proposed monumental axes, super-blocks, and socialist realist geometry.",
+      "Architectural education and references became strongly Soviet-oriented."
+    ]
+  },
+  {
+    "id": "P004",
+    "period": "socialist period",
+    "title": "Standardization, institutes, and ideological control",
+    "text": "The socialist period institutionalized design through centralized institutes, Soviet norms, standardized housing, and the ideological use of architecture and art.",
+    "tags": ["standardization", "housing", "institutes", "ideology"],
+    "mapTitle": "Socialist urban development in Albania",
+    "mapCaption": "Centralized planning and repetitive urban form",
+    "lat": 41.3275,
+    "lng": 19.8187,
+    "zoom": 7,
+    "items": [
+      "Architects and engineers were grouped into Design Institutes.",
+      "Town planning followed Soviet norms for workplaces, services, and facilities.",
+      "Standardization produced repetitive housing types and urban monotony.",
+      "Socialist realism was imposed across architecture and the arts.",
+      "Art and architecture became instruments of propaganda.",
+      "Large industrial and planning projects were presented as socialist achievements."
+    ]
+  },
+  {
+    "id": "P005",
+    "period": "1960s-1970s",
+    "title": "Mature socialist urban and construction development",
+    "text": "During the mature socialist period, urban development continued through standardized expansion, specific urban examples in Tirana, and industrialized building systems such as prefabrication.",
+    "tags": ["socialist urbanism", "tirana", "prefabrication"],
+    "mapTitle": "Tirana and socialist construction systems",
+    "mapCaption": "Urban development and industrialized construction",
+    "lat": 41.331,
+    "lng": 19.804,
+    "zoom": 14,
+    "items": [
+      "Durrës Street in Tirana is referenced as an example of socialist urban development.",
+      "The Camus prefabrication system was introduced in Albania.",
+      "Socialist visual culture appeared in magazines and architectural drawings."
+    ]
+  },
+  {
+    "id": "P006",
+    "period": "after 1990",
+    "title": "Post-socialist transition and reinterpretation",
+    "text": "After the collapse of dictatorship, socialist heritage entered a difficult transition marked by destruction, politicized debate, and only later renewed research interest.",
+    "tags": ["post-socialism", "heritage", "transition", "research"],
+    "mapTitle": "Post-socialist Albania",
+    "mapCaption": "Transition, loss, and later re-evaluation",
+    "lat": 41.3275,
+    "lng": 19.8187,
+    "zoom": 7,
+    "items": [
+      "There was little serious theoretical debate on socialist architecture after the regime fell.",
+      "Discussion became politicized and descriptive rather than scientific.",
+      "Factories and socialist heritage were damaged, stolen, or destroyed.",
+      "Albania’s fragile democracy pursued development and modernization.",
+      "In the last decade, research interest in socialist-period architecture has increased."
+    ]
+  },
+  {
+    "id": "EV001",
+    "title": "Brasini Masterplan for Tirana",
+    "start": "1925-01-01",
+    "end": "1926-12-31",
+    "city": "Tirana",
+    "place_id": "PL001",
+    "category": ["planning", "urban_design"],
+    "actor_ids": ["A001"],
+    "tags": ["boulevard", "italian_influence"],
+    "geometry_type": "point",
+    "coordinates": [41.3275, 19.8187],
+    "description": "Armando Brasini proposes a monumental boulevard and axial urban structure for Tirana.",
+    "source_refs": ["SRC001"],
+    "media": ["images/brasini_plan.jpg"]
+  },
+  {
+    "id": "EV002",
+    "title": "Construction of Socialist Housing Blocks",
+    "start": "1965-01-01",
+    "end": "1975-12-31",
+    "city": "Tirana",
+    "place_id": "PL002",
+    "category": ["housing", "socialist_modernism"],
+    "actor_ids": ["A002"],
+    "tags": ["standardization", "prefabrication"],
+    "geometry_type": "point",
+    "coordinates": [41.3310, 19.8200],
+    "description": "Expansion of standardized housing blocks during socialist urbanization.",
+    "source_refs": ["SRC002"],
+    "media": ["images/socialist_blocks.jpg"]
+  },
+  {
+    "id": "EV003",
+    "title": "Post-Socialist Informal Expansion",
+    "start": "1992-01-01",
+    "end": "2005-12-31",
+    "city": "Tirana",
+    "place_id": "PL003",
+    "category": ["urban_growth", "informality"],
+    "actor_ids": ["A003"],
+    "tags": ["peri-urban", "self-construction"],
+    "geometry_type": "point",
+    "coordinates": [41.3400, 19.8300],
+    "description": "Rapid informal expansion in peri-urban areas following the collapse of the socialist system.",
+    "source_refs": ["SRC003"],
+    "media": ["images/informal_expansion.jpg"]
+  },
+  {
+    "id": "EV004", 
+    "title": "Collaborative Urban Planning Project - Skanderbeg Square Development",
+    "start": "1970-01-01",
+    "end": "1980-12-31", 
+    "city": "Tirana",
+    "place_id": "PL001",
+    "category": ["planning", "urban_design", "socialist_modernism"],
+    "actor_ids": ["A002", "A004"], 
+    "tags": ["collaboration", "socialist_planning", "public_space"], 
+    "geometry_type": "point",
+    "coordinates": [41.3270, 19.8188], 
+    "description": "Joint project between Gani Strazimiri and Klement Kolaneci for the development and modernization of Skanderbeg Square under socialist urban planning guidelines.", 
+    "source_refs": ["SRC004"], 
+    "media": ["images/skanderbeg_collaboration.jpg"] 
+  }
+]

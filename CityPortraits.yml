@@ -1,0 +1,17 @@
+project:
+  name: CityPortraits
+  version: 1.0
+
+authors:
+  - name: Gresa
+    role: Architect
+  - name: Doren
+    role: Developer
+  - name: Aida
+    role: Archival Specialist
+
+settings:
+  debug: true
+  paths:
+    data: ./data
+    output: ./output
