@@ -18,6 +18,7 @@ hide:
 EXCLUDED_FILES = {"print_all.md"}
 EXCLUDED_DIRS = {"assets", "javascripts", "stylesheets"}
 
+
 def remove_frontmatter(content):
     if content.startswith("---"):
         parts = content.split("---", 2)
@@ -25,14 +26,18 @@ def remove_frontmatter(content):
             return parts[2].lstrip()
     return content
 
+
 def remove_first_h1(content):
     return re.sub(r"^# .*\n", "", content, count=1, flags=re.MULTILINE)
+
 
 def page_break():
     return "\n\n<div class='page-break'></div>\n\n"
 
+
 def normalize_path(path):
     return path.replace("\\", "/")
+
 
 def slugify_heading(text):
     text = text.lower()
@@ -41,6 +46,7 @@ def slugify_heading(text):
     text = re.sub(r"[^\w\s-]", "", text)
     text = re.sub(r"\s+", "-", text.strip())
     return text
+
 
 def normalize_asset_paths(content):
     # HTML src="../../../assets/..."
@@ -73,6 +79,7 @@ def normalize_asset_paths(content):
 
     return content
 
+
 def collect_all_md_files():
     md_files = []
 
@@ -90,6 +97,7 @@ def collect_all_md_files():
             md_files.append(normalize_path(rel_path))
 
     return md_files
+
 
 def sort_key(path):
     parts = path.split("/")
@@ -110,12 +118,14 @@ def sort_key(path):
 
     return (group, parts[:-1], index_priority, filename)
 
+
 def format_title(path):
     parts = path.replace(".md", "").split("/")
     return " → ".join(
         p.replace("_", " ").title()
         for p in parts
     )
+
 
 def build_anchor_map(files):
     """
@@ -133,6 +143,7 @@ def build_anchor_map(files):
 
     return anchor_map
 
+
 def resolve_relative_link(current_file, target_link):
     """
     Resolve a markdown relative link as if it were written from current_file.
@@ -141,16 +152,22 @@ def resolve_relative_link(current_file, target_link):
     joined = os.path.normpath(os.path.join(current_dir, target_link))
     return normalize_path(joined)
 
+
 def rewrite_internal_links(content, current_file, anchor_map):
     """
-    Rewrite markdown links from relative .md paths to print_all anchors.
+    Rewrite markdown links from relative doc paths to print_all anchors.
+    Handles:
+      - file.md
+      - folder/
+      - folder
+      - ../folder/
+      - ../file.md#section
     """
 
     def repl(match):
         text = match.group(1)
-        target = match.group(2)
+        target = match.group(2).strip()
 
-        # Skip external links, anchors, mailto, assets, absolute URLs
         if (
             target.startswith("http://")
             or target.startswith("https://")
@@ -162,17 +179,19 @@ def rewrite_internal_links(content, current_file, anchor_map):
         ):
             return match.group(0)
 
-        # Split optional anchor
         if "#" in target:
             file_part, fragment = target.split("#", 1)
         else:
             file_part, fragment = target, None
 
-        # Only rewrite markdown file links
-        if not file_part.endswith(".md"):
-            return match.group(0)
+        resolved = None
 
-        resolved = resolve_relative_link(current_file, file_part)
+        if file_part.endswith(".md"):
+            resolved = resolve_relative_link(current_file, file_part)
+        elif file_part.endswith("/"):
+            resolved = resolve_relative_link(current_file, file_part + "index.md")
+        elif "." not in os.path.basename(file_part):
+            resolved = resolve_relative_link(current_file, file_part + "/index.md")
 
         if resolved in anchor_map:
             new_target = anchor_map[resolved]
@@ -180,24 +199,26 @@ def rewrite_internal_links(content, current_file, anchor_map):
                 new_target += "-" + slugify_heading(fragment)
             return f"[{text}]({new_target})"
 
-        # fallback: leave unchanged
         return match.group(0)
 
     return re.sub(r'\[([^\]]+)\]\(([^)]+)\)', repl, content)
 
+
 def rewrite_html_links(content, current_file, anchor_map):
     """
-    Rewrite raw HTML href links from relative .md paths to print_all anchors.
-    Example:
-      <a href="methodology/index.md">Methodology</a>
-      -> <a href="#methodology-index">Methodology</a>
+    Rewrite raw HTML href links from relative doc paths to print_all anchors.
+    Handles:
+      - methodology/index.md
+      - case_studies/
+      - model
+      - ../written_documentation/
+      - calibration/#section
     """
 
     def repl(match):
         quote = match.group(1)
-        target = match.group(2)
+        target = match.group(2).strip()
 
-        # Skip external, anchors, mailto, absolute links, assets
         if (
             target.startswith("http://")
             or target.startswith("https://")
@@ -209,17 +230,19 @@ def rewrite_html_links(content, current_file, anchor_map):
         ):
             return match.group(0)
 
-        # split optional fragment
         if "#" in target:
             file_part, fragment = target.split("#", 1)
         else:
             file_part, fragment = target, None
 
-        # only rewrite markdown links
-        if not file_part.endswith(".md"):
-            return match.group(0)
+        resolved = None
 
-        resolved = resolve_relative_link(current_file, file_part)
+        if file_part.endswith(".md"):
+            resolved = resolve_relative_link(current_file, file_part)
+        elif file_part.endswith("/"):
+            resolved = resolve_relative_link(current_file, file_part + "index.md")
+        elif "." not in os.path.basename(file_part):
+            resolved = resolve_relative_link(current_file, file_part + "/index.md")
 
         if resolved in anchor_map:
             new_target = anchor_map[resolved]
@@ -230,6 +253,7 @@ def rewrite_html_links(content, current_file, anchor_map):
         return match.group(0)
 
     return re.sub(r'href=(["\'])([^"\']+)\1', repl, content)
+
 
 files = sorted(collect_all_md_files(), key=sort_key)
 anchor_map = build_anchor_map(files)
@@ -247,7 +271,23 @@ with open(OUTPUT, "w", encoding="utf-8") as out:
         content = remove_first_h1(content).strip()
         content = normalize_asset_paths(content)
         content = rewrite_internal_links(content, rel_path, anchor_map)
-        content = rewrite_html_links(content, rel_path, anchor_map) 
+        content = rewrite_html_links(content, rel_path, anchor_map)
+
+        # Debug check for unreplaced links in each source file
+        for bad in [
+            'href="methodology/',
+            'href="model/',
+            'href="case_studies/',
+            'href="written_documentation/',
+            'href="calibration/',
+            '](methodology/',
+            '](model/',
+            '](case_studies/',
+            '](written_documentation/',
+            '](calibration/',
+        ]:
+            if bad in content:
+                print(f"⚠ Unrewritten link still present in {rel_path}: {bad}")
 
         title = format_title(rel_path)
 
@@ -257,6 +297,26 @@ with open(OUTPUT, "w", encoding="utf-8") as out:
         if i < len(files) - 1:
             out.write(page_break())
 
-print(f"✅ print_all.md generated with {len(files)} markdown files.")
+# Final debug check on the merged print_all.md
+print("\nChecking generated print_all.md for bad links...")
+with open(OUTPUT, "r", encoding="utf-8") as f:
+    final_content = f.read()
+
+for bad in [
+    'href="methodology/',
+    'href="model/',
+    'href="case_studies/',
+    'href="written_documentation/',
+    'href="calibration/',
+    '](methodology/',
+    '](model/',
+    '](case_studies/',
+    '](written_documentation/',
+    '](calibration/',
+]:
+    if bad in final_content:
+        print(f"⚠ Still present in print_all.md: {bad}")
+
+print(f"\n✅ print_all.md generated with {len(files)} markdown files.")
 for f in files:
     print(" -", f)
