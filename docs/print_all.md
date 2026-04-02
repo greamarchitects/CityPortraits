@@ -19,19 +19,19 @@ Develop a reproducible method to describe and compare cities through their build
 
 <div class="cp-grid">
 
-  <a class="cp-card" href="methodology/">
+  <a class="cp-card" href="#methodology-index">
     <div class="cp-icon">◻◻◻ </div>
     <div class="cp-title">Methodology</div>
     <div class="cp-text">Integrated analytical framework combining spatial, documentary, and data-driven processes.</div>
   </a>
 
-  <a class="cp-card" href="model/">
+  <a class="cp-card" href="#model-index">
     <div class="cp-icon">○○○</div>
     <div class="cp-title">Model</div>
     <div class="cp-text">Structured synthesis layer translating inputs into graphs, patterns, and urban representations.</div>
   </a>
 
-  <a class="cp-card" href="case_studies/">
+  <a class="cp-card" href="#case-studies-index">
     <div class="cp-icon">△△△</div>
     <div class="cp-title">Case Studies</div>
     <div class="cp-text">Application of the framework to selected cities for comparison and validation.</div>
@@ -44,35 +44,35 @@ Develop a reproducible method to describe and compare cities through their build
 <div class="cp-tree">
   <ul>
     <li>
-      <a href="methodology/">Methodology</a>
+      <a href="#methodology-index">Methodology</a>
       <ul>
         <li>
           <a href="methodology/written_documentation/">Contextual Analysis</a> 
           <ul>
             <li><a href="methodology/contextual_analysis/historical_archive/">Historical Archive</a></li>
             <li><a href="methodology/contextual_analysis/narrative_studies/">Narrative Studies</a></li>
-            <li><a href="methodology/contextual_analysis/actor/">Actor</a></li>
+            <li><a href="#methodology-contextual-analysis-actor-index">Actor</a></li>
           </ul>
         </li>
         <li>
-          <a href="methodology/spatial_analysis/">Spatial Analysis</a>
+          <a href="#methodology-spatial-analysis-index">Spatial Analysis</a>
           <ul>
-            <li><a href="methodology/spatial_analysis/urban_fabric/">Urban Fabric</a></li>
-            <li><a href="methodology/spatial_analysis/architecture/">Architecture</a></li>
+            <li><a href="#methodology-spatial-analysis-urban-fabric-index">Urban Fabric</a></li>
+            <li><a href="#methodology-spatial-analysis-architecture-index">Architecture</a></li>
           </ul>
         </li>
         <li>
-          <a href="methodology/data_analysis/">Data Analysis</a>
+          <a href="#methodology-data-analysis-index">Data Analysis</a>
           <ul>
-            <li><a href="methodology/data_analysis/datasets/">Datasets</a></li>
-            <li><a href="methodology/data_analysis/calibration/">Calibration</a></li>
-            <li><a href="methodology/data_analysis/validation/">Validation</a></li>
+            <li><a href="#methodology-data-analysis-datasets-index">Datasets</a></li>
+            <li><a href="#methodology-data-analysis-calibration-index">Calibration</a></li>
+            <li><a href="#methodology-data-analysis-validation-index">Validation</a></li>
           </ul>
         </li>
       </ul>
     </li>
     <li>
-      <a href="model/">Model</a>
+      <a href="#model-index">Model</a>
       <ul>
         <li><a href="model/spatial_timeline/">Spatial Timeline</a></li>
         <li><a href="model/graphs/">Graphs</a></li>
@@ -80,7 +80,7 @@ Develop a reproducible method to describe and compare cities through their build
       </ul>
     </li>
     <li>
-      <a href="case_studies/">Case Studies</a>
+      <a href="#case-studies-index">Case Studies</a>
       <ul>
         <!-- <li><a href="case_studies/berat/">Berat</a></li> -->
         <li><a href="case_studies/durres/">Durres</a></li>
@@ -228,7 +228,7 @@ Further development of the framework will focus on extending city coverage, refi
 ## Insights
 
 <div class="insights-grid">
-  <div class="insight-card" onclick="window.location.href='contextual_analysis/'">
+  <div class="insight-card" onclick="window.location.href='#methodology-contextual-analysis-index'">
     <div class="card-header">
       <h3>Contextual Analysis</h3>
     </div>
@@ -237,7 +237,7 @@ Further development of the framework will focus on extending city coverage, refi
     </p>
   </div>
 
-  <div class="insight-card" onclick="window.location.href='spatial_analysis/'">
+  <div class="insight-card" onclick="window.location.href='#methodology-spatial-analysis-index'">
     <div class="card-header">
       <h3>Spatial Analysis</h3>
     </div>
@@ -246,7 +246,7 @@ Further development of the framework will focus on extending city coverage, refi
     </p>
   </div>
 
-  <div class="insight-card" onclick="window.location.href='data_analysis/'">
+  <div class="insight-card" onclick="window.location.href='#methodology-data-analysis-index'">
     <div class="card-header">
       <h3>Data Analysis</h3>
     </div>
