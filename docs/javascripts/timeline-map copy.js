@@ -26,11 +26,9 @@ async function loadEvents() {
     // docs/assets/data/events.json
     //
     // Build a path relative to the current page so that this works in local and deployed paths.
-    const currentPath = window.location.pathname;
-    const basePath = currentPath.replace(/\/model.*$/, "");
-    const eventsUrl = `${basePath}/assets/data/events.json`.replace(/\/+/g, "/");
-
-const response = await fetch(eventsUrl);
+    const basePath = window.location.pathname.replace(/\/model\/?$/, "");
+    const dataUrl = `${basePath}/assets/data/events.json`.replace(/\/\/+/, "/");
+    const response = await fetch(dataUrl);
 
     // Check if the file was found successfully
     if (!response.ok) {
@@ -209,4 +207,3 @@ function updateActiveYear(index) {
 
 // Wait for page to fully load before running
 document.addEventListener("DOMContentLoaded", loadEvents);
-if (typeof document$ !== "undefined") document$.subscribe(loadEvents);
