@@ -60,7 +60,7 @@
   </div>
 
   <div class="archive-image">
-    <img src="../../../assets/images/placeholder.jpg" alt="Archival urban plan of Tirana">
+    <img src="/greamarchitects/CityPortraits/assets/images/placeholder.jpg" alt="Archival urban plan of Tirana">
   </div>
 
   <div class="archive-caption">
