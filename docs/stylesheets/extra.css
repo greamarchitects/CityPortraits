@@ -1,12 +1,14 @@
 /* =====================================
    CITYPORTRAITS — UI SYSTEM
    ===================================== */
-   
-   
-   
-/* ---------- Timeline ---------- */
 
-   .timeline-layout {
+
+/* =====================================
+   1. TIMELINE
+   ===================================== */
+
+/* Main timeline wrapper layout */
+.timeline-layout {
   display: grid;
   grid-template-columns: 1fr;
   /* gap: 1.25rem;
@@ -14,6 +16,7 @@
   margin-bottom: 2rem; */
 }
 
+/* Container around the interactive timeline */
 .timeline-wrapper {
   padding: 20px;
   border-radius: 12px;
@@ -21,6 +24,7 @@
   border: 1px solid var(--md-default-fg-color--lightest, #ddd);
 }
 
+/* Row of year buttons */
 .years {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +34,7 @@
   padding-top: 10px;
 }
 
+/* Horizontal line behind the year buttons */
 .years::before {
   content: "";
   position: absolute;
@@ -40,6 +45,7 @@
   background: #ccc;
 }
 
+/* Individual year button */
 .year {
   padding: 6px 12px;
   border-radius: 20px;
@@ -49,24 +55,28 @@
   background: white;
 }
 
+/* Active/selected year state */
 .year.active {
   background: black;
   color: white;
   font-weight: bold;
 }
 
+/* Event content area below the timeline */
 .event-box {
   border-top: 1px solid #ddd;
   padding-top: 18px;
   min-height: 150px;
 }
 
+/* Tag container for event metadata */
 .event-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
+/* Individual event tag */
 .event-tag {
   padding: 4px 10px;
   border-radius: 999px;
@@ -75,16 +85,24 @@
   background: #f5f5f5;
 }
 
-/* ---------- Map Panel ---------- */
 
+/* =====================================
+   2. MAP PANEL
+   ===================================== */
+
+/* Timeline-linked map area */
 .timeline-map {
   width: 100%;
   min-height: 420px;
   border-radius: 12px;
 }
 
-/* ---------- Archive Cards ---------- */
 
+/* =====================================
+   3. ARCHIVE CARDS
+   ===================================== */
+
+/* Main card container for archival figures/items */
 .archive-card {
   max-width: 420px;
   border: 1px solid #ddd;
@@ -94,6 +112,7 @@
   font-family: system-ui, sans-serif;
 }
 
+/* Top bar with image count / metadata */
 .archive-header {
   display: flex;
   justify-content: space-between;
@@ -103,26 +122,32 @@
   color: #666;
 }
 
+/* Main archive title */
 .archive-title {
   font-size: 18px;
   font-weight: 600;
   padding: 10px 12px 0;
 }
 
+/* Secondary archive metadata */
 .archive-meta {
   font-size: 13px;
   color: #777;
   padding: 4px 12px 10px;
 }
 
+/* Inline people/role text */
 .archive-people {
   font-style: italic;
 }
 
+/* Archive image */
 .archive-image img {
   width: 100%;
+  display: block;
 }
 
+/* Image caption */
 .archive-caption {
   font-size: 12px;
   color: #666;
@@ -130,13 +155,20 @@
   font-style: italic;
 }
 
+/* Source / reference text at bottom of card */
 .archive-source {
   font-size: 11px;
   color: #888;
   padding: 10px 12px 14px;
   border-top: 1px solid #eee;
+}
 
-/* ---------- Cytoscape ---------- */
+
+/* =====================================
+   4. CYTOSCAPE / GRAPH
+   ===================================== */
+
+/* Graph container for Cytoscape network */
 #cy-network {
   width: 100%;
   height: 500px;
@@ -145,4 +177,311 @@
   margin-top: 20px;
   background: var(--md-default-bg-color);
 }
+
+
+/* =====================================
+   5. METHODOLOGY — INSIGHTS CARDS
+   ===================================== */
+
+/* Grid for insight cards */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.25rem 0 2rem 0;
+}
+
+/* Individual insight card */
+.insight-card {
+  display: block;
+  padding: 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+/* Hover effect */
+.insight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+/* Card title */
+.card-header h3 {
+  margin: 0 0 0.65rem 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+/* Card text */
+.insight-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+
+/* =====================================
+   6. METHODOLOGY — WORKFLOW SCROLL
+   ===================================== */
+
+/* Scrollable workflow container */
+.workflow-scroll {
+  max-height: 520px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 0.35rem;
+  margin: 1.25rem 0 2rem 0;
+}
+
+/* Individual workflow step card */
+.workflow-card {
+  scroll-snap-align: start;
+  min-height: 220px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Large step number */
+.workflow-card-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--md-primary-fg-color);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  padding-right: 1rem;
+}
+
+/* Workflow step title */
+.workflow-card-body h4 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.05rem;
+}
+
+/* Workflow step description */
+.workflow-card-body p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Custom scrollbar */
+.workflow-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.workflow-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+}
+
+
+/* =====================================
+   7. METHODOLOGY — PRINCIPLES CARDS
+   ===================================== */
+
+/* Grid for principle cards */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+/* Individual principle card */
+.principle-card {
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* Principle title */
+.principle-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* Principle bullet list */
+.principle-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.principle-card li {
+  margin-bottom: 0.45rem;
+}
+
+
+/* =====================================
+   8. METHODOLOGY — OBJECTIVES CARDS
+   ===================================== */
+
+/* Grid for objectives summary cards */
+.objectives-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+/* Individual objective item */
+.objective-item {
+  padding: 1.2rem 1.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background: var(--md-default-bg-color);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover state */
+.objective-item:hover {
+  border-color: rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+/* Objective title */
+.objective-content h4 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+/* Objective description */
+.objective-content p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--md-default-fg-color--light);
+}
+
+
+/* =====================================
+   9. GENERIC PAGE UTILITIES
+   ===================================== */
+
+/* Force page break when printing */
+.page-break {
+  page-break-before: always;
+}
+
+
+/* =====================================
+   10. RESPONSIVE RULES
+   ===================================== */
+
+@media (max-width: 1000px) {
+  .insights-grid,
+  .principles-grid,
+  .objectives-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .workflow-card {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .workflow-card-number {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-right: 0;
+    padding-bottom: 0.75rem;
+  }
+
+  .workflow-scroll {
+    max-height: 480px;
+  }
+}
+
+
+/* =====================================
+   11. PRINT STYLES
+   ===================================== */
+
+@media print {
+  .page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer {
+    display: none !important;
+  }
+
+  .md-grid,
+  .md-content,
+  .md-content__inner {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  p,
+  li,
+  blockquote,
+  table,
+  pre,
+  img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  html,
+  body {
+    font-size: 10pt;
+    line-height: 1.25;
+  }
+
+  h1 { font-size: 18pt; }
+  h2 { font-size: 15pt; }
+  h3 { font-size: 13pt; }
+  h4 { font-size: 11pt; }
+
+  p,
+  li {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+
+  .md-typeset table,
+  .md-typeset pre,
+  .md-typeset img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
 }
