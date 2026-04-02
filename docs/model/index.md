@@ -124,29 +124,101 @@ The model synthesizes spatial and data analysis into structured representations 
 Relational representation of spatial elements and their connections.  
 → [Graphs](graphs.md)
 
-#### Sample Graph Visualization Mermaid
+<div id="cy-network" style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"></div>
 
-```mermaid
-graph TD
-    A[Actor 1] --> B[Event 1]
-    A --> C[Event 2]
-    D[Actor 2] --> B
-    D --> E[Place 1]
-    F[Actor 3] --> C
-    F --> E
-```
-
-### Sample Graph - Cytoscape
 
 This is a sample network graph showing relationships between actors, events, and places. The actual graph will be rendered using the data from `events.json`, `actors.json`, and `places.json`.
-
-<div id="cy-network" style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"></div>
 
 
 ### Patterns
 Identification and abstraction of recurring spatial and architectural configurations.  
 → [Patterns](patterns.md)
 
+
+<div class="cp-grid">
+
+  <div class="cp-card">
+    <div class="cp-gif">
+      <img src="../assets/images/placeholder.gif" alt="Morphological Patterns" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="cp-title">Morphological</div>
+    <div class="cp-text">Analysis of urban form, street patterns, building density, and spatial structure.</div>
+  </div>
+
+  <div class="cp-card">
+    <div class="cp-gif">
+      <img src="../assets/images/placeholder.gif" alt="Architectural Patterns" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="cp-title">Architectural</div>
+    <div class="cp-text">Study of building typologies, construction styles, and architectural evolution.</div>
+  </div>
+
+  <div class="cp-card">
+    <div class="cp-gif">
+      <img src="../assets/images/placeholder.gif" alt="Functional Patterns" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="cp-title">Functional</div>
+    <div class="cp-text">Examination of land use distribution, activity centers, and urban functionality.</div>
+  </div>
+
+</div>
+
+<!-- Display of cards for Patterns -->
+<style>
+    
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.cp-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--md-default-fg-color--lightest, #ffffff);
+  border-radius: 12px;
+  background: var(--md-default-bg-color);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.cp-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--md-typeset-a-color, #ffffff);
+}
+
+.cp-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-bottom: 0.65rem;
+  opacity: 0.9;
+}
+
+.cp-title {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.cp-text {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light, #ffffff);
+}
+
+.cp-gif {
+  margin-bottom: 0.65rem;
+  text-align: center;
+}
+
+.cp-gif img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+</style>
 
 
 

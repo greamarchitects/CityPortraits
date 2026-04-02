@@ -1,14 +1,15 @@
-// Load data from JSON files
-async function loadData() {
-  const [actors, events, places] = await Promise.all([
-    fetch("../assets/data/actors.json").then(r => r.json()),
-    fetch("../assets/data/events.json").then(r => r.json()),
-    fetch("../assets/data/places.json").then(r => r.json())
-  ]);
-
-  return { actors, events, places };
+// Helper to resolve assets path across different pages
+function assetDataPath(file) {
+  const root = window.location.pathname.replace(/\/model.*$/, "");
+  return `${root}/assets/data/${file}`.replace(/\/+/g, "/");
 }
 
+// Load data from JSON files
+async function loadData() {
+  const urls = ['actors.json','events.json','places.json'].map(assetDataPath);
+  const [actors, events, places] = await Promise.all(urls.map(u => fetch(u).then(r => r.json())));
+  return { actors, events, places };
+}
 
 // Build Graph using Cytoscape.js
 function buildGraph({ actors, events, places }) {
@@ -79,60 +80,82 @@ function buildGraph({ actors, events, places }) {
 // Initialize Cytoscape
 async function initCytoscape() {
   const container = document.getElementById("cy-network");
-  if (!container) return;
+  if (!container) {
+    console.log("Cytoscape container not found");
+    return;
+  }
 
-  const data = await loadData();
-  const elements = buildGraph(data);
+  try {
+    console.log("Loading Cytoscape data...");
+    const data = await loadData();
+    console.log("Data loaded:", data);
 
-  cytoscape({
-    container,
+    const elements = buildGraph(data);
+    console.log("Graph elements built:", elements.length);
 
-    elements,
-
-    style: [
-      {
-        selector: 'node[type="actor"]',
-        style: {
-          'background-color': '#e91e63',
-          'label': 'data(label)'
+    cytoscape({
+      container,
+      elements,
+      style: [
+        {
+          selector: 'node[type="actor"]',
+          style: {
+            'background-color': '#e91e63',
+            'label': 'data(label)',
+            'text-valign': 'center',
+            'text-halign': 'center'
+          }
+        },
+        {
+          selector: 'node[type="event"]',
+          style: {
+            'background-color': '#3f51b5',
+            'label': 'data(label)',
+            'text-valign': 'center',
+            'text-halign': 'center'
+          }
+        },
+        {
+          selector: 'node[type="place"]',
+          style: {
+            'background-color': '#4caf50',
+            'label': 'data(label)',
+            'text-valign': 'center',
+            'text-halign': 'center'
+          }
+        },
+        {
+          selector: 'edge[type="actor-event"]',
+          style: {
+            'line-color': '#e91e63',
+            'target-arrow-shape': 'triangle',
+            'curve-style': 'bezier'
+          }
+        },
+        {
+          selector: 'edge[type="event-place"]',
+          style: {
+            'line-color': '#4caf50',
+            'target-arrow-shape': 'triangle',
+            'curve-style': 'bezier'
+          }
         }
-      },
-      {
-        selector: 'node[type="event"]',
-        style: {
-          'background-color': '#3f51b5',
-          'label': 'data(label)'
-        }
-      },
-      {
-        selector: 'node[type="place"]',
-        style: {
-          'background-color': '#4caf50',
-          'label': 'data(label)'
-        }
-      },
-      {
-        selector: 'edge[type="actor-event"]',
-        style: {
-          'line-color': '#e91e63',
-          'target-arrow-shape': 'triangle'
-        }
-      },
-      {
-        selector: 'edge[type="event-place"]',
-        style: {
-          'line-color': '#4caf50',
-          'target-arrow-shape': 'triangle'
-        }
+      ],
+      layout: {
+        name: "cose",
+        padding: 20,
+        animate: true,
+        animationDuration: 1000
       }
-    ],
+    });
 
-    layout: {
-      name: "cose",   // 🔥 good for networks
-      padding: 20
-    }
-  });
+    console.log("Cytoscape graph initialized successfully");
+
+  } catch (error) {
+    console.error("Error initializing Cytoscape:", error);
+  }
 }
 
+// Initialize on page load
 document.addEventListener("DOMContentLoaded", initCytoscape);
-document$.subscribe(initCytoscape); // for MkDocs Material
+if (typeof document$ !== "undefined") document$.subscribe(initCytoscape);

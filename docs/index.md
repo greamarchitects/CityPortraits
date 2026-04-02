@@ -140,6 +140,18 @@ Further development of the framework will focus on extending city coverage, refi
   color: var(--md-default-fg-color--light, #ffffff);
 }
 
+.cp-gif {
+  margin-bottom: 0.65rem;
+  text-align: center;
+}
+
+.cp-gif img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 .cp-section {
   margin-top: 1.5rem;
 }
