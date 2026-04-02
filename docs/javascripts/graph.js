@@ -1,7 +1,15 @@
 // Helper to resolve assets path across different pages
 function assetDataPath(file) {
-  const root = window.location.pathname.replace(/\/model.*$/, "");
-  return `${root}/assets/data/${file}`.replace(/\/+/g, "/");
+  // Get the base path by removing everything after the site root
+  // For URLs like /greamarchitects/CityPortraits/methodology/... we want /greamarchitects/CityPortraits/
+  const pathParts = window.location.pathname.split('/');
+  const siteIndex = pathParts.findIndex(part => part === 'CityPortraits');
+  if (siteIndex !== -1) {
+    const basePath = '/' + pathParts.slice(1, siteIndex + 1).join('/') + '/';
+    return `${basePath}assets/data/${file}`.replace(/\/+/g, "/");
+  }
+  // Fallback for development
+  return `/assets/data/${file}`;
 }
 
 // Load data from JSON files

@@ -21,16 +21,20 @@ let activeIndex = 0;
 
 async function loadEvents() {
   try {
-    // In MkDocs, files inside docs/ are served as site assets.
-    // Save your JSON here:
-    // docs/assets/data/events.json
-    //
-    // Build a path relative to the current page so that this works in local and deployed paths.
-    const currentPath = window.location.pathname;
-    const basePath = currentPath.replace(/\/model.*$/, "");
-    const eventsUrl = `${basePath}/assets/data/events.json`.replace(/\/+/g, "/");
+    // Build a path relative to the site root so that this works in local and deployed paths.
+    // For URLs like /greamarchitects/CityPortraits/methodology/... we want /greamarchitects/CityPortraits/assets/data/events.json
+    const pathParts = window.location.pathname.split('/');
+    const siteIndex = pathParts.findIndex(part => part === 'CityPortraits');
+    let eventsUrl;
+    if (siteIndex !== -1) {
+      const basePath = '/' + pathParts.slice(1, siteIndex + 1).join('/') + '/';
+      eventsUrl = `${basePath}assets/data/events.json`.replace(/\/+/g, "/");
+    } else {
+      // Fallback for development
+      eventsUrl = `/assets/data/events.json`;
+    }
 
-const response = await fetch(eventsUrl);
+    const response = await fetch(eventsUrl);
 
     // Check if the file was found successfully
     if (!response.ok) {
