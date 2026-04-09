@@ -1,6 +1,7 @@
 site_name: CityPortraits
 site_description: A project showcasing the architectural heritage of cities through portraits
-site_url: https://github.com/greamarchitects/CityPortraits
+# site_url: https://github.com/greamarchitects/CityPortraits
+site_url: https://greamarchitects.github.io/CityPortraits/
 
 theme:
   name: material
@@ -14,7 +15,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Print All: print_all.md
+  # - Print All: print_all.md
 
   - Methodology:
       - methodology/index.md
