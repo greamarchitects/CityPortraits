@@ -2,6 +2,9 @@ site_name: CityPortraits
 site_description: A project showcasing the architectural heritage of cities through portraits
 # site_url: https://github.com/greamarchitects/CityPortraits
 site_url: https://greamarchitects.github.io/CityPortraits/
+dev_addr: 127.0.0.1:8002
+site_url: http://127.0.0.1:8002/greamarchitects/CityPortraits/
+
 
 theme:
   name: material
@@ -9,28 +12,35 @@ theme:
     primary: indigo
     accent: blue
   features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
+    - search.highlight
     - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.footer
+    - toc.integrate 
 
 nav:
-  - Home: index.md
-  # - Print All: print_all.md
+  - Home:
+      - Main: index.md
 
   - Methodology:
-      - methodology/index.md
-      - Contextual Analysis:
-          - methodology/contextual_analysis/index.md
-      - Spatial Analysis:
-          - methodology/spatial_analysis/index.md
-      - Data Analysis:
-          - methodology/data_analysis/index.md
+      - Intro: methodology/index.md
+      - Contextual Analysis: methodology/contextual_analysis/index.md
+      - Spatial Analysis: methodology/spatial_analysis/index.md
+      - Data Analysis: methodology/data_analysis/index.md
 
   - Model:
       - model/index.md
 
   - Case Studies:
-      - case_studies/index.md
+      - Tirana: case_studies/tirana.md
+      - Durres: case_studies/durres.md
+      - Berat: case_studies/berat.md
 
   - About: 
       - about/index.md
@@ -47,7 +57,22 @@ extra_javascript:
   - https://unpkg.com/cytoscape/dist/cytoscape.min.js
 
 
+extra:
+  footer:
+    copyright: "© 2026 CityPortraits Team"
+    custom: true
+
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - tables
+  - toc:
+      toc_depth: 3
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -57,8 +82,7 @@ markdown_extensions:
 
 plugins:
   - search
-#   - pdf-export:
-#       combined: true
+  - mkdocs-jupyter
 
 markdown_extensions:
   - pymdownx.snippets:
@@ -67,5 +91,3 @@ markdown_extensions:
       check_paths: true
 
       
-dev_addr: 127.0.0.1:8002
-site_url: http://127.0.0.1:8002/greamarchitects/CityPortraits/
