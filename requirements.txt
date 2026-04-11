@@ -1,0 +1,11 @@
+geopandas
+shapely
+
+# website
+mkdocs-material
+mkdocs-jupyter
+pymdown-extensions
+jupyterlab
+
+# plotting
+matplotlib
