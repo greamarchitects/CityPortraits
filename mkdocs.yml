@@ -38,12 +38,17 @@ nav:
       - model/index.md
 
   - Case Studies:
-      - Tirana: case_studies/tirana.md
-      - Durres: case_studies/durres.md
-      - Berat: case_studies/berat.md
+      - case_studies/index.md
+      - Tirana: case_studies/Tirana.ipynb
+      - Durres: case_studies/Durres.ipynb
+      - Berat: case_studies/Berat.ipynb
+      - Shkodra: case_studies/Shkodra.ipynb
 
   - About: 
       - about/index.md
+
+  # - Print Version: 
+  #     - print_all.md
 
 extra_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
