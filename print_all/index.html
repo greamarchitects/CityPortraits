@@ -90,7 +90,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="CityPortraits" class="md-header__button md-logo" aria-label="CityPortraits" data-md-component="logo">
       
@@ -167,13 +167,132 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../methodology/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Methodology
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../model/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Model
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../case_studies/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Case Studies
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../about/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -189,8 +308,12 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="CityPortraits" class="md-nav__button md-logo" aria-label="CityPortraits" data-md-component="logo">
       
@@ -209,9 +332,34 @@
   
   
   
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -225,7 +373,26 @@
   
   
 
-      </a>
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -253,12 +420,12 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -286,7 +453,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -311,31 +478,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../methodology/contextual_analysis/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../methodology/contextual_analysis/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
@@ -349,26 +494,7 @@
   
   
 
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Contextual Analysis
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
+      </a>
     </li>
   
 
@@ -380,31 +506,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../methodology/spatial_analysis/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../methodology/spatial_analysis/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
@@ -418,26 +522,7 @@
   
   
 
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Spatial Analysis
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
+      </a>
     </li>
   
 
@@ -449,31 +534,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../methodology/data_analysis/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../methodology/data_analysis/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
@@ -487,26 +550,7 @@
   
   
 
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Data Analysis
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
+      </a>
     </li>
   
 
@@ -536,12 +580,12 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -603,16 +647,24 @@
           
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -639,6 +691,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
@@ -652,6 +709,118 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_studies/Tirana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tirana City Portrait
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_studies/Durres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Durres City Portrait
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_studies/Berat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Berat City Portrait
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case_studies/Shkodra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shkodra City Portrait
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -678,12 +847,12 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -738,1109 +907,6 @@
                 </div>
               </div>
             
-            
-              
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Purpose
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Framework
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#perspective" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Perspective
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#insights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Insights
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objectives
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-contextual-analysis-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Contextual Analysis → Index
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methodology → Contextual Analysis → Index">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#historical-archive" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Historical Archive
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#narrative-studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Narrative Studies
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#actor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Actor
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approach
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objective
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-contextual-analysis-documentary-research" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Contextual Analysis → Documentary Research
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-contextual-analysis-historical-archive" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Contextual Analysis → Historical Archive
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-contextual-analysis-narrative-studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Contextual Analysis → Narrative Studies
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-contextual-analysis-newspaper-archives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Contextual Analysis → Newspaper Archives
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-contextual-analysis-actor-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Contextual Analysis → Actor → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architect" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architect
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#urban-planner" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Urban Planner
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#landscape-architect" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Landscape Architect
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#civil-engineer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Civil Engineer
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Index
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methodology → Data Analysis → Index">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#datasets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Datasets
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#calibration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Calibration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approach_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approach
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objective_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objective
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-calibration-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Calibration → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-datasets-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Datasets → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dataset-categories" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dataset Categories
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dataset Categories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#spatial-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Spatial Data
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#administrative-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Administrative Data
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#socio-economic-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Socio-Economic Data
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-datasets-asig" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Datasets → Asig
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-content" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Content
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#applications-in-cityportraits" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Applications in CityPortraits
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Sources
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-datasets-census" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Datasets → Census
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-content_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Content
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#applications-in-cityportraits_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Applications in CityPortraits
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-sources_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Sources
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-datasets-gde" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Datasets → Gde
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-content_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Content
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exposure-indicators" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exposure Indicators
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-sources_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Sources
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integration
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-datasets-ghsl" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Datasets → Ghsl
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-content_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Content
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#applications-in-cityportraits_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Applications in CityPortraits
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-sources_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Sources
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integration
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-datasets-osm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Datasets → Osm
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-content_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Content
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#applications-in-cityportraits_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Applications in CityPortraits
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-sources_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Sources
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integration
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-data-analysis-validation-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Data Analysis → Validation → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Index
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methodology → Spatial Analysis → Index">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#urban-fabric" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Urban Fabric
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approach_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approach
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objective_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objective
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-architecture-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Architecture → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-architecture-building-construction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Architecture → Building Construction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-architecture-building-taxonomy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Architecture → Building Taxonomy
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-architecture-building-typology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Architecture → Building Typology
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-urban-fabric-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Urban Fabric → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-urban-fabric-cadastral-maps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Urban Fabric → Cadastral Maps
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-urban-fabric-emergent-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Urban Fabric → Emergent Patterns
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology-spatial-analysis-urban-fabric-morphology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Methodology → Spatial Analysis → Urban Fabric → Morphology
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Model → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spatial-timeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Spatial Timeline
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Spatial Timeline">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#graphs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Graphs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approach_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approach
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objective_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objective
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-graphs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Model → Graphs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Model → Patterns
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-spatial-timeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Model → Spatial Timeline
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-studies-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cities" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cities
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approach_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approach
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objective_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objective
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-studies-berat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies → Berat
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-studies-durres" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies → Durres
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-studies-gjirokaster" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies → Gjirokaster
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-studies-korce" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies → Korce
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-studies-shkoder" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies → Shkoder
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-studies-tirana" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies → Tirana
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-studies-vlora" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies → Vlora
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About → Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
             
           
           
@@ -1924,13 +990,13 @@
     <li>
       <a href="#case-studies-index">Case Studies</a>
       <ul>
-        <!-- <li><a href="case_studies/berat/">Berat</a></li> -->
+        <li><a href="case_studies/berat/">Berat</a></li>
         <li><a href="case_studies/durres/">Durres</a></li>
-        <!-- <li><a href="case_studies/gjirokaster/">Gjirokaster</a></li>
-        <li><a href="case_studies/korce/">Korce</a></li>
-        <li><a href="case_studies/shkoder/">Shkoder</a></li> -->
+        <!-- <li><a href="case_studies/gjirokaster/">Gjirokaster</a></li> -->
+        <!-- <li><a href="case_studies/korce/">Korce</a></li> -->
+        <li><a href="case_studies/shkodra/">Shkodra</a></li>
         <li><a href="case_studies/tirana/">Tirana</a></li>
-        <li><a href="case_studies/vlora/">Vlora</a></li>
+        <!-- <li><a href="case_studies/vlora/">Vlora</a></li> -->
       </ul>
     </li>
   </ul>
@@ -2993,7 +2059,15 @@ Reports, studies, and institutional publications.<br />
 <h3 id="graphs">Graphs</h3>
 <p>Relational representation of spatial elements and their connections.<br />
 → <a href="#model-graphs">Graphs</a></p>
-<div id="cy-network" style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"></div>
+<div class="cp-graph-shell">
+  <div class="cp-graph-toolbar">
+    <button id="graph-reset-btn" type="button">Reset view</button>
+  </div>
+  <div id="cy-network"></div>
+  <div class="cp-graph-note">
+    Click a node to focus its neighborhood. Click the background or Reset view to return.
+  </div>
+</div>
 
 <p>This is a sample network graph showing relationships between actors, events, and places. The actual graph will be rendered using the data from <code>events.json</code>, <code>actors.json</code>, and <code>places.json</code>.</p>
 <h3 id="patterns">Patterns</h3>
@@ -3105,47 +2179,93 @@ Reports, studies, and institutional publications.<br />
 <div class='page-break'></div>
 
 <h2 id="case-studies-index">Case Studies → Index</h2>
-<p>Case studies apply the methodology to specific cities, revealing local patterns and comparative insights.</p>
-<h2 id="cities">Cities</h2>
-<!-- [Berat](#case-studies-berat) -->
-<p><a href="#case-studies-durres">Durres</a></p>
-<!-- [Gjirokaster](#case-studies-gjirokaster) -->
-<!-- [Korce](#case-studies-korce) -->
-<!-- [Shkoder](#case-studies-shkoder) -->
-<p><a href="#case-studies-tirana">Tirana</a>
-<a href="#case-studies-vlora">Vlora</a></p>
-<h2 id="approach_4">Approach</h2>
+<div class='page-break'></div>
+
+<h2 id="case-studies-beratipynb">Case Studies → Berat.Ipynb</h2>
 <ul>
-<li>Multi-scale analysis  </li>
-<li>Cross-domain integration  </li>
-<li>Comparative evaluation  </li>
+<li>...</li>
+<li>...</li>
+<li>...</li>
 </ul>
-<h2 id="objective_4">Objective</h2>
-<p>Understand city-specific dynamics while enabling comparison across different urban contexts.</p>
+<p><br><br></p>
+<pre><code class="language-python">
+</code></pre>
 <div class='page-break'></div>
 
-<h2 id="case-studies-berat">Case Studies → Berat</h2>
+<h2 id="case-studies-durresipynb">Case Studies → Durres.Ipynb</h2>
+<ul>
+<li>...</li>
+<li>...</li>
+<li>...</li>
+</ul>
+<p><br><br></p>
+<pre><code class="language-python">
+</code></pre>
 <div class='page-break'></div>
 
-<h2 id="case-studies-durres">Case Studies → Durres</h2>
+<h2 id="case-studies-shkodraipynb">Case Studies → Shkodra.Ipynb</h2>
+<ul>
+<li>...</li>
+<li>...</li>
+<li>...</li>
+</ul>
+<p><br><br></p>
+<pre><code class="language-python">
+</code></pre>
 <div class='page-break'></div>
 
-<h2 id="case-studies-gjirokaster">Case Studies → Gjirokaster</h2>
-<div class='page-break'></div>
-
-<h2 id="case-studies-korce">Case Studies → Korce</h2>
-<div class='page-break'></div>
-
-<h2 id="case-studies-shkoder">Case Studies → Shkoder</h2>
-<div class='page-break'></div>
-
-<h2 id="case-studies-tirana">Case Studies → Tirana</h2>
-<div class='page-break'></div>
-
-<h2 id="case-studies-vlora">Case Studies → Vlora</h2>
-<hr />
-<p><em>Sources</em>
-<a href="https://www.instat.gov.al/media/14325/cens-2023-vlora.pdf">INSTAT</a></p>
+<h2 id="case-studies-tiranaipynb">Case Studies → Tirana.Ipynb</h2>
+<ul>
+<li>...</li>
+<li>...</li>
+<li>...</li>
+</ul>
+<p><br><br></p>
+<h2 id="1-base-map-layers">1. Base Map Layers</h2>
+<p>The different data sources used for the analysis are the following:</p>
+<ul>
+<li>OpenStreetMap</li>
+<li>Overture</li>
+<li>GDE</li>
+</ul>
+<pre><code class="language-python">import pandas as pd
+</code></pre>
+<p><br><br></p>
+<h2 id="2-statistical-layers">2. Statistical Layers</h2>
+<ul>
+<li>Global Exposure Model</li>
+<li>GHSL: Algorithm: Shape to Point</li>
+<li>Census</li>
+</ul>
+<pre><code class="language-python">
+</code></pre>
+<p><br><br></p>
+<h2 id="3-archival-data">3. Archival Data</h2>
+<ul>
+<li>Events</li>
+<li>Wikipedia</li>
+<li>World Imagery Wayback</li>
+</ul>
+<pre><code class="language-python">
+</code></pre>
+<p><br><br></p>
+<h2 id="4-clustering">4. Clustering</h2>
+<ul>
+<li>Rule based/event-based suggestions</li>
+<li>Algorithm: Spatial Interpolation</li>
+</ul>
+<pre><code class="language-python">
+</code></pre>
+<p><br><br></p>
+<h2 id="5-building-stock-scenarios">5. Building Stock Scenarios</h2>
+<ul>
+<li>Algorithm: Filter based on archival data</li>
+<li>Redistribute</li>
+</ul>
+<pre><code class="language-python">
+</code></pre>
+<pre><code class="language-python">
+</code></pre>
 <div class='page-break'></div>
 
 <h2 id="about-index">About → Index</h2>
@@ -3174,9 +2294,17 @@ Reports, studies, and institutional publications.<br />
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
+  
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3199,11 +2327,13 @@ Reports, studies, and institutional publications.<br />
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "search.highlight", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.footer", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
