@@ -1,5 +1,7 @@
 import os
 import re
+from nbconvert import MarkdownExporter
+import nbformat
 
 DOCS_DIR = "docs"
 OUTPUT = os.path.join(DOCS_DIR, "print_all.md")
@@ -87,7 +89,7 @@ def collect_all_md_files():
         dirs[:] = [d for d in dirs if d not in EXCLUDED_DIRS]
 
         for file in files:
-            if not file.endswith(".md"):
+            if not (file.endswith(".md") or file.endswith(".ipynb")):
                 continue
             if file in EXCLUDED_FILES:
                 continue
@@ -254,6 +256,13 @@ def rewrite_html_links(content, current_file, anchor_map):
 
     return re.sub(r'href=(["\'])([^"\']+)\1', repl, content)
 
+def read_ipynb_as_md(path):
+    with open(path, "r", encoding="utf-8") as f:
+        nb = nbformat.read(f, as_version=4)
+
+    exporter = MarkdownExporter()
+    body, _ = exporter.from_notebook_node(nb)
+    return body
 
 files = sorted(collect_all_md_files(), key=sort_key)
 anchor_map = build_anchor_map(files)
@@ -264,8 +273,11 @@ with open(OUTPUT, "w", encoding="utf-8") as out:
     for i, rel_path in enumerate(files):
         full_path = os.path.join(DOCS_DIR, rel_path)
 
-        with open(full_path, "r", encoding="utf-8") as f:
-            content = f.read()
+        if rel_path.endswith(".ipynb"):
+            content = read_ipynb_as_md(full_path)
+        else:
+            with open(full_path, "r", encoding="utf-8") as f:
+                content = f.read()
 
         content = remove_frontmatter(content)
         content = remove_first_h1(content).strip()

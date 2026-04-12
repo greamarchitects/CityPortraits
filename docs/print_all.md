@@ -82,13 +82,13 @@ Develop a reproducible method to describe and compare cities through their build
     <li>
       <a href="#case-studies-index">Case Studies</a>
       <ul>
-        <!-- <li><a href="case_studies/berat/">Berat</a></li> -->
+        <li><a href="case_studies/berat/">Berat</a></li>
         <li><a href="case_studies/durres/">Durres</a></li>
-        <!-- <li><a href="case_studies/gjirokaster/">Gjirokaster</a></li>
-        <li><a href="case_studies/korce/">Korce</a></li>
-        <li><a href="case_studies/shkoder/">Shkoder</a></li> -->
+        <!-- <li><a href="case_studies/gjirokaster/">Gjirokaster</a></li> -->
+        <!-- <li><a href="case_studies/korce/">Korce</a></li> -->
+        <li><a href="case_studies/shkodra/">Shkodra</a></li>
         <li><a href="case_studies/tirana/">Tirana</a></li>
-        <li><a href="case_studies/vlora/">Vlora</a></li>
+        <!-- <li><a href="case_studies/vlora/">Vlora</a></li> -->
       </ul>
     </li>
   </ul>
@@ -1058,8 +1058,15 @@ The model synthesizes spatial and data analysis into structured representations 
 Relational representation of spatial elements and their connections.  
 → [Graphs](#model-graphs)
 
-<div id="cy-network" style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"></div>
-
+<div class="cp-graph-shell">
+  <div class="cp-graph-toolbar">
+    <button id="graph-reset-btn" type="button">Reset view</button>
+  </div>
+  <div id="cy-network"></div>
+  <div class="cp-graph-note">
+    Click a node to focus its neighborhood. Click the background or Reset view to return.
+  </div>
+</div>
 
 This is a sample network graph showing relationships between actors, events, and places. The actual graph will be rendered using the data from `events.json`, `actors.json`, and `places.json`.
 
@@ -1197,85 +1204,137 @@ Translate urban complexity into structured models for analysis, comparison, and 
 
 ## Case Studies → Index
 
-Case studies apply the methodology to specific cities, revealing local patterns and comparative insights.
-
-## Cities
-
-<!-- [Berat](#case-studies-berat) -->
-[Durres](#case-studies-durres)
-<!-- [Gjirokaster](#case-studies-gjirokaster) -->
-<!-- [Korce](#case-studies-korce) -->
-<!-- [Shkoder](#case-studies-shkoder) -->
-[Tirana](#case-studies-tirana)
-[Vlora](#case-studies-vlora)
-
-## Approach
-
-- Multi-scale analysis  
-- Cross-domain integration  
-- Comparative evaluation  
-
-## Objective
-
-Understand city-specific dynamics while enabling comparison across different urban contexts.
-
-<div class='page-break'></div>
-
-
-
-## Case Studies → Berat
-
 
 
 <div class='page-break'></div>
 
 
 
-## Case Studies → Durres
+## Case Studies → Berat.Ipynb
+
+- ...
+- ...
+- ...
+
+<br><br>
 
 
+```python
 
-<div class='page-break'></div>
-
-
-
-## Case Studies → Gjirokaster
-
-
-
-<div class='page-break'></div>
-
-
-
-## Case Studies → Korce
-
-
+```
 
 <div class='page-break'></div>
 
 
 
-## Case Studies → Shkoder
+## Case Studies → Durres.Ipynb
+
+- ...
+- ...
+- ...
+
+<br><br>
 
 
+```python
+
+```
 
 <div class='page-break'></div>
 
 
 
-## Case Studies → Tirana
+## Case Studies → Shkodra.Ipynb
+
+- ...
+- ...
+- ...
+
+<br><br>
 
 
+```python
+
+```
 
 <div class='page-break'></div>
 
 
 
-## Case Studies → Vlora
+## Case Studies → Tirana.Ipynb
 
----
-_Sources_
-[INSTAT](https://www.instat.gov.al/media/14325/cens-2023-vlora.pdf)
+- ...
+- ...
+- ...
+
+<br><br>
+
+## 1. Base Map Layers
+
+The different data sources used for the analysis are the following:
+
+- OpenStreetMap
+- Overture
+- GDE
+
+
+```python
+import pandas as pd
+```
+
+<br><br>
+
+## 2. Statistical Layers
+
+- Global Exposure Model
+- GHSL: Algorithm: Shape to Point
+- Census
+
+
+```python
+
+```
+
+
+<br><br>
+
+## 3. Archival Data
+- Events
+- Wikipedia
+- World Imagery Wayback
+
+
+
+```python
+
+```
+
+<br><br>
+## 4. Clustering 
+- Rule based/event-based suggestions
+- Algorithm: Spatial Interpolation
+
+
+```python
+
+```
+
+<br><br>
+
+## 5. Building Stock Scenarios
+- Algorithm: Filter based on archival data
+- Redistribute
+
+
+
+```python
+
+```
+
+
+```python
+
+```
 
 <div class='page-break'></div>
 
