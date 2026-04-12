@@ -79,12 +79,12 @@ Develop a reproducible method to describe and compare cities through their build
     <li>
       <a href="case_studies/">Case Studies</a>
       <ul>
-        <li><a href="case_studies/Berat.ipynb/">Berat</a></li>
-        <li><a href="case_studies/Durres.ipynb/">Durres</a></li>
+        <li><a href="case_studies/Berat/">Berat</a></li>
+        <li><a href="case_studies/Durresb/">Durres</a></li>
         <!-- <li><a href="case_studies/gjirokaster/">Gjirokaster</a></li> -->
         <!-- <li><a href="case_studies/korce/">Korce</a></li> -->
-        <li><a href="case_studies/Shkodra.ipynb/">Shkodra</a></li>
-        <li><a href="case_studies/Tirana.ipynb">Tirana</a></li>
+        <li><a href="case_studies/Shkodra/">Shkodra</a></li>
+        <li><a href="case_studies/Tirana">Tirana</a></li>
         <!-- <li><a href="case_studies/vlora/">Vlora</a></li> -->
       </ul>
     </li>
