@@ -1,0 +1,259 @@
+[
+  {
+    "Area \/ Neighborhood":"Historic Ottoman Tirana core",
+    "Period of Evolution":"pre-1920 → early 20th c.",
+    "Map Category":"historic_core",
+    "Map Color":"#8c510a",
+    "Streets \/ Axes":[
+      "Pazari i Ri",
+      "Et'hem Bey Mosque surroundings",
+      "Rruga Barrikadave"
+    ],
+    "Building Complexes":[
+      "Courtyard houses",
+      "Bazaar fabric",
+      "Small plot mixed-use",
+      "Commercial strips"
+    ],
+    "Socio-Political Events":[
+      "Ottoman urban structure",
+      "Tirana becomes capital (1920)"
+    ],
+    "Actors":[
+
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Monarchy-era planned capital",
+    "Period of Evolution":"1920–1940",
+    "Map Category":"planned_capital",
+    "Map Color":"#bf812d",
+    "Streets \/ Axes":[
+      "Skanderbeg Square",
+      "Boulevard Zogu I",
+      "Boulevard Dëshmorët e Kombit"
+    ],
+    "Building Complexes":[
+      "Institutional ensembles",
+      "Axial boulevards",
+      "Perimeter blocks (neoclassical\/rationalist)"
+    ],
+    "Socio-Political Events":[
+      "Capital formation",
+      "Monarchy period",
+      "Westernization"
+    ],
+    "Actors":[
+      "Italian architects",
+      "Austrian architects"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Socialist centre zone",
+    "Period of Evolution":"1945–1991",
+    "Map Category":"socialist_centre",
+    "Map Color":"#01665e",
+    "Streets \/ Axes":[
+      "Boulevard Dëshmorët e Kombit",
+      "Skanderbeg Square radial axes"
+    ],
+    "Building Complexes":[
+      "Monumental civic complexes",
+      "Palace of Culture",
+      "National Historical Museum",
+      "Large plazas"
+    ],
+    "Socio-Political Events":[
+      "Communist takeover (1945)",
+      "Socialist restructuring",
+      "Regime change (1991)"
+    ],
+    "Actors":[
+      "State planning institutes"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Socialist housing estates",
+    "Period of Evolution":"1945–1991",
+    "Map Category":"socialist_housing",
+    "Map Color":"#35978f",
+    "Streets \/ Axes":[
+      "Rruga e Kavajës",
+      "Rruga e Durrësit",
+      "Rruga Myslym Shyri"
+    ],
+    "Building Complexes":[
+      "Prefabricated blocks (4–6 floors)",
+      "Superblocks",
+      "Slab buildings",
+      "Internal green\/open space"
+    ],
+    "Socio-Political Events":[
+      "State socialism",
+      "Social housing provision",
+      "Abolition of private property"
+    ],
+    "Actors":[
+      "State design institutes"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Soviet-model block neighborhoods",
+    "Period of Evolution":"1945–1991",
+    "Map Category":"socialist_blocks",
+    "Map Color":"#80cdc1",
+    "Streets \/ Axes":[
+      "Hierarchical street networks",
+      "Main vs internal roads"
+    ],
+    "Building Complexes":[
+      "Semi-perimeter blocks",
+      "Freestanding slabs",
+      "Large courtyards (later infill)"
+    ],
+    "Socio-Political Events":[
+      "Centralized planning",
+      "Post-socialist fragmentation"
+    ],
+    "Actors":[
+      "State planning bodies"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Inner-city densified blocks",
+    "Period of Evolution":"1992–2015",
+    "Map Category":"post_socialist_densification",
+    "Map Color":"#c51b7d",
+    "Streets \/ Axes":[
+      "Rruga Myslym Shyri",
+      "Rruga e Kavajës",
+      "Rruga e Durrësit"
+    ],
+    "Building Complexes":[
+      "Block extensions",
+      "Infill buildings",
+      "Mixed-use ground floors",
+      "Fragmented morphology"
+    ],
+    "Socio-Political Events":[
+      "Internal migration",
+      "Privatization",
+      "Weak planning control"
+    ],
+    "Actors":[
+      "Private developers",
+      "Informal actors"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Shallvaret",
+    "Period of Evolution":"pre-1991 → post-1991 transformation",
+    "Map Category":"post_socialist_densification",
+    "Map Color":"#c51b7d",
+    "Streets \/ Axes":[
+      "Rruga Ibrahim Rugova",
+      "Boulevard Bajram Curri"
+    ],
+    "Building Complexes":[
+      "Mid\/high-rise blocks (>6 floors)",
+      "Dense mixed-use",
+      "Active frontage",
+      "Café\/retail dominance"
+    ],
+    "Socio-Political Events":[
+      "Post-socialist densification",
+      "Commercial growth"
+    ],
+    "Actors":[
+      "Private developers"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Kombinati",
+    "Period of Evolution":"socialist → post-1991",
+    "Map Category":"industrial_socialist",
+    "Map Color":"#5e3c99",
+    "Streets \/ Axes":[
+      "Rruga e Kavajës",
+      "Industrial access roads"
+    ],
+    "Building Complexes":[
+      "Worker housing (2–5 floors)",
+      "Textile factories",
+      "Warehouses",
+      "Adaptive reuse"
+    ],
+    "Socio-Political Events":[
+      "Industrialization",
+      "Post-socialist decline",
+      "Reuse"
+    ],
+    "Actors":[
+      "State industry → private sector"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Industrial sites (within Tirana)",
+    "Period of Evolution":"1945–1991 → reuse after 1991",
+    "Map Category":"industrial_socialist",
+    "Map Color":"#5e3c99",
+    "Streets \/ Axes":[
+      "Western & southern industrial axes"
+    ],
+    "Building Complexes":[
+      "Industrial halls",
+      "Factory compounds",
+      "Converted warehouses",
+      "Hybrid reuse"
+    ],
+    "Socio-Political Events":[
+      "Socialist industrial planning",
+      "Market transition"
+    ],
+    "Actors":[
+      "State → private"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Urban edges \/ peripheral expansion",
+    "Period of Evolution":"1992–2015",
+    "Map Category":"peripheral_expansion",
+    "Map Color":"#fdae61",
+    "Streets \/ Axes":[
+      "Radial roads (Durrës, Elbasan)"
+    ],
+    "Building Complexes":[
+      "Informal housing clusters",
+      "Self-built multi-storey",
+      "Irregular parcels"
+    ],
+    "Socio-Political Events":[
+      "Mass migration",
+      "Uncontrolled expansion"
+    ],
+    "Actors":[
+      "Informal builders"
+    ]
+  },
+  {
+    "Area \/ Neighborhood":"Informal settlements",
+    "Period of Evolution":"1992–2015",
+    "Map Category":"informal_settlements",
+    "Map Color":"#d73027",
+    "Streets \/ Axes":[
+      "Non-aligned \/ organic networks"
+    ],
+    "Building Complexes":[
+      "Incremental housing",
+      "Mixed typologies",
+      "High variability"
+    ],
+    "Socio-Political Events":[
+      "Collapse of state control",
+      "Legalization processes"
+    ],
+    "Actors":[
+      "Informal actors"
+    ]
+  }
+]
