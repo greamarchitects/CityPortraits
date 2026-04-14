@@ -1,0 +1,150 @@
+Area / Neighborhood,Overpass Query
+Historic Ottoman Tirana core,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""residential""]
+  way[""building""=""residential""]
+  node[""landuse""=""commercial""]
+  way[""landuse""=""commercial""]
+  node[""building""=""mixed_use""]
+  way[""building""=""mixed_use""]
+  node[""shop""]
+  way[""shop""]
+);
+out body;
+>;
+out skel qt;
+"
+Monarchy-era planned capital,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""government""]
+  way[""building""=""government""]
+  node[""building""=""residential""]
+  way[""building""=""residential""]
+);
+out body;
+>;
+out skel qt;
+"
+Socialist centre zone,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""public""]
+  way[""building""=""public""]
+  node[""building""=""civic""]
+  way[""building""=""civic""]
+  node[""tourism""=""museum""]
+  way[""tourism""=""museum""]
+);
+out body;
+>;
+out skel qt;
+"
+Socialist housing estates,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""apartments""]
+  way[""building""=""apartments""]
+  node[""landuse""=""residential""]
+  way[""landuse""=""residential""]
+  node[""building""=""apartments""]
+  way[""building""=""apartments""]
+);
+out body;
+>;
+out skel qt;
+"
+Soviet-model block neighborhoods,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""apartments""]
+  way[""building""=""apartments""]
+  node[""building""=""apartments""]
+  way[""building""=""apartments""]
+);
+out body;
+>;
+out skel qt;
+"
+Inner-city densified blocks,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""residential""]
+  way[""building""=""residential""]
+  node[""building""=""residential""]
+  way[""building""=""residential""]
+  node[""building""=""mixed_use""]
+  way[""building""=""mixed_use""]
+);
+out body;
+>;
+out skel qt;
+"
+Shallvaret,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""apartments""]
+  way[""building""=""apartments""]
+);
+out body;
+>;
+out skel qt;
+"
+Kombinati,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""apartments""]
+  way[""building""=""apartments""]
+  node[""building""=""industrial""]
+  way[""building""=""industrial""]
+  node[""building""=""warehouse""]
+  way[""building""=""warehouse""]
+);
+out body;
+>;
+out skel qt;
+"
+Industrial sites (within Tirana),"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""industrial""]
+  way[""building""=""industrial""]
+);
+out body;
+>;
+out skel qt;
+"
+Urban edges / peripheral expansion,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""residential""]
+  way[""building""=""residential""]
+  node[""building""=""residential""]
+  way[""building""=""residential""]
+);
+out body;
+>;
+out skel qt;
+"
+Informal settlements,"
+[out:json][timeout:25];
+area[""name""=""Tirana""]->.searchArea;
+(
+  node[""building""=""residential""]
+  way[""building""=""residential""]
+);
+out body;
+>;
+out skel qt;
+"
