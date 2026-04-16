@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_280c66ca0d7d6248de50c6df89348f63 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_280c66ca0d7d6248de50c6df89348f63" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_280c66ca0d7d6248de50c6df89348f63 = L.map(
+                "map_280c66ca0d7d6248de50c6df89348f63",
+                {
+                    center: [41.3275, 19.8187],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9669299d89cdac2afbe35ad1fcfec53b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9669299d89cdac2afbe35ad1fcfec53b.addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            var poly_line_25a8b2ea7dd4d95a8149445e886198b9 = L.polyline(
+                [[41.3309, 19.8174], [41.3299, 19.818], [41.3289, 19.8188]],
+                {"bubblingMouseEvents": true, "color": "#d4d4d4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d4d4d4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 8}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            var poly_line_c09f9f711b31537a006d81a70636f96e = L.polyline(
+                [[41.3309, 19.8174], [41.3299, 19.818], [41.3289, 19.8188]],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7a7a7a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.96, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            poly_line_c09f9f711b31537a006d81a70636f96e.bindTooltip(
+                `<div>
+                     Rruga Barrikadave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_833d28770e38b348e6abf6dc57989ee1 = L.polyline(
+                [[41.3308, 19.8204], [41.3285, 19.8205], [41.3263, 19.8206], [41.3238, 19.8207]],
+                {"bubblingMouseEvents": true, "color": "#d4d4d4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d4d4d4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 9}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            var poly_line_e63e5e012fdb2b993923179d996b6717 = L.polyline(
+                [[41.3308, 19.8204], [41.3285, 19.8205], [41.3263, 19.8206], [41.3238, 19.8207]],
+                {"bubblingMouseEvents": true, "color": "#5a5a5a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#5a5a5a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.96, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            poly_line_e63e5e012fdb2b993923179d996b6717.bindTooltip(
+                `<div>
+                     Bulevardi Dëshmorët e Kombit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_af25055c1d6a5ba75e27c1c1bb19040e = L.polyline(
+                [[41.3313, 19.8112], [41.3302, 19.8131], [41.3291, 19.8152], [41.328, 19.8171]],
+                {"bubblingMouseEvents": true, "color": "#d4d4d4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d4d4d4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 8}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            var poly_line_cf8f9d10707158ed0a36e5909f796f78 = L.polyline(
+                [[41.3313, 19.8112], [41.3302, 19.8131], [41.3291, 19.8152], [41.328, 19.8171]],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7a7a7a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.96, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            poly_line_cf8f9d10707158ed0a36e5909f796f78.bindTooltip(
+                `<div>
+                     Rruga e Durrësit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4fe4b6818910db0565140b315f5a7c49 = L.polyline(
+                [[41.3262, 19.8088], [41.3245, 19.8064], [41.3228, 19.8041], [41.321, 19.8016]],
+                {"bubblingMouseEvents": true, "color": "#d4d4d4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d4d4d4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 8}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            var poly_line_e10a9c3285ec826c41f6c89f62f71fce = L.polyline(
+                [[41.3262, 19.8088], [41.3245, 19.8064], [41.3228, 19.8041], [41.321, 19.8016]],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7a7a7a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.96, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            poly_line_e10a9c3285ec826c41f6c89f62f71fce.bindTooltip(
+                `<div>
+                     Rruga e Kavajës
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8c9156823093c1b52f016ec0bd0ed2bc = L.polyline(
+                [[41.3341, 19.8282], [41.3321, 19.8261], [41.3302, 19.8239], [41.3283, 19.8218]],
+                {"bubblingMouseEvents": true, "color": "#d4d4d4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d4d4d4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 8}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            var poly_line_58cbbebbbba941ba057996b7a2f077b8 = L.polyline(
+                [[41.3341, 19.8282], [41.3321, 19.8261], [41.3302, 19.8239], [41.3283, 19.8218]],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7a7a7a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.96, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            poly_line_58cbbebbbba941ba057996b7a2f077b8.bindTooltip(
+                `<div>
+                     Rruga e Dibrës
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_134752213d4d3a0990dfee5a76d99c1d = L.polyline(
+                [[41.3253, 19.8128], [41.3248, 19.8148], [41.3243, 19.8168], [41.3238, 19.8187]],
+                {"bubblingMouseEvents": true, "color": "#d4d4d4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d4d4d4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 7}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            var poly_line_f1076010a820f9371c1ea6f2305b5df8 = L.polyline(
+                [[41.3253, 19.8128], [41.3248, 19.8148], [41.3243, 19.8168], [41.3238, 19.8187]],
+                {"bubblingMouseEvents": true, "color": "#9a9a9a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#9a9a9a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.96, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            poly_line_f1076010a820f9371c1ea6f2305b5df8.bindTooltip(
+                `<div>
+                     Rruga Myslym Shyri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_5fea0b9e4601b14808657be72a869f7a = L.circle(
+                [41.3281, 19.8188],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a8a8a8", "fillOpacity": 0.14, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 167.7050983124842, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            circle_5fea0b9e4601b14808657be72a869f7a.bindTooltip(
+                `<div>
+                     Historic Ottoman Tirana core
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0532ce60dfb572235512382160b24865 = L.circleMarker(
+                [41.3281, 19.8188],
+                {"bubblingMouseEvents": true, "color": "#4a4a4a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4a4a4a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+        var popup_174a039eb406cf9a34673e81f31b6cad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50d82d70e3d837710cb77e21fe0e293c = $(`<div id="html_50d82d70e3d837710cb77e21fe0e293c" style="width: 100.0%; height: 100.0%;">Historic Ottoman Tirana core<br>Dummy area proxy: 18,000 m²</div>`)[0];
+                popup_174a039eb406cf9a34673e81f31b6cad.setContent(html_50d82d70e3d837710cb77e21fe0e293c);
+            
+        
+
+        circle_marker_0532ce60dfb572235512382160b24865.bindPopup(popup_174a039eb406cf9a34673e81f31b6cad)
+        ;
+
+        
+    
+    
+            var circle_e9cf5c54f0c1c4a1d27ff6be7b14ea79 = L.circle(
+                [41.3288, 19.8166],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a8a8a8", "fillOpacity": 0.14, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 201.55644370746373, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            circle_e9cf5c54f0c1c4a1d27ff6be7b14ea79.bindTooltip(
+                `<div>
+                     Monarchy-era planned capital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c0f9718a130c1a5b620561bc782135e = L.circleMarker(
+                [41.3288, 19.8166],
+                {"bubblingMouseEvents": true, "color": "#4a4a4a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4a4a4a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+        var popup_7c5c4767b8eebc8a3a803eb84b030ef7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_135084274dc1b2c497ae4f7d4e9a2e37 = $(`<div id="html_135084274dc1b2c497ae4f7d4e9a2e37" style="width: 100.0%; height: 100.0%;">Monarchy-era planned capital<br>Dummy area proxy: 26,000 m²</div>`)[0];
+                popup_7c5c4767b8eebc8a3a803eb84b030ef7.setContent(html_135084274dc1b2c497ae4f7d4e9a2e37);
+            
+        
+
+        circle_marker_4c0f9718a130c1a5b620561bc782135e.bindPopup(popup_7c5c4767b8eebc8a3a803eb84b030ef7)
+        ;
+
+        
+    
+    
+            var circle_a20eb9efd34ce976232e4c761c8e4f92 = L.circle(
+                [41.3268, 19.8206],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a8a8a8", "fillOpacity": 0.14, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 193.64916731037084, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            circle_a20eb9efd34ce976232e4c761c8e4f92.bindTooltip(
+                `<div>
+                     Socialist centre zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2ea8101b721e456720ff48cd78bb318 = L.circleMarker(
+                [41.3268, 19.8206],
+                {"bubblingMouseEvents": true, "color": "#4a4a4a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4a4a4a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+        var popup_41db478df367f94e9b4e72d2f1945fa2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cf99fc66bd6e540f245e1abbb34c4655 = $(`<div id="html_cf99fc66bd6e540f245e1abbb34c4655" style="width: 100.0%; height: 100.0%;">Socialist centre zone<br>Dummy area proxy: 24,000 m²</div>`)[0];
+                popup_41db478df367f94e9b4e72d2f1945fa2.setContent(html_cf99fc66bd6e540f245e1abbb34c4655);
+            
+        
+
+        circle_marker_b2ea8101b721e456720ff48cd78bb318.bindPopup(popup_41db478df367f94e9b4e72d2f1945fa2)
+        ;
+
+        
+    
+    
+            var circle_6d93e70eb325d78410692296dee65fb8 = L.circle(
+                [41.3244, 19.8078],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a8a8a8", "fillOpacity": 0.14, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 256.17376914899, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            circle_6d93e70eb325d78410692296dee65fb8.bindTooltip(
+                `<div>
+                     Socialist housing estates
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_04f5dd03108c18ea6ec7cd2d24e5faae = L.circleMarker(
+                [41.3244, 19.8078],
+                {"bubblingMouseEvents": true, "color": "#4a4a4a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4a4a4a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+        var popup_95c5d6ab6926c361084a3b46908cd692 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32ffe1807094e9c4b95ea88994e6fc72 = $(`<div id="html_32ffe1807094e9c4b95ea88994e6fc72" style="width: 100.0%; height: 100.0%;">Socialist housing estates<br>Dummy area proxy: 42,000 m²</div>`)[0];
+                popup_95c5d6ab6926c361084a3b46908cd692.setContent(html_32ffe1807094e9c4b95ea88994e6fc72);
+            
+        
+
+        circle_marker_04f5dd03108c18ea6ec7cd2d24e5faae.bindPopup(popup_95c5d6ab6926c361084a3b46908cd692)
+        ;
+
+        
+    
+    
+            var circle_3f70dddc74d45a2ffd56892b34427ad4 = L.circle(
+                [41.3238, 19.815],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a8a8a8", "fillOpacity": 0.14, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 147.9019945774904, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            circle_3f70dddc74d45a2ffd56892b34427ad4.bindTooltip(
+                `<div>
+                     Shallvaret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fdaf9abfa5087a64e5204e0212bd9ecc = L.circleMarker(
+                [41.3238, 19.815],
+                {"bubblingMouseEvents": true, "color": "#4a4a4a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4a4a4a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+        var popup_1e173c2b35f2320bdd2d0972b121f042 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1a77f99f94c4efddc34c2812ed5aa33 = $(`<div id="html_a1a77f99f94c4efddc34c2812ed5aa33" style="width: 100.0%; height: 100.0%;">Shallvaret<br>Dummy area proxy: 14,000 m²</div>`)[0];
+                popup_1e173c2b35f2320bdd2d0972b121f042.setContent(html_a1a77f99f94c4efddc34c2812ed5aa33);
+            
+        
+
+        circle_marker_fdaf9abfa5087a64e5204e0212bd9ecc.bindPopup(popup_1e173c2b35f2320bdd2d0972b121f042)
+        ;
+
+        
+    
+    
+            var circle_388a25071832d705cef7d7ffedceae71 = L.circle(
+                [41.3094, 19.7926],
+                {"bubblingMouseEvents": true, "color": "#7a7a7a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a8a8a8", "fillOpacity": 0.14, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 237.17082451262843, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+            circle_388a25071832d705cef7d7ffedceae71.bindTooltip(
+                `<div>
+                     Kombinati
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_54a4bb93333eb5dcb26110144d727248 = L.circleMarker(
+                [41.3094, 19.7926],
+                {"bubblingMouseEvents": true, "color": "#4a4a4a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4a4a4a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+        
+    
+        var popup_cb501dd7dd778a71b89481e6d17c2b68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2202a5f7633098245843ef9f594728d2 = $(`<div id="html_2202a5f7633098245843ef9f594728d2" style="width: 100.0%; height: 100.0%;">Kombinati<br>Dummy area proxy: 36,000 m²</div>`)[0];
+                popup_cb501dd7dd778a71b89481e6d17c2b68.setContent(html_2202a5f7633098245843ef9f594728d2);
+            
+        
+
+        circle_marker_54a4bb93333eb5dcb26110144d727248.bindPopup(popup_cb501dd7dd778a71b89481e6d17c2b68)
+        ;
+
+        
+    
+    
+            var layer_control_b971583cc637063a25e3fcc12a0adf5d_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_9669299d89cdac2afbe35ad1fcfec53b,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_b971583cc637063a25e3fcc12a0adf5d = L.control.layers(
+                layer_control_b971583cc637063a25e3fcc12a0adf5d_layers.base_layers,
+                layer_control_b971583cc637063a25e3fcc12a0adf5d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_280c66ca0d7d6248de50c6df89348f63);
+
+        
+</script>
+</html>

@@ -87,7 +87,10 @@ markdown_extensions:
 
 plugins:
   - search
-  - mkdocs-jupyter
+  - mkdocs-jupyter:
+      execute: false
+      show_input: false
+      include_source: false
 
 markdown_extensions:
   - pymdownx.snippets:
