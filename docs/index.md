@@ -6,11 +6,17 @@ hide:
 
 # CityPortraits
 
-CityPortraits is a framework for reconstructing and analyzing urban systems through spatial data, historical sources, and computational models.
+Digital twin models can unravel unwritten urban local patterns. In countries like Albania, finding contextual historical information to explain these patterns is challenging. Existing maps, planning documents, and historical accounts can be translated into useful spatial data that constrain models and create more credible scenarios of development.
 
-## Purpose
+CityPortraits uses open data to generate scenarios of the urban and rural building stock in Albania through spatial interpolation and rule-based adjustments. The basis of the system is the Global Dynamic Exposure (GDE) model, which contains building type distributions based on taxonomies defined for disaster risk management
 
-Develop a reproducible method to describe and compare cities through their building stock, spatial structure, and historical evolution.
+GDE integrates data from OpenStreetMap, the Global Human Settlement Layer (GHSL), and local census sources. The resulting dataset includes exposure attributes such as occupancy, structural value, construction type, and urban-rural classification. The model is open source and calibrated using indicators such as population counts, building densities, map completeness, and construction periods. These calibration parameters are then adjusted to generate alternative scenarios within CityPortraits.
+
+Additional constraints are introduced by translating written and visual sources - such as historical maps, planning regulations, or descriptive accounts of urban growth - into spatial parameters. For instance, in Tirana, post-1990 expansion is often described as informal, low-density growth along main access roads and at the urban periphery. In this way, qualitative observations are systematically incorporated into the spatial modeling process.
+
+Outputs are generated in interoperable formats such as GeoJSON, enabling integration with mapping platforms, analytical workflows, and graph-based representations of urban structure. For instance, building clusters can be represented as graph nodes connected through adjacency or functional relationships, supporting queries on typology, density, or accessibility.
+The system explores how local Albanian building patterns can be documented, compared, and communicated through searchable, graph-based, and map-based digital interfaces. As a pilot, the project will test the pipeline on a limited study area (e.g., Tirana and 3 other cities), demonstrating how open tools can support the creation, validation, and exploration of large-scale building datasets.
+
 
 ## Framework
 
