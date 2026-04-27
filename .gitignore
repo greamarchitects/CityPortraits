@@ -237,3 +237,8 @@ site/assets/data/databases/GHSL_ALB/*.gpkg
 # Ignore heavy geopackages in docs
 docs/assets/data/outputs/*.gpkg
 site/assets/data/outputs/*.gpkg
+
+#ignore local data
+local_data/
+docs/assets/data/**/*.gpkg
+site/assets/data/**/*.gpkg

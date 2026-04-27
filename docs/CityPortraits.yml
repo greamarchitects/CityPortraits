@@ -15,3 +15,7 @@ settings:
   paths:
     data: ./data
     output: ./output
+
+exclude:
+  - assets/data/databases/GHSL_ALB/**
+  - assets/data/outputs/tirana_building_period_layers.gpkg
