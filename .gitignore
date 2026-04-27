@@ -229,3 +229,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+docs/assets/data/databases/GHSL_ALB/GHSL_ALB.gpkg
