@@ -1,0 +1,30 @@
+exclude:
+  - "**/*.gpkg"
+  - "**/*.zip"
+  - "**/*.parquet"
+  - "**/*.sqlite"
+  - "**/*.osm"
+  - "**/*.pbf"
+  
+project:
+  name: CityPortraits
+  version: 1.0
+
+authors:
+  - name: Gresa
+    role: Architect
+  - name: Doren
+    role: Developer
+  - name: Aida
+    role: Archival Specialist
+
+settings:
+  debug: true
+  paths:
+    data: ./data
+    output: ./output
+
+exclude:
+  - assets/data/databases/GHSL_ALB/**
+  - assets/data/outputs/tirana_building_period_layers.gpkg
+  

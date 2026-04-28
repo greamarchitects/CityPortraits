@@ -1,0 +1,304 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Historic Ottoman Tirana core",
+        "period": "pre-1920 → early 20th c.",
+        "category": "historic_core",
+        "color": "#8c510a",
+        "streets": [
+          "Pazari i Ri",
+          "Et'hem Bey Mosque surroundings",
+          "Rruga Barrikadave"
+        ],
+        "building_complexes": [
+          "Courtyard houses",
+          "Bazaar fabric",
+          "Small plot mixed-use",
+          "Commercial strips"
+        ],
+        "events": [
+          "Ottoman urban structure",
+          "Tirana becomes capital (1920)"
+        ],
+        "actors": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Monarchy-era planned capital",
+        "period": "1920–1940",
+        "category": "planned_capital",
+        "color": "#bf812d",
+        "streets": [
+          "Skanderbeg Square",
+          "Boulevard Zogu I",
+          "Boulevard Dëshmorët e Kombit"
+        ],
+        "building_complexes": [
+          "Institutional ensembles",
+          "Axial boulevards",
+          "Perimeter blocks (neoclassical/rationalist)"
+        ],
+        "events": [
+          "Capital formation",
+          "Monarchy period",
+          "Westernization"
+        ],
+        "actors": [
+          "Italian architects",
+          "Austrian architects"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Socialist centre zone",
+        "period": "1945–1991",
+        "category": "socialist_centre",
+        "color": "#01665e",
+        "streets": [
+          "Boulevard Dëshmorët e Kombit",
+          "Skanderbeg Square radial axes"
+        ],
+        "building_complexes": [
+          "Monumental civic complexes",
+          "Palace of Culture",
+          "National Historical Museum",
+          "Large plazas"
+        ],
+        "events": [
+          "Communist takeover (1945)",
+          "Socialist restructuring",
+          "Regime change (1991)"
+        ],
+        "actors": [
+          "State planning institutes"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Socialist housing estates",
+        "period": "1945–1991",
+        "category": "socialist_housing",
+        "color": "#35978f",
+        "streets": [
+          "Rruga e Kavajës",
+          "Rruga e Durrësit",
+          "Rruga Myslym Shyri"
+        ],
+        "building_complexes": [
+          "Prefabricated blocks (4–6 floors)",
+          "Superblocks",
+          "Slab buildings",
+          "Internal green/open space"
+        ],
+        "events": [
+          "State socialism",
+          "Social housing provision",
+          "Abolition of private property"
+        ],
+        "actors": [
+          "State design institutes"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Soviet-model block neighborhoods",
+        "period": "1945–1991",
+        "category": "socialist_blocks",
+        "color": "#80cdc1",
+        "streets": [
+          "Hierarchical street networks",
+          "Main vs internal roads"
+        ],
+        "building_complexes": [
+          "Semi-perimeter blocks",
+          "Freestanding slabs",
+          "Large courtyards (later infill)"
+        ],
+        "events": [
+          "Centralized planning",
+          "Post-socialist fragmentation"
+        ],
+        "actors": [
+          "State planning bodies"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Inner-city densified blocks",
+        "period": "1992–2015",
+        "category": "post_socialist_densification",
+        "color": "#c51b7d",
+        "streets": [
+          "Rruga Myslym Shyri",
+          "Rruga e Kavajës",
+          "Rruga e Durrësit"
+        ],
+        "building_complexes": [
+          "Block extensions",
+          "Infill buildings",
+          "Mixed-use ground floors",
+          "Fragmented morphology"
+        ],
+        "events": [
+          "Internal migration",
+          "Privatization",
+          "Weak planning control"
+        ],
+        "actors": [
+          "Private developers",
+          "Informal actors"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Shallvaret",
+        "period": "pre-1991 → post-1991 transformation",
+        "category": "post_socialist_densification",
+        "color": "#c51b7d",
+        "streets": [
+          "Rruga Ibrahim Rugova",
+          "Boulevard Bajram Curri"
+        ],
+        "building_complexes": [
+          "Mid/high-rise blocks (>6 floors)",
+          "Dense mixed-use",
+          "Active frontage",
+          "Café/retail dominance"
+        ],
+        "events": [
+          "Post-socialist densification",
+          "Commercial growth"
+        ],
+        "actors": [
+          "Private developers"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Kombinati",
+        "period": "socialist → post-1991",
+        "category": "industrial_socialist",
+        "color": "#5e3c99",
+        "streets": [
+          "Rruga e Kavajës",
+          "Industrial access roads"
+        ],
+        "building_complexes": [
+          "Worker housing (2–5 floors)",
+          "Textile factories",
+          "Warehouses",
+          "Adaptive reuse"
+        ],
+        "events": [
+          "Industrialization",
+          "Post-socialist decline",
+          "Reuse"
+        ],
+        "actors": [
+          "State industry → private sector"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Industrial sites (within Tirana)",
+        "period": "1945–1991 → reuse after 1991",
+        "category": "industrial_socialist",
+        "color": "#5e3c99",
+        "streets": [
+          "Western & southern industrial axes"
+        ],
+        "building_complexes": [
+          "Industrial halls",
+          "Factory compounds",
+          "Converted warehouses",
+          "Hybrid reuse"
+        ],
+        "events": [
+          "Socialist industrial planning",
+          "Market transition"
+        ],
+        "actors": [
+          "State → private"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Urban edges / peripheral expansion",
+        "period": "1992–2015",
+        "category": "peripheral_expansion",
+        "color": "#fdae61",
+        "streets": [
+          "Radial roads (Durrës, Elbasan)"
+        ],
+        "building_complexes": [
+          "Informal housing clusters",
+          "Self-built multi-storey",
+          "Irregular parcels"
+        ],
+        "events": [
+          "Mass migration",
+          "Uncontrolled expansion"
+        ],
+        "actors": [
+          "Informal builders"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "name": "Informal settlements",
+        "period": "1992–2015",
+        "category": "informal_settlements",
+        "color": "#d73027",
+        "streets": [
+          "Non-aligned / organic networks"
+        ],
+        "building_complexes": [
+          "Incremental housing",
+          "Mixed typologies",
+          "High variability"
+        ],
+        "events": [
+          "Collapse of state control",
+          "Legalization processes"
+        ],
+        "actors": [
+          "Informal actors"
+        ]
+      }
+    }
+  ]
+}
