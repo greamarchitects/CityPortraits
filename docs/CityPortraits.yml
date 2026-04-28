@@ -1,3 +1,11 @@
+exclude:
+  - "**/*.gpkg"
+  - "**/*.zip"
+  - "**/*.parquet"
+  - "**/*.sqlite"
+  - "**/*.osm"
+  - "**/*.pbf"
+  
 project:
   name: CityPortraits
   version: 1.0
@@ -19,3 +27,4 @@ settings:
 exclude:
   - assets/data/databases/GHSL_ALB/**
   - assets/data/outputs/tirana_building_period_layers.gpkg
+  
