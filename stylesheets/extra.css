@@ -551,3 +551,67 @@
     width: 100%;
   }
 }
+
+ /* =====================================
+   12. SPATIAL ANALYSIS
+   DASHBOARD — CARD LAYOUT
+   ===================================== */
+
+.spatial-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.dashboard-card {
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 14px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.dashboard-card p {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-card ul {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-card li {
+  font-size: 0.82rem;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-card li span {
+  display: block;
+  font-size: 0.72rem;
+  opacity: 0.65;
+  margin-top: 0.1rem;
+}
+
+.dashboard-card a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dashboard-card a:hover {
+  text-decoration: underline;
+}

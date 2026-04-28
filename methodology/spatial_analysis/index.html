@@ -574,6 +574,129 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spatial-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processing Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spatial-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial Interpolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-based-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule-Based Adjustments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clustering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatial-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spatial Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Sections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Related Sections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#urban-fabric" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -583,8 +706,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -594,15 +717,9 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Approach
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1017,22 +1134,267 @@
 
 
 <h1 id="spatial-analysis">Spatial Analysis</h1>
-<p>Spatial analysis examines the city as a layered system shaped by history, planning, and architecture.</p>
+<p>interprets the city as a layered system structured by historical evolution, planning frameworks, and architectural form.</p>
+<section class="dashboard-grid spatial-dashboard">
+
+  <!-- SPATIAL PARAMETERS -->
+  <article class="dashboard-card"
+    id="card-spatial-parameters"
+    data-category="core"
+    data-type="spatial-parameters"
+    data-tags="density distance parcel building network edge fragmentation">
+
+    <h3>Spatial Parameters</h3>
+    <p>Measurable geometric and topological properties of urban space.</p>
+
+    <ul>
+      <li data-key="density">Density <span>FAR · coverage ratio · units/ha</span></li>
+      <li data-key="distance">Distance <span>euclidean · network · nearest neighbor</span></li>
+      <li data-key="parcel_geometry">Parcel geometry <span>area · aspect ratio · frontage · depth</span></li>
+      <li data-key="building_geometry">Building geometry <span>footprint · height · volume · compactness</span></li>
+      <li data-key="network_geometry">Network geometry <span>intersection density · centrality · length</span></li>
+      <li data-key="edge_fragmentation">Edge / fragmentation <span>patch size · edge density · continuity</span></li>
+    </ul>
+
+    <a href="#spatial-parameters">Open module →</a>
+  </article>
+
+
+  <!-- CONSTRAINTS -->
+  <article class="dashboard-card"
+    id="card-constraints"
+    data-category="logic"
+    data-type="constraints"
+    data-tags="morphological discretization infrastructure regulatory">
+
+    <h3>Constraints</h3>
+    <p>Rules limiting or guiding spatial configuration and transformation.</p>
+
+    <ul>
+      <li data-key="morphological">Morphological <span>typology · geometry · network structure</span></li>
+      <li data-key="discretization">Discretization <span>thresholds · buffers · classification rules</span></li>
+      <li data-key="infrastructure_capacity">Infrastructure <span>transport · utilities · accessibility</span></li>
+      <li data-key="regulatory">Regulatory <span>zoning · codes · planning policies</span></li>
+    </ul>
+
+    <a href="#constraints">Open module →</a>
+  </article>
+
+
+  <!-- INTERFACES -->
+  <article class="dashboard-card"
+    id="card-interfaces"
+    data-category="interpretation"
+    data-type="interfaces"
+    data-tags="reasoning relationships comparative retrieval evolution documentation synthesis heuristic catalogue">
+
+    <h3>Interfaces</h3>
+    <p>Link analytical results with interpretation, comparison, and synthesis.</p>
+
+    <ul>
+      <li data-key="reasoning">Reasoning <span>rule logic · inference · decision paths</span></li>
+      <li data-key="relationships">Relationships <span>dependencies · correlations · links</span></li>
+      <li data-key="comparative">Comparative <span>cross-city · cross-scale analysis</span></li>
+      <li data-key="retrieval">Retrieval <span>data extraction · querying · indexing</span></li>
+      <li data-key="evolution">Evolution <span>temporal change · growth trajectories</span></li>
+      <li data-key="documentation">Documentation <span>sources · traceability · metadata</span></li>
+      <li data-key="synthesis">Synthesis <span>aggregation · abstraction · modeling</span></li>
+      <li data-key="heuristic">Heuristic <span>rules of thumb · expert logic</span></li>
+      <li data-key="catalogue">Catalogue <span>typologies · pattern libraries</span></li>
+    </ul>
+
+    <a href="#interfaces">Open module →</a>
+  </article>
+
+
+  <!-- SPATIAL INTERPOLATION -->
+  <article class="dashboard-card"
+    id="card-spatial-interpolation"
+    data-category="methods"
+    data-type="spatial-interpolation"
+    data-tags="rule-based geostatistical discrete redistribution local diffusion">
+
+    <h3>Spatial Interpolation</h3>
+    <p>Methods for estimating and distributing spatial values.</p>
+
+    <ul>
+      <li data-key="rule_based">Rule-based <span>deterministic assignment</span></li>
+      <li data-key="geostatistical">Geostatistical <span>kriging · spatial statistics</span></li>
+      <li data-key="discrete_assignment">Discrete <span>zonal allocation · grid assignment</span></li>
+      <li data-key="redistribution">Redistribution <span>rebalancing · scaling</span></li>
+      <li data-key="local_averaging">Local averaging <span>neighborhood smoothing</span></li>
+      <li data-key="graph_diffusion">Graph diffusion <span>network propagation</span></li>
+    </ul>
+
+    <a href="#processing-methods">Open module →</a>
+  </article>
+
+
+  <!-- RULE-BASED ADJUSTMENTS -->
+  <article class="dashboard-card"
+    id="card-rule-based-adjustments"
+    data-category="methods"
+    data-type="rule-based-adjustments"
+    data-tags="threshold conditional topology morphology temporal correction aggregation constraint similarity">
+
+    <h3>Rule-Based Adjustments</h3>
+    <p>Logical operations refining spatial outputs under constraints.</p>
+
+    <ul>
+      <li data-key="threshold">Threshold <span>cut-offs · classification limits</span></li>
+      <li data-key="conditional">Conditional <span>if–then logic · filters</span></li>
+      <li data-key="topological">Topological <span>adjacency · connectivity</span></li>
+      <li data-key="morphological">Morphological <span>shape-based transformations</span></li>
+      <li data-key="temporal">Temporal <span>time-based rules · sequencing</span></li>
+      <li data-key="correction">Correction <span>bias adjustment · normalization</span></li>
+      <li data-key="aggregation">Aggregation <span>grouping · merging</span></li>
+      <li data-key="constraint_based">Constraint-based <span>rule enforcement</span></li>
+      <li data-key="similarity">Similarity <span>pattern matching · clustering input</span></li>
+    </ul>
+
+    <a href="#processing-methods">Open module →</a>
+  </article>
+
+
+  <!-- CLUSTER -->
+  <article class="dashboard-card"
+    id="card-cluster"
+    data-category="methods"
+    data-type="cluster"
+    data-tags="dbscan kmeans pam agglomerative skater redcap louvain kde gmm">
+
+    <h3>Clustering</h3>
+    <p>Grouping spatial units based on similarity and structure.</p>
+
+    <ul>
+      <li data-key="density_dbscan">Density <span>DBSCAN</span></li>
+      <li data-key="distance_kmeans">Partitioning <span>K-means · PAM</span></li>
+      <li data-key="hierarchical">Hierarchical <span>Agglomerative</span></li>
+      <li data-key="spatially_constrained">Spatial <span>SKATER · REDCAP</span></li>
+      <li data-key="network">Network <span>Louvain</span></li>
+      <li data-key="hotspot">Hotspot <span>Gi* · KDE</span></li>
+      <li data-key="model_based">Model-based <span>GMM</span></li>
+    </ul>
+
+    <a href="#processing-methods">Open module →</a>
+  </article>
+
+
+  <!-- PATTERNS -->
+  <article class="dashboard-card"
+    id="card-patterns"
+    data-category="interpretation"
+    data-type="patterns"
+    data-tags="linear dispersed compact transformational geometric irregular">
+
+    <h3>Patterns</h3>
+    <p>Urban form structures derived from spatial metrics and clustering.</p>
+
+    <ul>
+      <li data-key="linear">Linear <span>corridor · ribbon</span></li>
+      <li data-key="dispersed">Dispersed <span>sprawl · leapfrog</span></li>
+      <li data-key="compact">Compact <span>clustered · infill</span></li>
+      <li data-key="transformational">Transformational <span>subdivision · densification</span></li>
+      <li data-key="geometric">Geometric <span>grid · radial</span></li>
+      <li data-key="irregular">Irregular <span>organic · fragmented · patchwork</span></li>
+    </ul>
+
+    <a href="#spatial-patterns">Open module →</a>
+  </article>
+
+</section>
+
+<hr />
+<h2 id="modules">Modules</h2>
+<h3 id="spatial-parameters"><span id="spatial-parameters"></span>Spatial Parameters</h3>
+<p>Measurable geometric and topological properties describing urban space.</p>
+<ul>
+<li><strong>Density</strong> — floor area ratio (FAR), building coverage ratio (BCR), units per hectare  </li>
+<li><strong>Distance</strong> — Euclidean distance, network distance, nearest-neighbor metrics  </li>
+<li><strong>Parcel Geometry</strong> — area, aspect ratio, frontage, depth  </li>
+<li><strong>Building Geometry</strong> — footprint area, height, volume, compactness  </li>
+<li><strong>Network Geometry</strong> — intersection density, street length, centrality measures  </li>
+<li><strong>Edge / Fragmentation</strong> — patch size, edge density, spatial continuity  </li>
+</ul>
+<hr />
+<h3 id="constraints"><span id="constraints"></span>Constraints</h3>
+<p>Rules and limitations governing spatial configuration and transformation.</p>
+<ul>
+<li><strong>Morphological</strong> — typology constraints, geometric compatibility, network structure  </li>
+<li><strong>Discretization</strong> — thresholds, buffers, classification boundaries  </li>
+<li><strong>Infrastructure Capacity</strong> — transport access, service provision, digital infrastructure  </li>
+<li><strong>Regulatory</strong> — zoning rules, building codes, planning policies  </li>
+</ul>
+<hr />
+<h3 id="interfaces"><span id="interfaces"></span>Interfaces</h3>
+<p>Link analytical results with interpretation, comparison, and synthesis processes.</p>
+<ul>
+<li><strong>Reasoning</strong> — rule logic, inference pathways  </li>
+<li><strong>Relationships</strong> — dependencies and correlations between variables  </li>
+<li><strong>Comparative</strong> — cross-city and cross-scale analysis  </li>
+<li><strong>Retrieval</strong> — querying, extraction, indexing of data  </li>
+<li><strong>Evolution</strong> — temporal change and growth trajectories  </li>
+<li><strong>Documentation</strong> — source tracking, metadata, traceability  </li>
+<li><strong>Synthesis</strong> — aggregation, abstraction, model generation  </li>
+<li><strong>Heuristic</strong> — expert rules and approximations  </li>
+<li><strong>Catalogue</strong> — typologies, pattern libraries  </li>
+</ul>
+<hr />
+<h3 id="processing-methods"><span id="processing-methods"></span>Processing Methods</h3>
+<p>Methods for estimating, transforming, and organizing spatial data.</p>
+<h4 id="spatial-interpolation">Spatial Interpolation</h4>
+<ul>
+<li>Rule-based assignment  </li>
+<li>Geostatistical methods (e.g. kriging)  </li>
+<li>Discrete spatial allocation  </li>
+<li>Redistribution and scaling  </li>
+<li>Local averaging (neighborhood smoothing)  </li>
+<li>Graph-based diffusion (network propagation)  </li>
+</ul>
+<h4 id="rule-based-adjustments">Rule-Based Adjustments</h4>
+<ul>
+<li>Threshold-based filtering  </li>
+<li>Conditional logic (if–then rules)  </li>
+<li>Topological constraints (adjacency, connectivity)  </li>
+<li>Morphological transformations  </li>
+<li>Temporal sequencing  </li>
+<li>Correction and normalization  </li>
+<li>Aggregation (grouping, merging)  </li>
+<li>Constraint-based enforcement  </li>
+<li>Similarity-based adjustment  </li>
+</ul>
+<h4 id="clustering">Clustering</h4>
+<ul>
+<li>Density-based (DBSCAN)  </li>
+<li>Partitioning (K-means, K-medoids PAM)  </li>
+<li>Hierarchical (agglomerative)  </li>
+<li>Spatially constrained (SKATER, REDCAP)  </li>
+<li>Network-based (Louvain community detection)  </li>
+<li>Hotspot detection (Getis-Ord Gi*, KDE)  </li>
+<li>Model-based (Gaussian Mixture Models)  </li>
+</ul>
+<hr />
+<h3 id="spatial-patterns"><span id="spatial-patterns"></span>Spatial Patterns</h3>
+<p>Urban form structures derived from spatial parameters and clustering.</p>
+<ul>
+<li><strong>Linear</strong> — corridor-based development, ribbon structures  </li>
+<li><strong>Dispersed</strong> — sprawl, leapfrog development  </li>
+<li><strong>Compact</strong> — clustered, infill development  </li>
+<li><strong>Transformational</strong> — subdivision, densification processes  </li>
+<li><strong>Geometric</strong> — grid-based or radial planning systems  </li>
+<li><strong>Irregular</strong> — organic, fragmented, patchwork morphologies  </li>
+</ul>
+<hr />
+<h2 id="related-sections">Related Sections</h2>
 <h3 id="urban-fabric">Urban Fabric</h3>
-<p>Block structure, street networks, and spatial patterns.<br />
+<p>Block structure, street networks, and spatial patterns<br />
 → <a href="urban_fabric/">Urban Fabric</a> · <a href="urban_fabric/morphology/">Morphology</a> · <a href="urban_fabric/emergent_patterns/">Emergent Patterns</a></p>
 <h3 id="architecture">Architecture</h3>
-<p>Building-level analysis of typology, construction, and classification.<br />
+<p>Building-level typology and construction systems<br />
 → <a href="architecture/">Architecture</a> · <a href="architecture/building_typology/">Typology</a> · <a href="architecture/building_construction/">Construction</a> · <a href="architecture/building_taxonomy/">Taxonomy</a></p>
-<h2 id="approach">Approach</h2>
-<ul>
-<li>Geospatial data (GIS, cadastral)  </li>
-<li>Historical sources  </li>
-<li>Computational methods  </li>
-<li>Architectural analysis  </li>
-</ul>
+<hr />
 <h2 id="objective">Objective</h2>
-<p>Reveal urban structure, link past and present, and support comparative city analysis.</p>
+<p>Decode urban structure by linking form, data, and history into a comparable spatial system.</p>
 
 
 
@@ -1135,15 +1497,17 @@
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-      
         <script src="../../javascripts/timeline-map.js"></script>
       
         <script src="../../javascripts/graph.js"></script>
       
+        <script src="../../javascripts/spatial-dashboard.js"></script>
+      
         <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
       
         <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+      
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
       
     
   </body>
