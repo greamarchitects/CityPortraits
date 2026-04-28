@@ -55,11 +55,12 @@ extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
-  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - javascripts/timeline-map.js
   - javascripts/graph.js
+  - javascripts/spatial-dashboard.js
   - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
   - https://unpkg.com/cytoscape/dist/cytoscape.min.js
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
 
 
 extra:
@@ -98,4 +99,3 @@ markdown_extensions:
         - docs
       check_paths: true
 
-      
