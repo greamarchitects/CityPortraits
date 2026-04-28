@@ -14,40 +14,6 @@ CityPortraits bridges traditional architectural analysis with modern data scienc
 - **Spatial Analysis**: Geometric and relational structures derived from mapped data
 - **Data Analysis**: Quantification and validation across multiple urban datasets
 
-## Methodology
-
-Our analytical pipeline integrates three core approaches:
-
-### 1. Contextual Analysis
-- Documentary research and archival studies
-- Historical narrative analysis
-- Actor mapping and stakeholder identification
-- Newspaper archives and period documentation
-
-### 2. Spatial Analysis
-- Urban morphology and architectural taxonomy
-- Cadastral mapping and building typology
-- Morphological patterns and emergent structures
-- Geographic relationships and spatial networks
-
-### 3. Data Analysis
-- Multi-source dataset integration (OSM, GHSL, GDE, ASIG, Census)
-- Statistical validation and cross-dataset consistency
-- Calibration and quality assurance
-- Quantitative urban attribute analysis
-
-## Case Studies
-
-The framework has been applied to major Albanian cities:
-
-- **Tirana**: Capital city urban development patterns
-- **Berat**: UNESCO World Heritage Site analysis
-- **Durrës**: Coastal city morphological studies
-- **Gjirokastër**: Historic city preservation analysis
-- **Korçë**: Regional center urban dynamics
-- **Shkodër**: Northern city development patterns
-- **Vlorë**: Southern coastal city analysis
-
 ## 📊 Data Sources
 
 ### Primary Datasets
@@ -74,15 +40,26 @@ The framework has been applied to major Albanian cities:
 ### Project Structure
 ```
 CityPortraits/
-├── docs/                    # MkDocs source files
-│   ├── assets/data/        # JSON data files
-│   ├── javascripts/        # Interactive components
-│   ├── stylesheets/        # Custom CSS styling
-│   ├── methodology/        # Analytical framework docs
-│   ├── model/             # Urban modeling results
-│   └── case_studies/      # City-specific analyses
-├── mkdocs.yml             # Site configuration
-└── README.md              # This file
+├── docs/
+│   ├── index.md
+│   ├── print_all.md
+│   ├── about/
+│   ├── assets/
+│   │   ├── data/
+│   │   ├── images/
+│   │   └── outputs/
+│   ├── case_studies/
+│   │   ├── index.md
+│   │   └── *.ipynb
+│   ├── methodology/
+│   │   ├── contextual_analysis/
+│   │   ├── spatial_analysis/
+│   │   └── data_analysis/
+│   ├── model/
+│   ├── javascripts/
+│   └── stylesheets/
+├── mkdocs.yml
+└── README.md
 ```
 
 ## 🚀 Getting Started
@@ -157,11 +134,10 @@ We welcome contributions to improve the framework and expand the analysis to add
 - Enhance visualization components
 - Expand methodological documentation
 - Report bugs and suggest features
+-  **Collaborate!** : [Contact](https://greamarchitects.github.io/CityPortraits/about/)
 
 ### Development Guidelines
-- Follow MkDocs and Material theme conventions
 - Maintain data format consistency
-- Ensure responsive design compatibility
 - Document new features and methodologies
 
 ##  License
