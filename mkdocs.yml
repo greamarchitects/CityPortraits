@@ -1,15 +1,13 @@
 site_name: CityPortraits
 site_description: A project showcasing the architectural heritage of cities through portraits
-# site_url: https://github.com/greamarchitects/CityPortraits
 site_url: https://greamarchitects.github.io/CityPortraits/
 dev_addr: 127.0.0.1:8002
-site_url: http://127.0.0.1:8002/greamarchitects/CityPortraits/
-
 
 theme:
   name: material
   palette:
-    primary: indigo
+    scheme: default
+    primary: white
     accent: blue
   features:
     - navigation.top
@@ -17,16 +15,15 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
-    - search.highlight
     - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
     - navigation.footer
-    - toc.integrate 
+    - search.highlight
+    - toc.integrate
 
 nav:
-  - Home:
-      - Main: index.md
+  - Home: index.md
 
   - Methodology:
       - Intro: methodology/index.md
@@ -34,57 +31,16 @@ nav:
       - Spatial Analysis: methodology/spatial_analysis/index.md
       - Data Analysis: methodology/data_analysis/index.md
 
-  - Model:
-      - model/index.md
+  - Model: model/index.md
 
   - Case Studies:
-      - case_studies/index.md
+      - Overview: case_studies/index.md
       - Tirana: case_studies/Tirana.ipynb
-      - Durres: case_studies/Durres.ipynb
+      - Durrës: case_studies/Durres.ipynb
       - Berat: case_studies/Berat.ipynb
-      - Shkodra: case_studies/Shkodra.ipynb
+      - Shkodër: case_studies/Shkodra.ipynb
 
-  - About: 
-      - about/index.md
-
-  # - Print Version: 
-  #     - print_all.md
-
-extra_css:
-  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
-  - stylesheets/extra.css
-
-extra_javascript:
-  - javascripts/timeline-map.js
-  - javascripts/graph.js
-  - javascripts/spatial-dashboard.js
-  - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
-  - https://unpkg.com/cytoscape/dist/cytoscape.min.js
-  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
-
-
-extra:
-  footer:
-    copyright: "© 2026 CityPortraits Team"
-    custom: true
-
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - attr_list
-  - tables
-  - toc:
-      toc_depth: 3
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-
+  - About: about/index.md
 
 plugins:
   - search
@@ -94,8 +50,55 @@ plugins:
       include_source: false
 
 markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - md_in_html
+  - pymdownx.details
   - pymdownx.snippets:
       base_path:
         - docs
       check_paths: true
+  - toc:
+      toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
+extra_css:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - https://unpkg.com/cytoscape/dist/cytoscape.min.js
+  - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
+  - javascripts/timeline-map.js
+  - javascripts/graph.js
+  - javascripts/spatial-dashboard.js
+
+extra:
+  generator: false
+  footer:
+    copyright: "© 2026 CityPortraits Team"
+    custom: true
+  meta:
+    - name: google-site-verification
+      content: "2_jAyfd8zpoIiuPrwYmkixpWFASajcOzTFl0KMrpJrE"
+    - name: robots
+      content: "index, follow"
+
+exclude_docs: |
+  **/*.gpkg
+  **/*.zip
+  **/*.parquet
+  **/*.sqlite
+  **/*.osm
+  **/*.pbf
+  assets/data/databases/GHSL_ALB/**
+  assets/data/outputs/tirana_building_period_layers.gpkg

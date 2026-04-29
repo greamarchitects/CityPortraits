@@ -1,22 +1,206 @@
 /* =====================================
    CITYPORTRAITS — UI SYSTEM
+
+   docs/
+   ├─ index.md
+   ├─ methodology/
+   │  ├─ index.md
+   │  ├─ contextual_analysis/
+   │  │  └─ index.md
+   │  └─ spatial_analysis/
+   │     └─ index.md
+   ├─ model/
+   │  ├─ index.md
+   │  └─ graphs.md
+   ├─ case_studies/
+   │  └─ index.md
+   ├─ about/
+   │  └─ index.md
+   └─ print_all.md
    ===================================== */
 
 
 /* =====================================
-   1. TIMELINE
+   0. GLOBAL THEME — VERCEL STYLE
+
+   Used globally:
+   docs/
+   └─ assets/
+      └─ stylesheets/
+         └─ extra.css
+
+   Purpose:
+   Minimal, clean, SaaS-like UI (Vercel / Linear style)
+   Overrides Material defaults without breaking layout
+
+   Affects:
+   - header / navigation
+   - links / typography
+   - all card components
+   - borders / shadows / spacing
    ===================================== */
 
-/* Main timeline wrapper layout */
+
+/* ---------- ROOT DESIGN TOKENS ---------- */
+
+:root {
+  --cp-bg: #ffffff;
+  --cp-surface: #fafafa;
+  --cp-border: #eaeaea;
+  --cp-border-strong: #d4d4d4;
+
+  --cp-text: #111111;
+  --cp-text-soft: #666666;
+
+  --cp-radius: 14px;
+  --cp-radius-sm: 10px;
+
+  --cp-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.03);
+  --cp-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.04);
+  --cp-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.06);
+
+  --cp-transition: 0.2s ease;
+}
+
+
+/* ---------- BASE TYPOGRAPHY ---------- */
+
+.md-typeset {
+  color: var(--cp-text);
+}
+
+.md-typeset p {
+  color: var(--cp-text-soft);
+}
+
+
+/* ---------- LINKS ---------- */
+
+.md-typeset a {
+  color: var(--cp-text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.md-typeset a:hover {
+  color: black;
+}
+
+
+/* ---------- HEADER (VERCEL STYLE) ---------- */
+
+.md-header {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--cp-text);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--cp-border);
+  box-shadow: none;
+}
+
+.md-tabs {
+  background: var(--cp-bg);
+  border-bottom: 1px solid var(--cp-border);
+}
+
+
+/* ---------- GLOBAL CARD SYSTEM ---------- */
+
+.dashboard-card,
+.case-card,
+.insight-card,
+.workflow-card,
+.objective-item,
+.principle-card,
+.cp-graph-shell,
+.timeline-wrapper,
+.archive-card {
+  background: var(--cp-surface);
+  border: 1px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  box-shadow: var(--cp-shadow-sm);
+  transition:
+    transform var(--cp-transition),
+    box-shadow var(--cp-transition),
+    border-color var(--cp-transition);
+}
+
+
+/* ---------- HOVER BEHAVIOR ---------- */
+
+.dashboard-card:hover,
+.case-card:hover,
+.insight-card:hover,
+.objective-item:hover,
+.workflow-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--cp-border-strong);
+  box-shadow: var(--cp-shadow-lg);
+}
+
+
+/* ---------- BUTTONS (OPTIONAL IMPROVEMENT) ---------- */
+
+button,
+.cp-graph-toolbar button,
+.contact-form button {
+  border-radius: 999px;
+  transition: all var(--cp-transition);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ---------- INPUTS / FORMS ---------- */
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  border: 1px solid var(--cp-border);
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--cp-border-strong);
+}
+
+
+/* ---------- SMALL POLISH ---------- */
+
+.case-card-header {
+  background: #f7f7f7;
+}
+
+.archive-header {
+  background: #f7f7f7;
+}
+
+
+/* =====================================
+   1. TIMELINE
+
+   Used in:
+   docs/
+   └─ model/
+      └─ index.md
+
+   Related:
+   .timeline-layout
+   .timeline-wrapper
+   .years
+   .year
+   .event-box
+   .event-tags
+   ===================================== */
+
 .timeline-layout {
   display: grid;
   grid-template-columns: 1fr;
-  /* gap: 1.25rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem; */
 }
 
-/* Container around the interactive timeline */
 .timeline-wrapper {
   padding: 20px;
   border-radius: 12px;
@@ -24,7 +208,6 @@
   border: 1px solid var(--md-default-fg-color--lightest, #ddd);
 }
 
-/* Row of year buttons */
 .years {
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +217,6 @@
   padding-top: 10px;
 }
 
-/* Horizontal line behind the year buttons */
 .years::before {
   content: "";
   position: absolute;
@@ -45,7 +227,6 @@
   background: #ccc;
 }
 
-/* Individual year button */
 .year {
   padding: 6px 12px;
   border-radius: 20px;
@@ -55,28 +236,24 @@
   background: white;
 }
 
-/* Active/selected year state */
 .year.active {
   background: black;
   color: white;
   font-weight: bold;
 }
 
-/* Event content area below the timeline */
 .event-box {
   border-top: 1px solid #ddd;
   padding-top: 18px;
   min-height: 150px;
 }
 
-/* Tag container for event metadata */
 .event-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-/* Individual event tag */
 .event-tag {
   padding: 4px 10px;
   border-radius: 999px;
@@ -88,21 +265,73 @@
 
 /* =====================================
    2. MAP PANEL
+
+   Used in:
+   docs/
+   └─ model/
+      └─ index.md
+
+   Related:
+   .timeline-map
    ===================================== */
 
-/* Timeline-linked map area */
 .timeline-map {
   width: 100%;
   min-height: 420px;
   border-radius: 12px;
 }
 
+/* Material header must stay above everything */
+.md-header {
+  z-index: 9999 !important;
+}
+
+.md-tabs {
+  z-index: 9998 !important;
+}
+
+/* Map/iframe must stay below header */
+iframe,
+.leaflet-container,
+.map-container,
+.case-map-session,
+.case-map-session iframe {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Leaflet controls are often the problem */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom,
+.leaflet-control {
+  z-index: 10 !important;
+}
+
+/* If map is inside a card */
+.case-map-session {
+  overflow: hidden;
+  isolation: isolate;
+}
+
 
 /* =====================================
    3. ARCHIVE CARDS
+
+   Used in:
+   docs/
+   └─ methodology/
+      └─ contextual_analysis/
+         └─ index.md
+
+   Related:
+   .archive-card
+   .archive-header
+   .archive-title
+   .archive-meta
+   .archive-image
    ===================================== */
 
-/* Main card container for archival figures/items */
 .archive-card {
   max-width: 420px;
   border: 1px solid #ddd;
@@ -112,7 +341,6 @@
   font-family: system-ui, sans-serif;
 }
 
-/* Top bar with image count / metadata */
 .archive-header {
   display: flex;
   justify-content: space-between;
@@ -122,32 +350,27 @@
   color: #666;
 }
 
-/* Main archive title */
 .archive-title {
   font-size: 18px;
   font-weight: 600;
   padding: 10px 12px 0;
 }
 
-/* Secondary archive metadata */
 .archive-meta {
   font-size: 13px;
   color: #777;
   padding: 4px 12px 10px;
 }
 
-/* Inline people/role text */
 .archive-people {
   font-style: italic;
 }
 
-/* Archive image */
 .archive-image img {
   width: 100%;
   display: block;
 }
 
-/* Image caption */
 .archive-caption {
   font-size: 12px;
   color: #666;
@@ -155,7 +378,6 @@
   font-style: italic;
 }
 
-/* Source / reference text at bottom of card */
 .archive-source {
   font-size: 11px;
   color: #888;
@@ -166,24 +388,112 @@
 
 /* =====================================
    4. CYTOSCAPE / GRAPH
+
+   Used in:
+   docs/
+   └─ model/
+      └─ graphs.md
+
+   Related:
+   .cp-graph-shell
+   .cp-graph-toolbar
+   #cy-network
+   .cp-graph-note
    ===================================== */
 
-/* Graph container for Cytoscape network */
-#cy-network {
-  width: 100%;
-  height: 500px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  margin-top: 20px;
+.cp-graph-shell {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  border-radius: 14px;
   background: var(--md-default-bg-color);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
+.cp-graph-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.cp-graph-toolbar button {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.cp-graph-toolbar button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 0, 0, 0.24);
+}
+
+#cy-network {
+  width: 100%;
+  height: 640px;
+  min-height: 520px;
+
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  border-radius: 12px;
+  border: 1px solid #ddd;
+
+  background:
+    radial-gradient(circle at top left, rgba(63, 81, 181, 0.04), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(76, 175, 80, 0.05), transparent 28%),
+    var(--md-default-bg-color);
+}
+
+.cp-graph-note {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cp-graph-shell {
+    padding: 0.75rem;
+  }
+
+  #cy-network {
+    height: 70vh;
+    min-height: 420px;
+  }
+}
+
+#cy-network {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+#cy-network:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
 
 /* =====================================
    5. METHODOLOGY — INSIGHTS CARDS
+
+   Used in:
+   docs/
+   └─ methodology/
+      └─ index.md
+
+   Related:
+   .insights-grid
+   .insight-card
+   .card-header
    ===================================== */
 
-/* Grid for insight cards */
 .insights-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -191,7 +501,6 @@
   margin: 1.25rem 0 2rem 0;
 }
 
-/* Individual insight card */
 .insight-card {
   display: block;
   padding: 1.2rem;
@@ -206,21 +515,18 @@
     border-color 0.18s ease;
 }
 
-/* Hover effect */
 .insight-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border-color: rgba(0, 0, 0, 0.14);
 }
 
-/* Card title */
 .card-header h3 {
   margin: 0 0 0.65rem 0;
   font-size: 1rem;
   line-height: 1.35;
 }
 
-/* Card text */
 .insight-card p {
   margin: 0;
   line-height: 1.6;
@@ -230,9 +536,19 @@
 
 /* =====================================
    6. METHODOLOGY — WORKFLOW SCROLL
+
+   Used in:
+   docs/
+   └─ methodology/
+      └─ index.md
+
+   Related:
+   .workflow-scroll
+   .workflow-card
+   .workflow-card-number
+   .workflow-card-body
    ===================================== */
 
-/* Scrollable workflow container */
 .workflow-scroll {
   max-height: 520px;
   overflow-y: auto;
@@ -244,12 +560,11 @@
   margin: 1.25rem 0 2rem 0;
 }
 
-/* Individual workflow step card */
 .workflow-card {
   scroll-snap-align: start;
   min-height: 220px;
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 80px 1fr;
   gap: 1.25rem;
   align-items: start;
   padding: 1.4rem;
@@ -259,30 +574,31 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-/* Large step number */
 .workflow-card-number {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
-  color: var(--md-primary-fg-color);
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
-  padding-right: 1rem;
+  color: #1f2937;              /* dark grey, visible on white */
+  background: #f3f4f6;         /* light grey badge */
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  min-width: 64px;
+  border-right: none;
 }
 
-/* Workflow step title */
 .workflow-card-body h4 {
   margin: 0 0 0.6rem 0;
   font-size: 1.05rem;
 }
 
-/* Workflow step description */
 .workflow-card-body p {
   margin: 0;
   line-height: 1.65;
   color: var(--md-default-fg-color--light);
 }
 
-/* Custom scrollbar */
 .workflow-scroll::-webkit-scrollbar {
   width: 8px;
 }
@@ -295,9 +611,17 @@
 
 /* =====================================
    7. METHODOLOGY — PRINCIPLES CARDS
+
+   Used in:
+   docs/
+   └─ methodology/
+      └─ index.md
+
+   Related:
+   .principles-grid
+   .principle-card
    ===================================== */
 
-/* Grid for principle cards */
 .principles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -305,7 +629,6 @@
   margin: 1.5rem 0 2rem 0;
 }
 
-/* Individual principle card */
 .principle-card {
   padding: 1rem 1.2rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -313,13 +636,11 @@
   background: #fff;
 }
 
-/* Principle title */
 .principle-card h4 {
   margin-top: 0;
   margin-bottom: 0.75rem;
 }
 
-/* Principle bullet list */
 .principle-card ul {
   margin: 0;
   padding-left: 1.2rem;
@@ -332,9 +653,18 @@
 
 /* =====================================
    8. METHODOLOGY — OBJECTIVES CARDS
+
+   Used in:
+   docs/
+   └─ methodology/
+      └─ index.md
+
+   Related:
+   .objectives-summary
+   .objective-item
+   .objective-content
    ===================================== */
 
-/* Grid for objectives summary cards */
 .objectives-summary {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -342,7 +672,6 @@
   margin: 1.5rem 0 2rem 0;
 }
 
-/* Individual objective item */
 .objective-item {
   padding: 1.2rem 1.3rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -351,20 +680,17 @@
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Hover state */
 .objective-item:hover {
   border-color: rgba(0, 0, 0, 0.14);
   transform: translateY(-2px);
 }
 
-/* Objective title */
 .objective-content h4 {
   margin: 0 0 0.6rem 0;
   font-size: 1rem;
   line-height: 1.35;
 }
 
-/* Objective description */
 .objective-content p {
   margin: 0;
   font-size: 0.92rem;
@@ -374,17 +700,297 @@
 
 
 /* =====================================
-   9. GENERIC PAGE UTILITIES
+   9. SPATIAL ANALYSIS DASHBOARD
+
+   Used in:
+   docs/
+   └─ methodology/
+      └─ spatial_analysis/
+         └─ index.md
+
+   Related:
+   .spatial-dashboard
+   .dashboard-card
    ===================================== */
 
-/* Force page break when printing */
-.page-break {
-  page-break-before: always;
+.spatial-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.dashboard-card {
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 14px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.dashboard-card p {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-card ul {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-card li {
+  font-size: 0.82rem;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-card li span {
+  display: block;
+  font-size: 0.72rem;
+  opacity: 0.65;
+  margin-top: 0.1rem;
+}
+
+.dashboard-card a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dashboard-card a:hover {
+  text-decoration: underline;
 }
 
 
 /* =====================================
-   10. RESPONSIVE RULES
+   10. ABOUT PAGE / CONTACT FORM
+
+   Used in:
+   docs/
+   └─ about/
+      └─ index.md
+
+   Related:
+   .contact-form
+   .tag
+   ===================================== */
+
+.contact-form {
+  max-width: 640px;
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font: inherit;
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #3f51b5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  margin: 0.2rem 0.2rem 0.2rem 0;
+  border-radius: 6px;
+  background: #eef2ff;
+  color: #3f51b5;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+/* =====================================
+   11. CASE STUDY DASHBOARD
+
+   Used in:
+   docs/
+   └─ case_studies/
+      └─ index.md
+
+   Related:
+   .case-dashboard-grid
+   .case-card
+   .case-map-preview
+   .case-map-session
+   .case-card-body
+   .case-tags
+   .case-link
+   ===================================== */
+
+.case-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+
+.case-card {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.case-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--md-code-bg-color);
+}
+
+.case-status {
+  color: var(--md-accent-fg-color);
+  font-weight: 700;
+}
+
+.case-map-preview {
+  height: 220px;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+.case-map-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-map-empty {
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  color: #777;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.case-map-session {
+  height: 260px;
+  width: 100%;
+  overflow: hidden;
+  background: #f2f2f2;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.case-map-session iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.case-card-body {
+  padding: 1rem;
+}
+
+.case-card-body h2 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+}
+
+.case-card-body p {
+  margin-bottom: 0.8rem;
+}
+
+.case-card-body ul {
+  margin: 0.6rem 0 1rem 0;
+  padding-left: 1.1rem;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.8rem 0 1rem 0;
+}
+
+.case-tags span {
+  font-size: 0.7rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  background: var(--md-code-bg-color);
+}
+
+.case-link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+/* =====================================
+   12. GENERIC PAGE UTILITIES
+
+   Used in:
+   docs/
+   ├─ print_all.md
+   └─ any markdown page using custom layout utilities
+
+   Related:
+   .page-break
+   h3
+   ===================================== */
+
+.page-break {
+  page-break-before: always;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+
+/* =====================================
+   13. RESPONSIVE RULES
+
+   Used globally:
+   docs/
+   └─ assets/
+      └─ stylesheets/
+         └─ extra.css
+
+   Affects:
+   methodology cards
+   workflow cards
+   graph panel
+   case study cards
    ===================================== */
 
 @media (max-width: 1000px) {
@@ -411,11 +1017,30 @@
   .workflow-scroll {
     max-height: 480px;
   }
+
+  #cy-network {
+    height: 480px;
+  }
+
+  .cp-graph-toolbar {
+    justify-content: stretch;
+  }
+
+  .cp-graph-toolbar button {
+    width: 100%;
+  }
 }
 
 
 /* =====================================
-   11. PRINT STYLES
+   14. PRINT STYLES
+
+   Used in:
+   docs/
+   └─ print_all.md
+
+   Purpose:
+   browser print / PDF export
    ===================================== */
 
 @media print {
@@ -484,187 +1109,4 @@
     size: A4;
     margin: 12mm;
   }
-}
-
-/* =====================================
-   4. CYTOSCAPE / GRAPH
-   ===================================== */
-
-.cp-graph-shell {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
-  border-radius: 14px;
-  background: var(--md-default-bg-color);
-}
-
-.cp-graph-toolbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 0.75rem;
-}
-
-.cp-graph-toolbar button {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  background: var(--md-default-bg-color);
-  color: var(--md-default-fg-color);
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: transform 0.15s ease, border-color 0.15s ease;
-}
-
-.cp-graph-toolbar button:hover {
-  transform: translateY(-1px);
-  border-color: rgba(0, 0, 0, 0.24);
-}
-
-#cy-network {
-  width: 100%;
-  height: 640px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  background:
-    radial-gradient(circle at top left, rgba(63, 81, 181, 0.04), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(76, 175, 80, 0.05), transparent 28%),
-    var(--md-default-bg-color);
-}
-
-.cp-graph-note {
-  margin-top: 0.75rem;
-  font-size: 0.85rem;
-  color: var(--md-default-fg-color--light);
-}
-
-@media (max-width: 700px) {
-  #cy-network {
-    height: 480px;
-  }
-
-  .cp-graph-toolbar {
-    justify-content: stretch;
-  }
-
-  .cp-graph-toolbar button {
-    width: 100%;
-  }
-}
-
- /* =====================================
-   12. SPATIAL ANALYSIS
-   DASHBOARD — CARD LAYOUT
-   ===================================== */
-
-.spatial-dashboard {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.dashboard-card {
-  padding: 1rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 14px;
-  background: var(--md-default-bg-color);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.dashboard-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-}
-
-.dashboard-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.4rem;
-}
-
-.dashboard-card p {
-  font-size: 0.85rem;
-  opacity: 0.75;
-  margin-bottom: 0.75rem;
-}
-
-.dashboard-card ul {
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-.dashboard-card li {
-  font-size: 0.82rem;
-  margin-bottom: 0.25rem;
-}
-
-.dashboard-card li span {
-  display: block;
-  font-size: 0.72rem;
-  opacity: 0.65;
-  margin-top: 0.1rem;
-}
-
-.dashboard-card a {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.dashboard-card a:hover {
-  text-decoration: underline;
-}
-
- /* =====================================
-   13. ABOUT PAGE
-   FORM LAYOUT
-   ===================================== */
-
-.contact-form {
-  max-width: 640px;
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.contact-form label {
-  display: grid;
-  gap: 0.35rem;
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  padding: 0.65rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
-  font: inherit;
-}
-
-.contact-form button {
-  width: fit-content;
-  padding: 0.65rem 1rem;
-  border-radius: 8px;
-  border: none;
-  background: #3f51b5;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.tag {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  margin: 0.2rem 0.2rem 0.2rem 0;
-  border-radius: 6px;
-  background: #eef2ff;
-  color: #3f51b5;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-h3 {
-  margin-top: 2rem;
 }

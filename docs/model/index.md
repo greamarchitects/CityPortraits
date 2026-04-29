@@ -131,13 +131,15 @@ Relational representation of spatial elements and their connections.
 
 <div class="cp-graph-shell">
   <div class="cp-graph-toolbar">
-    <button id="graph-reset-btn" type="button">Reset view</button>
+    <button id="graph-reset-btn" type="md-button">Reset view</button>
   </div>
   <div id="cy-network"></div>
   <div class="cp-graph-note">
     Click a node to focus its neighborhood. Click the background or Reset view to return.
   </div>
 </div>
+
+
 
 This is a sample network graph showing relationships between actors, events, and places. The actual graph will be rendered using the data from `events.json`, `actors.json`, and `places.json`.
 

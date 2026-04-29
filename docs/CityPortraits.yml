@@ -1,30 +1,43 @@
-exclude:
-  - "**/*.gpkg"
-  - "**/*.zip"
-  - "**/*.parquet"
-  - "**/*.sqlite"
-  - "**/*.osm"
-  - "**/*.pbf"
-  
-project:
-  name: CityPortraits
-  version: 1.0
+site_name: CityPortraits
+site_url: https://greamarchitects.github.io/CityPortraits/
 
-authors:
-  - name: Gresa
-    role: Architect
-  - name: Doren
-    role: Developer
-  - name: Aida
-    role: Archival Specialist
+theme:
+  name: material
 
-settings:
-  debug: true
-  paths:
-    data: ./data
-    output: ./output
+plugins:
+  - search
 
-exclude:
-  - assets/data/databases/GHSL_ALB/**
-  - assets/data/outputs/tirana_building_period_layers.gpkg
-  
+exclude_docs: |
+  **/*.gpkg
+  **/*.zip
+  **/*.parquet
+  **/*.sqlite
+  **/*.osm
+  **/*.pbf
+  assets/data/databases/GHSL_ALB/**
+  assets/data/outputs/tirana_building_period_layers.gpkg
+
+extra:
+  project:
+    name: CityPortraits
+    version: 1.0
+
+  authors:
+    - name: Gresa
+      role: Architect, Maintainer, Developer, Data Analyst
+    - name: Doren
+      role: Developer, Data Analyst
+    - name: Aida
+      role: Archival Specialist, Reviewer
+    - name: Jora
+      role: Architect, Reviewer
+
+  settings:
+    debug: true
+    paths:
+      data: ./data
+      output: ./output
+    urls:
+      github: https://github.com/greamarchitects/CityPortraits
+      live: https://greamarchitects.github.io/CityPortraits/
+      
