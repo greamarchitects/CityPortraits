@@ -690,10 +690,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-base-map-layers" class="md-nav__link">
+  <a href="#archival-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Base Map Layers
+        Archival Data
       
     </span>
   </a>
@@ -701,35 +701,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-statistical-layers" class="md-nav__link">
+  <a href="#projection-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Statistical Layers
+        Projection Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projection Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clustering
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-archival-data" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#building-stock-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Archival Data
+        Building Stock Scenarios
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-architectural-landscape" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Architectural Landscape
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1599,43 +1605,158 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=083a51ab">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8a82915">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="tirana">Tirana<a class="anchor-link" href="#tirana">¶</a></h1><p><em>Ongoing work</em></p>
-<p>This notebook assembles a compact website-ready preview of the Tirana case study.<br/>
-It combines a small archival synthesis table, an OSM-oriented interpretation layer, and a schematic map preview.</p>
-<h2 id="1-base-map-layers">1. Base Map Layers<a class="anchor-link" href="#1-base-map-layers">¶</a></h2><p>The base map stack used in the broader analysis includes:</p>
-<ul>
-<li>OpenStreetMap --&gt; Export - JOSM</li>
+<p>Prototype of the Tirana City Portrait model using the three-block structure: <strong>Analysis</strong>, <strong>Mapping</strong>, and <strong>Projection</strong>.</p>
+<p>This notebook combines archival interpretation, OSM/GHSL-derived spatial classification, and website-ready map outputs.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=8cb84008">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div class="mcp-dashboard tirana-dashboard">
+<!-- =============================
+       BLOCK 1: ANALYSIS
+       Components + Feature
+       ============================= -->
+<section class="mcp-block">
+<header class="mcp-block-header">
+<span class="mcp-kicker">Block 1</span>
+<h2>Analysis</h2>
+<p>Interpretive components used to read Tirana through points, axes, patches, and archival features.</p>
+</header>
+<div class="mcp-grid mcp-grid-3">
+<article class="mcp-card">
+<h3>Component: Point</h3>
+<p>Landmarks, institutions, archival references, building samples, and historically significant locations.</p>
+<ul class="mcp-mini-list">
+<li>Skanderbeg Square</li>
+<li>Et'hem Bey Mosque surroundings</li>
+<li>Palace of Culture</li>
+<li>National Historical Museum</li>
 </ul>
-<!-- - Overture -->
-<!-- - GDE -->
-<h2 id="2-statistical-layers">2. Statistical Layers<a class="anchor-link" href="#2-statistical-layers">¶</a></h2><p>Selected statistical layers used in the broader workflow:</p>
-<ul>
-<li>Global Exposure Model</li>
-<li>GHSL: Shape to Point</li>
-<li>Census</li>
+</article>
+<article class="mcp-card">
+<h3>Component: Axial</h3>
+<p>Urban axes, streets, routes, planning lines, and corridors shaping Tirana's spatial transformation.</p>
+<ul class="mcp-mini-list">
+<li>Bulevardi Dëshmorët e Kombit</li>
+<li>Rruga e Durrësit</li>
+<li>Rruga e Kavajës</li>
+<li>Lana axis</li>
 </ul>
+</article>
+<article class="mcp-card">
+<h3>Component: Patch</h3>
+<p>Morphological zones, housing estates, historic fabrics, industrial-residential ensembles, and urban edges.</p>
+<ul class="mcp-mini-list">
+<li>Historic Ottoman core</li>
+<li>Socialist housing estates</li>
+<li>Kombinati</li>
+<li>Peripheral expansion areas</li>
+</ul>
+</article>
+</div>
+<div class="mcp-grid mcp-grid-feature">
+<article class="mcp-card">
+<h3>Feature: Archival Morphology</h3>
+<div class="mcp-feature-box">
+<p><strong>Base map layers:</strong> OpenStreetMap export through JOSM, prepared for building-level interpretation.</p>
+<p><strong>Statistical layers:</strong> GHSL, exposure model references, census-related settlement assumptions.</p>
+<p><strong>Interpretive layer:</strong> archival periods connected to morphology, actors, streets, and building complexes.</p>
+</div>
+</article>
+<article class="mcp-card mcp-text-card">
+<h3>Feature Description</h3>
+<p>The analysis block links Tirana's urban evolution to observable spatial components. Points capture landmarks and samples; axes capture planning and movement structures; patches capture neighborhood-scale morphology and growth periods.</p>
+</article>
+</div>
+</section>
+<!-- =============================
+       BLOCK 2: MAPPING
+       Full-width map output
+       ============================= -->
+<section class="mcp-block">
+<header class="mcp-block-header">
+<span class="mcp-kicker">Block 2</span>
+<h2>Mapping</h2>
+<p>Spatial analysis result showing classified building-period layers derived from GHSL and OSM geometry.</p>
+</header>
+<article class="mcp-card">
+<h3>Tirana Architectural Landscape</h3>
+<iframe class="mcp-iframe-map" height="650" loading="lazy" src="../../assets/data/outputs/tirana_architectural_landscape.html" style="border:0; border-radius:12px; width:100%; display:block;" width="100%">
+</iframe>
+</article>
+</section>
+<!-- =============================
+       BLOCK 3: PROJECTION
+       Graph + Artifacts
+       ============================= -->
+<section class="mcp-block">
+<header class="mcp-block-header">
+<span class="mcp-kicker">Block 3</span>
+<h2>Projection</h2>
+<p>Relational projection, clustering direction, and generated artifacts for the Tirana case study.</p>
+</header>
+<div class="mcp-grid mcp-grid-graph">
+<article class="mcp-card mcp-text-card">
+<h3>Graph</h3>
+<p>Future graph layer connecting urban components, archival actors, socio-political events, streets, places, and building-stock artifacts.</p>
+</article>
+<article class="mcp-card mcp-graph-card">
+<h3>Relational Graph Placeholder</h3>
+<div class="mcp-graph-toolbar">
+<button id="graph-reset-btn" type="button">Reset graph</button>
+</div>
+<div class="mcp-graph-box" id="cy-network"></div>
+</article>
+</div>
+<div class="mcp-grid mcp-grid-3">
+<article class="mcp-card">
+<h3>Artifact: Portrait</h3>
+<p>Compact narrative of Tirana's spatial transformation across Ottoman, monarchy, socialist, and post-socialist periods.</p>
+</article>
+<article class="mcp-card">
+<h3>Artifact: Pattern</h3>
+<p>Recurring spatial patterns such as axial modernization, housing-estate expansion, industrial-residential clustering, and informal peripheral growth.</p>
+</article>
+<article class="mcp-card">
+<h3>Artifact: Project</h3>
+<p>Scenario layer for clustering, interpolation, building-stock redistribution, and exposure model refinement.</p>
+</article>
+</div>
+</section>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=433ed7d1">
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=05e31729">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="3-archival-data">3. Archival Data<a class="anchor-link" href="#3-archival-data">¶</a></h2><p>The table below summarizes selected areas and neighborhood types in Tirana discussed in archival and morphological literature. Streets are listed only where relatively precise references are available.</p>
+<h2 id="archival-data">Archival Data<a class="anchor-link" href="#archival-data">¶</a></h2><p>The table below summarizes selected areas and neighborhood types in Tirana discussed in archival and morphological literature. Streets are listed only where relatively precise references are available.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=2b554dcf">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=5b39028b">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -1644,33 +1765,12 @@ It combines a small archival synthesis table, an OSM-oriented interpretation lay
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style>
-.tirana-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.92rem;
-  line-height: 1.45;
-}
-.tirana-table th, .tirana-table td {
-  border: 1px solid #d9d9d9;
-  padding: 0.65rem 0.75rem;
-  vertical-align: top !important;
-  text-align: left !important;
-}
-.tirana-table th {
-  background: #f5f5f5;
-  font-weight: 600;
-}
-.tirana-table .cell-list {
-  margin: 0;
-  padding-left: 1.15rem;
-  list-style-position: outside;
-}
-.tirana-table .cell-list li {
-  margin: 0 0 0.18rem 0;
-}
-.tirana-table .empty {
-  color: #777;
-}
+.tirana-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; line-height: 1.45; }
+.tirana-table th, .tirana-table td { border: 1px solid #d9d9d9; padding: 0.65rem 0.75rem; vertical-align: top !important; text-align: left !important; }
+.tirana-table th { background: #f5f5f5; font-weight: 600; }
+.tirana-table .cell-list { margin: 0; padding-left: 1.15rem; list-style-position: outside; }
+.tirana-table .cell-list li { margin: 0 0 0.18rem 0; }
+.tirana-table .empty { color: #777; }
 </style>
 <table border="1" class="dataframe tirana-table">
 <thead>
@@ -1747,103 +1847,25 @@ It combines a small archival synthesis table, an OSM-oriented interpretation lay
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ed63ccd7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4-architectural-landscape">4. Architectural Landscape<a class="anchor-link" href="#4-architectural-landscape">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cb1a5a2e">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Skipping field collection_times: unsupported OGR type: 10
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>
-Raw GHSL epoch counts:
-ghsl_epoch
-NaN    24622
-1.0     6060
-3.0     3263
-4.0      976
-2.0      330
-5.0      150
-0.0        3
-Name: count, dtype: int64
-
-Final class counts:
-period_class
-unknown_or_uncertain                    24625
-historic_pre_1945_or_early_socialist     4218
-post_socialist_transition                3263
-early_socialist_1945_1975                1842
-transition_infill_2000_2014               976
-socialist_period_lowrise                  230
-recent_contemporary_2015_2026             150
-socialist_modernism_block                  91
-socialist_modernism_midrise                 9
-Name: count, dtype: int64
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=c1218231">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=48e9ae46">
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=06af13ab">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=27b678e8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="preview">Preview<a class="anchor-link" href="#preview">¶</a></h1>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=97293c47">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<iframe height="650" loading="lazy" src="/CityPortraits/assets/data/outputs/tirana_architectural_landscape.html" style="border:0; border-radius:12px;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=da1657e5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="5-clustering">5. Clustering<a class="anchor-link" href="#5-clustering">¶</a></h2><ul>
+<h2 id="projection-notes">Projection Notes<a class="anchor-link" href="#projection-notes">¶</a></h2><h3 id="clustering">Clustering<a class="anchor-link" href="#clustering">¶</a></h3><ul>
 <li>Rule-based / event-based suggestions</li>
 <li>Algorithm: spatial interpolation</li>
+<li>Future layer: cluster archival periods with building-period classes</li>
 </ul>
-<h2 id="7-building-stock-scenarios">7. Building Stock Scenarios<a class="anchor-link" href="#7-building-stock-scenarios">¶</a></h2><ul>
+<h3 id="building-stock-scenarios">Building Stock Scenarios<a class="anchor-link" href="#building-stock-scenarios">¶</a></h3><ul>
 <li>Algorithm: filter based on archival data</li>
-<li>Redistribute</li>
+<li>Redistribute uncertain buildings using morphological and historical constraints</li>
+<li>Compare generated stock scenarios against GHSL, OSM, and census assumptions</li>
 </ul>
 </div>
 </div>
