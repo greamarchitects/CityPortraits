@@ -4,15 +4,17 @@
 
 // Resolve asset path for local development and GitHub Pages
 function assetDataPath(file) {
-  const pathParts = window.location.pathname.split("/");
-  const siteIndex = pathParts.findIndex(p => p === "CityPortraits");
+  const path = window.location.pathname;
 
-  if (siteIndex !== -1) {
-    const basePath = "/" + pathParts.slice(1, siteIndex + 1).join("/") + "/";
-    return `${basePath}assets/data/${file}`.replace(/\/+/g, "/");
+  if (path.includes("/CityPortraits/")) {
+    return "/CityPortraits/assets/data/" + file;
   }
 
-  return `assets/data/${file}`;
+  if (path.includes("/model/")) {
+    return "../assets/data/" + file;
+  }
+
+  return "assets/data/" + file;
 }
 
 // Load graph data
