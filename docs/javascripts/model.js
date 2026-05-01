@@ -21,7 +21,8 @@ function initMap(id, zoom = 13) {
     return;
   }
 
-  if (el.dataset.ready === "true") return;
+  // Prevent duplicate Leaflet initialization
+  if (el.dataset.ready === "true" || el._leaflet_id) return;
   el.dataset.ready = "true";
 
   const zoomById = {
@@ -30,7 +31,8 @@ function initMap(id, zoom = 13) {
 
   const map = L.map(id, {
     zoomControl: true,
-    scrollWheelZoom: false
+    scrollWheelZoom: false,
+    attributionControl: true
   }).setView([41.3275, 19.8187], zoomById[id] || zoom);
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
@@ -39,9 +41,15 @@ function initMap(id, zoom = 13) {
     maxZoom: 20
   }).addTo(map);
 
-  L.marker([41.3275, 19.8187]).addTo(map);
+  // Small clean marker
+  L.circleMarker([41.3275, 19.8187], {
+    radius: 5,
+    weight: 1,
+    fillOpacity: 0.8
+  }).addTo(map);
 
   setTimeout(() => map.invalidateSize(), 300);
+  setTimeout(() => map.invalidateSize(), 1000);
 }
 
 function initAllMaps() {
