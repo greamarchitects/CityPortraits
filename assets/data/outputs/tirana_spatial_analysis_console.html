@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f7f7f3;
+}
+
+.folium-map {
+  position: absolute !important;
+  inset: 132px 270px 132px 270px !important;
+  width: auto !important;
+  height: auto !important;
+  border: 1px solid #ff5a5a;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.08);
+  z-index: 1;
+}
+
+.cityportrait-console {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cp-title {
+  position: absolute;
+  left: 28px;
+  top: 22px;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #111;
+  font-weight: 650;
+}
+
+.cp-subtitle {
+  position: absolute;
+  left: 28px;
+  top: 42px;
+  font-size: 11px;
+  color: #777;
+}
+
+.cp-zone {
+  position: absolute;
+  pointer-events: auto;
+  color: #ff4d4d;
+}
+
+.cp-zone h3 {
+  margin: 0 0 8px 0;
+  padding-top: 8px;
+  border-top: 1px solid #ff6b6b;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.cp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cp-item {
+  display: grid;
+  grid-template-columns: 14px 10px 1fr;
+  gap: 6px;
+  align-items: start;
+  font-size: 10px;
+  line-height: 1.1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cp-item input {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  accent-color: #ff4d4d;
+}
+
+.cp-color {
+  width: 9px;
+  height: 9px;
+  margin-top: 2px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,.15);
+}
+
+.cp-item span {
+  display: block;
+  color: #777;
+  font-size: 9px;
+  margin-top: 1px;
+}
+
+.cp-top-left { left: 270px; top: 32px; width: 260px; }
+.cp-top-right { right: 270px; top: 32px; width: 260px; }
+
+.cp-left-top { left: 28px; top: 150px; width: 220px; }
+.cp-left-bottom { left: 28px; bottom: 150px; width: 220px; }
+
+.cp-right-top { right: 28px; top: 150px; width: 220px; }
+.cp-right-bottom { right: 28px; bottom: 150px; width: 220px; }
+
+.cp-bottom-left { left: 270px; bottom: 28px; width: 260px; }
+.cp-bottom-right { right: 270px; bottom: 28px; width: 260px; }
+
+.cp-map-label {
+  position: absolute;
+  left: 290px;
+  top: 148px;
+  z-index: 3;
+  pointer-events: none;
+  padding: 7px 10px;
+  border: 1px solid #ff6b6b;
+  border-radius: 999px;
+  background: rgba(255,255,255,.86);
+  color: #ff4d4d;
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.leaflet-control-container {
+  display: none;
+}
+</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_eaffa5c992c574ead8a84d496b250600 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div class="cityportrait-console">
+  <div class="cp-title">City Portraits</div>
+  <div class="cp-subtitle">Tirana Spatial Analysis Console</div>
+  <div class="cp-map-label">City Portraits Spatial Model</div>
+
+    <section class="cp-zone cp-top-left">
+      <h3>Constraints Layers</h3>
+      <div class="cp-list">
+    
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Constraints · Morphological">
+          <i class="cp-color" style="background:#deebf7;"></i>
+          <div>Morphological<span>typology · geometry · network structure</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Constraints · Regulatory">
+          <i class="cp-color" style="background:#3182bd;"></i>
+          <div>Regulatory<span>zoning · codes · planning policies</span></div>
+        </label>
+        
+      </div>
+    </section>
+    
+    <section class="cp-zone cp-top-right">
+      <h3>Rules Layers</h3>
+      <div class="cp-list">
+    
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Rule-Based Adjustments · Threshold">
+          <i class="cp-color" style="background:#e5f5e0;"></i>
+          <div>Threshold<span>cut-offs · classification limits</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Rule-Based Adjustments · Topological">
+          <i class="cp-color" style="background:#31a354;"></i>
+          <div>Topological<span>adjacency · connectivity</span></div>
+        </label>
+        
+      </div>
+    </section>
+    
+    <section class="cp-zone cp-left-top">
+      <h3>Parameter Layers</h3>
+      <div class="cp-list">
+    
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Spatial Parameters · Density">
+          <i class="cp-color" style="background:#fee5d9;"></i>
+          <div>Density<span>FAR · coverage ratio · units/ha</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Spatial Parameters · Building Geometry">
+          <i class="cp-color" style="background:#fcae91;"></i>
+          <div>Building Geometry<span>footprint · height · compactness</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Spatial Parameters · Network Geometry">
+          <i class="cp-color" style="background:#fb6a4a;"></i>
+          <div>Network Geometry<span>intersection density · centrality</span></div>
+        </label>
+        
+      </div>
+    </section>
+    
+    <section class="cp-zone cp-left-bottom">
+      <h3>Interpolation Layers</h3>
+      <div class="cp-list">
+    
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Spatial Interpolation · Rule-Based">
+          <i class="cp-color" style="background:#f2f0f7;"></i>
+          <div>Rule-Based<span>deterministic assignment</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Spatial Interpolation · Graph Diffusion">
+          <i class="cp-color" style="background:#756bb1;"></i>
+          <div>Graph Diffusion<span>network propagation</span></div>
+        </label>
+        
+      </div>
+    </section>
+    
+    <section class="cp-zone cp-right-top">
+      <h3>Temporal / Evolution Layers</h3>
+      <div class="cp-list">
+    
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Rule-Based Adjustments · Temporal Rule">
+          <i class="cp-color" style="background:#74c476;"></i>
+          <div>Temporal Rule<span>time-based rules · sequencing</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Interfaces · Synthesis">
+          <i class="cp-color" style="background:#636363;"></i>
+          <div>Synthesis<span>aggregation · abstraction · modeling</span></div>
+        </label>
+        
+      </div>
+    </section>
+    
+    <section class="cp-zone cp-right-bottom">
+      <h3>Pattern Layers</h3>
+      <div class="cp-list">
+    
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Patterns · Linear">
+          <i class="cp-color" style="background:#fdd0a2;"></i>
+          <div>Linear<span>corridor · ribbon</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Patterns · Compact">
+          <i class="cp-color" style="background:#e6550d;"></i>
+          <div>Compact<span>clustered · infill</span></div>
+        </label>
+        
+      </div>
+    </section>
+    
+    <section class="cp-zone cp-bottom-left">
+      <h3>Cluster Layers</h3>
+      <div class="cp-list">
+    
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Clustering · Density DBSCAN">
+          <i class="cp-color" style="background:#fff7bc;"></i>
+          <div>Density DBSCAN<span>density-based clustering</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Clustering · Hotspot">
+          <i class="cp-color" style="background:#fec44f;"></i>
+          <div>Hotspot<span>Gi* · KDE</span></div>
+        </label>
+        
+      </div>
+    </section>
+    
+    <section class="cp-zone cp-bottom-right">
+      <h3>Interface Layers</h3>
+      <div class="cp-list">
+    
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Interfaces · Documentation">
+          <i class="cp-color" style="background:#d9d9d9;"></i>
+          <div>Documentation<span>sources · traceability · metadata</span></div>
+        </label>
+        
+        <label class="cp-item">
+          <input type="checkbox" data-layer-name="Interfaces · Synthesis">
+          <i class="cp-color" style="background:#636363;"></i>
+          <div>Synthesis<span>aggregation · abstraction · modeling</span></div>
+        </label>
+        
+      </div>
+    </section>
+    
+</div>
+    
+<script>
+(function () {
+  function waitForLeafletMap() {
+    const mapElement = document.querySelector(".folium-map");
+    if (!mapElement) {
+      setTimeout(waitForLeafletMap, 100);
+      return;
+    }
+
+    const mapId = mapElement.id;
+    const map = window[mapId];
+
+    if (!map || !map.eachLayer) {
+      setTimeout(waitForLeafletMap, 100);
+      return;
+    }
+
+    const namedLayers = {};
+
+    map.eachLayer(function(layer) {
+      if (layer.options && layer.options.name) {
+        namedLayers[layer.options.name] = layer;
+      }
+    });
+
+    document.querySelectorAll("[data-layer-name]").forEach(function(input) {
+      const layerName = input.getAttribute("data-layer-name");
+      const layer = namedLayers[layerName];
+
+      if (!layer) {
+        input.disabled = true;
+        return;
+      }
+
+      map.removeLayer(layer);
+
+      input.addEventListener("change", function() {
+        if (input.checked) {
+          map.addLayer(layer);
+        } else {
+          map.removeLayer(layer);
+        }
+      });
+    });
+
+    setTimeout(function () {
+      map.invalidateSize();
+    }, 300);
+  }
+
+  waitForLeafletMap();
+})();
+</script>
+    
+            <div class="folium-map" id="map_eaffa5c992c574ead8a84d496b250600" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_eaffa5c992c574ead8a84d496b250600 = L.map(
+                "map_eaffa5c992c574ead8a84d496b250600",
+                {
+                    center: [41.3275, 19.8189],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_eaffa5c992c574ead8a84d496b250600);
+
+            
+
+        
+    
+            var tile_layer_32c5d495cf71849cd222bd23040b8ea7 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_32c5d495cf71849cd222bd23040b8ea7.addTo(map_eaffa5c992c574ead8a84d496b250600);
+        
+    
+            var feature_group_4638c9d6b49b5d1eb753996cf599b04f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_45671bb375b40149f561d80c6c2b24e8 = L.circle(
+                [41.3275, 19.8189],
+                {"bubblingMouseEvents": true, "color": "#fee5d9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 750, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4638c9d6b49b5d1eb753996cf599b04f);
+        
+    
+        var popup_439180a067a365bd20d52fa66e718b0b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fec7172fa9facc843b357840ec638c2b = $(`<div id="html_fec7172fa9facc843b357840ec638c2b" style="width: 100.0%; height: 100.0%;"><strong>Spatial Parameters</strong><br>Density<br><small>FAR · coverage ratio · units/ha</small></div>`)[0];
+                popup_439180a067a365bd20d52fa66e718b0b.setContent(html_fec7172fa9facc843b357840ec638c2b);
+            
+        
+
+        circle_45671bb375b40149f561d80c6c2b24e8.bindPopup(popup_439180a067a365bd20d52fa66e718b0b)
+        ;
+
+        
+    
+    
+            var feature_group_0a9a32f736e3a48314a6b0e1f12efe39 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_8ebeae3acc9ce8df78f217b1f060b179 = L.rectangle(
+                [[41.3225, 19.8125], [41.3325, 19.825]],
+                {"bubblingMouseEvents": true, "color": "#fcae91", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fcae91", "fillOpacity": 0.28, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_0a9a32f736e3a48314a6b0e1f12efe39);
+        
+    
+        var popup_75b0b9b20d7042a7e6ac6881e9c95578 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b430a04e74f2e6cd8c440d81833c5164 = $(`<div id="html_b430a04e74f2e6cd8c440d81833c5164" style="width: 100.0%; height: 100.0%;"><strong>Spatial Parameters</strong><br>Building Geometry<br><small>footprint · height · volume · compactness</small></div>`)[0];
+                popup_75b0b9b20d7042a7e6ac6881e9c95578.setContent(html_b430a04e74f2e6cd8c440d81833c5164);
+            
+        
+
+        rectangle_8ebeae3acc9ce8df78f217b1f060b179.bindPopup(popup_75b0b9b20d7042a7e6ac6881e9c95578)
+        ;
+
+        
+    
+    
+            var feature_group_09bc1bee438b4b4c7953f6716ed9f543 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_15e431a3905d9d54c79d534bfcf974b6 = L.polyline(
+                [[41.318, 19.806], [41.324, 19.814], [41.331, 19.825], [41.339, 19.838]],
+                {"bubblingMouseEvents": true, "color": "#fb6a4a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#fb6a4a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_09bc1bee438b4b4c7953f6716ed9f543);
+        
+    
+        var popup_264e1c211b4776e910483dcbace8157d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_60825971d4cb7ad1a14e339c75c74474 = $(`<div id="html_60825971d4cb7ad1a14e339c75c74474" style="width: 100.0%; height: 100.0%;"><strong>Spatial Parameters</strong><br>Network Geometry<br><small>intersection density · centrality · length</small></div>`)[0];
+                popup_264e1c211b4776e910483dcbace8157d.setContent(html_60825971d4cb7ad1a14e339c75c74474);
+            
+        
+
+        poly_line_15e431a3905d9d54c79d534bfcf974b6.bindPopup(popup_264e1c211b4776e910483dcbace8157d)
+        ;
+
+        
+    
+    
+            var feature_group_71c3cbbcf3b11aa98254a1ca667e6848 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_a7684050a2c34e830b9d867d88df31a3 = L.circle(
+                [41.333, 19.815],
+                {"bubblingMouseEvents": true, "color": "#deebf7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#deebf7", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 520, "stroke": true, "weight": 2}
+            ).addTo(feature_group_71c3cbbcf3b11aa98254a1ca667e6848);
+        
+    
+        var popup_cd393fe103cb3cc390d73ef389df294f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3a9472dd20e24085a2e045c1181f67c2 = $(`<div id="html_3a9472dd20e24085a2e045c1181f67c2" style="width: 100.0%; height: 100.0%;"><strong>Constraints</strong><br>Morphological<br><small>typology · geometry · network structure</small></div>`)[0];
+                popup_cd393fe103cb3cc390d73ef389df294f.setContent(html_3a9472dd20e24085a2e045c1181f67c2);
+            
+        
+
+        circle_a7684050a2c34e830b9d867d88df31a3.bindPopup(popup_cd393fe103cb3cc390d73ef389df294f)
+        ;
+
+        
+    
+    
+            var feature_group_967d43d53401de7fcec623e2bb1781f4 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_5e670683cd6192d1ad7ef8097315a5d0 = L.rectangle(
+                [[41.325, 19.821], [41.336, 19.835]],
+                {"bubblingMouseEvents": true, "color": "#3182bd", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3182bd", "fillOpacity": 0.28, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_967d43d53401de7fcec623e2bb1781f4);
+        
+    
+        var popup_f8b84088b3794e17bd0975bdb2abd93c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_30c1d29a93446db25b902be9ec999edb = $(`<div id="html_30c1d29a93446db25b902be9ec999edb" style="width: 100.0%; height: 100.0%;"><strong>Constraints</strong><br>Regulatory<br><small>zoning · codes · planning policies</small></div>`)[0];
+                popup_f8b84088b3794e17bd0975bdb2abd93c.setContent(html_30c1d29a93446db25b902be9ec999edb);
+            
+        
+
+        rectangle_5e670683cd6192d1ad7ef8097315a5d0.bindPopup(popup_f8b84088b3794e17bd0975bdb2abd93c)
+        ;
+
+        
+    
+    
+            var feature_group_3f6c144b91d9e3c5007b74f53b7d7037 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_1cb45bc162b00a86062fabbd8ddbff74 = L.circle(
+                [41.322, 19.826],
+                {"bubblingMouseEvents": true, "color": "#e5f5e0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5f5e0", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 430, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3f6c144b91d9e3c5007b74f53b7d7037);
+        
+    
+        var popup_f04e0a4b44b7564aef4b54319abe1eb2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5f6415f72b2e0e8ba4a81114e3a7b527 = $(`<div id="html_5f6415f72b2e0e8ba4a81114e3a7b527" style="width: 100.0%; height: 100.0%;"><strong>Rule-Based Adjustments</strong><br>Threshold<br><small>cut-offs · classification limits</small></div>`)[0];
+                popup_f04e0a4b44b7564aef4b54319abe1eb2.setContent(html_5f6415f72b2e0e8ba4a81114e3a7b527);
+            
+        
+
+        circle_1cb45bc162b00a86062fabbd8ddbff74.bindPopup(popup_f04e0a4b44b7564aef4b54319abe1eb2)
+        ;
+
+        
+    
+    
+            var feature_group_d3685e8bfacbd69527f0eb9da8a33735 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_b3b36687d84582b18dd98db79f57f9a9 = L.polyline(
+                [[41.321, 19.811], [41.326, 19.816], [41.33, 19.817], [41.336, 19.823]],
+                {"bubblingMouseEvents": true, "color": "#31a354", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#31a354", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_d3685e8bfacbd69527f0eb9da8a33735);
+        
+    
+        var popup_b2153b94ecf2adfa448328e24888f55d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_07a3cb7109cf13738266af8ba4faea13 = $(`<div id="html_07a3cb7109cf13738266af8ba4faea13" style="width: 100.0%; height: 100.0%;"><strong>Rule-Based Adjustments</strong><br>Topological<br><small>adjacency · connectivity</small></div>`)[0];
+                popup_b2153b94ecf2adfa448328e24888f55d.setContent(html_07a3cb7109cf13738266af8ba4faea13);
+            
+        
+
+        poly_line_b3b36687d84582b18dd98db79f57f9a9.bindPopup(popup_b2153b94ecf2adfa448328e24888f55d)
+        ;
+
+        
+    
+    
+            var feature_group_f294132fcee52ea72e6f24a1628f419a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_5cbe47986ee008eac3d294967a6da207 = L.circle(
+                [41.335, 19.812],
+                {"bubblingMouseEvents": true, "color": "#74c476", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c476", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 390, "stroke": true, "weight": 2}
+            ).addTo(feature_group_f294132fcee52ea72e6f24a1628f419a);
+        
+    
+        var popup_1f11a934826a373fc1629ce4e8441523 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7641c1be05efc2de39642c7cc8745343 = $(`<div id="html_7641c1be05efc2de39642c7cc8745343" style="width: 100.0%; height: 100.0%;"><strong>Rule-Based Adjustments</strong><br>Temporal Rule<br><small>time-based rules · sequencing</small></div>`)[0];
+                popup_1f11a934826a373fc1629ce4e8441523.setContent(html_7641c1be05efc2de39642c7cc8745343);
+            
+        
+
+        circle_5cbe47986ee008eac3d294967a6da207.bindPopup(popup_1f11a934826a373fc1629ce4e8441523)
+        ;
+
+        
+    
+    
+            var feature_group_1713cb11fe1b6e693c46b129af751546 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_f495034383a656591fb0ee5f1a7e8367 = L.circle(
+                [41.329, 19.829],
+                {"bubblingMouseEvents": true, "color": "#f2f0f7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f2f0f7", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 600, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1713cb11fe1b6e693c46b129af751546);
+        
+    
+        var popup_12af8a6f864d66f424c810db9f39f58b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7a98d77b536c542a4fda06b8bf364206 = $(`<div id="html_7a98d77b536c542a4fda06b8bf364206" style="width: 100.0%; height: 100.0%;"><strong>Spatial Interpolation</strong><br>Rule-Based<br><small>deterministic assignment</small></div>`)[0];
+                popup_12af8a6f864d66f424c810db9f39f58b.setContent(html_7a98d77b536c542a4fda06b8bf364206);
+            
+        
+
+        circle_f495034383a656591fb0ee5f1a7e8367.bindPopup(popup_12af8a6f864d66f424c810db9f39f58b)
+        ;
+
+        
+    
+    
+            var feature_group_a4ef411548508ffbbdf6da7fd024102a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_9f702059873d92abdc2e34319297dfb4 = L.polyline(
+                [[41.317, 19.819], [41.323, 19.823], [41.329, 19.83], [41.334, 19.837]],
+                {"bubblingMouseEvents": true, "color": "#756bb1", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#756bb1", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_a4ef411548508ffbbdf6da7fd024102a);
+        
+    
+        var popup_0820c75eca7c4437a1c3e854358c29a0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1c49ba1b1253791f1fb640fd1027b5ec = $(`<div id="html_1c49ba1b1253791f1fb640fd1027b5ec" style="width: 100.0%; height: 100.0%;"><strong>Spatial Interpolation</strong><br>Graph Diffusion<br><small>network propagation</small></div>`)[0];
+                popup_0820c75eca7c4437a1c3e854358c29a0.setContent(html_1c49ba1b1253791f1fb640fd1027b5ec);
+            
+        
+
+        poly_line_9f702059873d92abdc2e34319297dfb4.bindPopup(popup_0820c75eca7c4437a1c3e854358c29a0)
+        ;
+
+        
+    
+    
+            var feature_group_533bbb561236e131d1be458b5e3238c8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_c33793585968aa13099f1ddfd0339e1e = L.circle(
+                [41.3315, 19.8215],
+                {"bubblingMouseEvents": true, "color": "#fff7bc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff7bc", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 380, "stroke": true, "weight": 2}
+            ).addTo(feature_group_533bbb561236e131d1be458b5e3238c8);
+        
+    
+        var popup_49bb5127279a72f2055c862d3a2306fb = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_81fcf76545b4426b70dc49b12e477fee = $(`<div id="html_81fcf76545b4426b70dc49b12e477fee" style="width: 100.0%; height: 100.0%;"><strong>Clustering</strong><br>Density DBSCAN<br><small>density-based clustering</small></div>`)[0];
+                popup_49bb5127279a72f2055c862d3a2306fb.setContent(html_81fcf76545b4426b70dc49b12e477fee);
+            
+        
+
+        circle_c33793585968aa13099f1ddfd0339e1e.bindPopup(popup_49bb5127279a72f2055c862d3a2306fb)
+        ;
+
+        
+    
+    
+            var feature_group_12104f40b30cd229e2e31de230a34589 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_18346df31fb83bbc3c6c10e4302aef99 = L.circle(
+                [41.3245, 19.817],
+                {"bubblingMouseEvents": true, "color": "#fec44f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec44f", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 480, "stroke": true, "weight": 2}
+            ).addTo(feature_group_12104f40b30cd229e2e31de230a34589);
+        
+    
+        var popup_99a5a328950065388c58663081203f86 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3a9d6739edb937542382bba6d03cb1b4 = $(`<div id="html_3a9d6739edb937542382bba6d03cb1b4" style="width: 100.0%; height: 100.0%;"><strong>Clustering</strong><br>Hotspot<br><small>Gi* · KDE</small></div>`)[0];
+                popup_99a5a328950065388c58663081203f86.setContent(html_3a9d6739edb937542382bba6d03cb1b4);
+            
+        
+
+        circle_18346df31fb83bbc3c6c10e4302aef99.bindPopup(popup_99a5a328950065388c58663081203f86)
+        ;
+
+        
+    
+    
+            var feature_group_c7bc72610df3f6b52634d2f47f3a0def = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_52bb5ff43edbfc5f9ed56300a4bb38c8 = L.polyline(
+                [[41.316, 19.804], [41.322, 19.813], [41.329, 19.824], [41.337, 19.836]],
+                {"bubblingMouseEvents": true, "color": "#fdd0a2", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#fdd0a2", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_c7bc72610df3f6b52634d2f47f3a0def);
+        
+    
+        var popup_cdcc04bcc770081b9f0e3ef9803b03b6 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5ac255c04f3150da32a8b166aba75aa4 = $(`<div id="html_5ac255c04f3150da32a8b166aba75aa4" style="width: 100.0%; height: 100.0%;"><strong>Patterns</strong><br>Linear<br><small>corridor · ribbon</small></div>`)[0];
+                popup_cdcc04bcc770081b9f0e3ef9803b03b6.setContent(html_5ac255c04f3150da32a8b166aba75aa4);
+            
+        
+
+        poly_line_52bb5ff43edbfc5f9ed56300a4bb38c8.bindPopup(popup_cdcc04bcc770081b9f0e3ef9803b03b6)
+        ;
+
+        
+    
+    
+            var feature_group_2a2927a9acf444b1ef7f2759441ab1e8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_87ae063e19f7ca2a6a9068ced265277d = L.circle(
+                [41.3275, 19.8189],
+                {"bubblingMouseEvents": true, "color": "#e6550d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e6550d", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 300, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2a2927a9acf444b1ef7f2759441ab1e8);
+        
+    
+        var popup_88977c73aa8e666bcc5f15df3b052fb0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c64f91a899e65d9b35cef6540cd4332c = $(`<div id="html_c64f91a899e65d9b35cef6540cd4332c" style="width: 100.0%; height: 100.0%;"><strong>Patterns</strong><br>Compact<br><small>clustered · infill</small></div>`)[0];
+                popup_88977c73aa8e666bcc5f15df3b052fb0.setContent(html_c64f91a899e65d9b35cef6540cd4332c);
+            
+        
+
+        circle_87ae063e19f7ca2a6a9068ced265277d.bindPopup(popup_88977c73aa8e666bcc5f15df3b052fb0)
+        ;
+
+        
+    
+    
+            var feature_group_df78bd0370e6bbd78ea11fd29ee2ac05 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_935c0b8ceb60fe088aeecd0e1c399744 = L.rectangle(
+                [[41.319, 19.828], [41.326, 19.838]],
+                {"bubblingMouseEvents": true, "color": "#d9d9d9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9d9d9", "fillOpacity": 0.28, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_df78bd0370e6bbd78ea11fd29ee2ac05);
+        
+    
+        var popup_a526a644b213c37322126a363b0ee16c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d946eca4d6653237a3ba913351d0e0c2 = $(`<div id="html_d946eca4d6653237a3ba913351d0e0c2" style="width: 100.0%; height: 100.0%;"><strong>Interfaces</strong><br>Documentation<br><small>sources · traceability · metadata</small></div>`)[0];
+                popup_a526a644b213c37322126a363b0ee16c.setContent(html_d946eca4d6653237a3ba913351d0e0c2);
+            
+        
+
+        rectangle_935c0b8ceb60fe088aeecd0e1c399744.bindPopup(popup_a526a644b213c37322126a363b0ee16c)
+        ;
+
+        
+    
+    
+            var feature_group_71f2b727423fe36e95e641d722963329 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_702ffd744928e936fe8c94d244817904 = L.circle(
+                [41.335, 19.828],
+                {"bubblingMouseEvents": true, "color": "#636363", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#636363", "fillOpacity": 0.38, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 360, "stroke": true, "weight": 2}
+            ).addTo(feature_group_71f2b727423fe36e95e641d722963329);
+        
+    
+        var popup_4ef12d88139c43b0356b307873c69060 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8b2ea4d997192b16a46824867bc598d1 = $(`<div id="html_8b2ea4d997192b16a46824867bc598d1" style="width: 100.0%; height: 100.0%;"><strong>Interfaces</strong><br>Synthesis<br><small>aggregation · abstraction · modeling</small></div>`)[0];
+                popup_4ef12d88139c43b0356b307873c69060.setContent(html_8b2ea4d997192b16a46824867bc598d1);
+            
+        
+
+        circle_702ffd744928e936fe8c94d244817904.bindPopup(popup_4ef12d88139c43b0356b307873c69060)
+        ;
+
+        
+    
+    
+            var layer_control_1ad6ddbd0fbdd88f6ae34942a9f9fda8_layers = {
+                base_layers : {
+                },
+                overlays :  {
+                    "Spatial Parameters \u00b7 Density" : feature_group_4638c9d6b49b5d1eb753996cf599b04f,
+                    "Spatial Parameters \u00b7 Building Geometry" : feature_group_0a9a32f736e3a48314a6b0e1f12efe39,
+                    "Spatial Parameters \u00b7 Network Geometry" : feature_group_09bc1bee438b4b4c7953f6716ed9f543,
+                    "Constraints \u00b7 Morphological" : feature_group_71c3cbbcf3b11aa98254a1ca667e6848,
+                    "Constraints \u00b7 Regulatory" : feature_group_967d43d53401de7fcec623e2bb1781f4,
+                    "Rule-Based Adjustments \u00b7 Threshold" : feature_group_3f6c144b91d9e3c5007b74f53b7d7037,
+                    "Rule-Based Adjustments \u00b7 Topological" : feature_group_d3685e8bfacbd69527f0eb9da8a33735,
+                    "Rule-Based Adjustments \u00b7 Temporal Rule" : feature_group_f294132fcee52ea72e6f24a1628f419a,
+                    "Spatial Interpolation \u00b7 Rule-Based" : feature_group_1713cb11fe1b6e693c46b129af751546,
+                    "Spatial Interpolation \u00b7 Graph Diffusion" : feature_group_a4ef411548508ffbbdf6da7fd024102a,
+                    "Clustering \u00b7 Density DBSCAN" : feature_group_533bbb561236e131d1be458b5e3238c8,
+                    "Clustering \u00b7 Hotspot" : feature_group_12104f40b30cd229e2e31de230a34589,
+                    "Patterns \u00b7 Linear" : feature_group_c7bc72610df3f6b52634d2f47f3a0def,
+                    "Patterns \u00b7 Compact" : feature_group_2a2927a9acf444b1ef7f2759441ab1e8,
+                    "Interfaces \u00b7 Documentation" : feature_group_df78bd0370e6bbd78ea11fd29ee2ac05,
+                    "Interfaces \u00b7 Synthesis" : feature_group_71f2b727423fe36e95e641d722963329,
+                },
+            };
+            let layer_control_1ad6ddbd0fbdd88f6ae34942a9f9fda8 = L.control.layers(
+                layer_control_1ad6ddbd0fbdd88f6ae34942a9f9fda8_layers.base_layers,
+                layer_control_1ad6ddbd0fbdd88f6ae34942a9f9fda8_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_eaffa5c992c574ead8a84d496b250600);
+
+        
+</script>
+</html>
